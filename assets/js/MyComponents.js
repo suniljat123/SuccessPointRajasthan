@@ -180,101 +180,21 @@ class Navbar extends HTMLElement {
           <!-- for Mobile responsive navbar  -->
           <li class="dropdown dropDownServiceMobile">
             <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown">
-                <a href="#"><span>Implementation</span>
-                  <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="SalesCloud.html">Sales Cloud</a></li>
-                  <li><a href="MarketingCloud.html">Marketing Cloud</a></li>
-                  <li><a href="ServiceCloud.html">Service Cloud</a></li>
-                  <li><a href="AnalyticsCloud.html">Analytics Cloud</a></li>
-                  <li><a href="ExperienceCloud.html">Experience Cloud</a></li>
-                  <li><a href="FinancialCloud.html">Financial services Cloud</a></li>
-                  <li><a href="NonProfitCloud.html">Non-Profit Cloud</a></li>
-                  <li><a href="SalesforcePardot.html">Salesforce Pardot</a></li>
-                  <li><a href="EducationCloud.html">Education Cloud</a></li>
-                  <li><a href="HealthCloud.html">Health Cloud</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Development</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="CustomCloud.html">Custom Cloud App </a></li>
-                  <li><a href="MobileFirst.html">Mobile-First Solution </a></li>
-                  <li><a href="AppExchange.html">AppExchange Product </a></li>
-                  <li><a href="SalesforceCustomization.html">Salesforce Customization</a></li>
-                  <li><a href="SalesforceConfiguration.html">Salesforce Configuration</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Migration</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="ClassicToLightningMigration.html">Classic to Lightning Migration</a></li>
-                  <li><a href="ThirdPartyToSalesforceMigration.html">Third-Party to Salesforce Migration</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Support</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="ManagedServices.html">Managed Services</a></li>
-                  <li><a href="RemoteAdministrator.html">Remote Administrator</a></li>
-                  <li><a href="SalesforceProductionSupport.html">Salesforce Production Support</a></li>
-                  <li><a href="UserAdminAndManagementTraning.html">User Admin and Management Training</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#"><span>Integration and Consulting</span>
-                  <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="ERPIntegration.html">ERP </a></li>
-                  <li><a href="AccountingSoftwareIntegration.html">Accounting Software </a></li>
-                  <li><a href="MarketingAutomationIntegration.html">Marketing Automation </a></li>
-                  <li><a href="SocialMediaIntegration.html">Social Media </a></li>
-                  <li><a href="ECommerceIntegration.html">E-Commerce </a></li>
-                  <li><a href="ChatbotIntegration.html">Chatbot </a></li>
-                  <li><a href="PaymentGatewayIntegration.html">Payment Gateway </a></li>
-                  <li><a href="CollaborationToolsIntegration.html">Collaboration Tools </a></li>
-                  <li><a href="CalendeEmailIntegration.html">Calender & Email </a></li>
-                  <li><a href="CTI.html">CTI</a></li>
-                  <li><a href="ITSMIntgration.html">ITSM </a></li>
-                </ul>
-              </li>
-            </ul>
+             
           </li>
           <!-- for Mobile responsive navbar  -->
 
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
           <li class="dropdown">
             <a href="#Industries"><span>Industries</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="NonProfit.html">Non-Profit</a></li>
-              <li><a href="Education.html">Education</a></li>
-              <li><a href="Publicsector.html">Public Sector</a></li>
-              <li><a href="HealthCare.html">Healthcare</a></li>
-              <li><a href="LifeSciences.html">Life Sciences</a></li>
-              <li><a href="CommunicationMedia.html">Communication & media</a></li>
-              <li><a href="Manufacturing.html">Manufacturing</a></li>
-              <li><a href="HighTech.html">High Tech</a></li>
-              <li><a href="Retails.html">Consumer Goods & Retail</a></li>
-              <li><a href="FinancialServices.html">Financial Services</a></li>
-              <li><a href="ProfessionalServices.html">Professional Services</a></li>
-            </ul>
+            
           </li>
           <li>
             <a class="nav-link scrollto" href="product.html">Our Product</a>
           </li>
           <li class="dropdown">
-            <a href="#About"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#about" onclick="navbarClosed()">About us</a></li>
-              <li><a href="#testimonials" onclick="navbarClosed()">Testimonials</a></li>
-
-              <li><a href="#team" onclick="navbarClosed()">Leadership</a></li>
-              <li><a href="Career.html">Careers</a></li>
-              <li><a href="CaseStudy.html">Case Study</a></li>
-              <li><a href="Contact.html">Contact us</a></li>
-            </ul>
+            <a href="#About"><span>About111</span> <i class="bi bi-chevron-down"></i></a>
+             
           </li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
