@@ -192,7 +192,7 @@ class Navbar extends HTMLElement {
           <li>
             <a class="nav-link scrollto" href="product.html">Our Product</a>
           </li>
-          <li class="dropdown">
+          <li  >
             <a href="#About"><span>About111</span> <i class="bi bi-chevron-down"></i></a>
              
           </li>
