@@ -166,7 +166,7 @@ class Navbar extends HTMLElement {
         <a href="./"><img src="assets/img/SuccessPointRajasthanlogo.png" height="100" width="100" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="./" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="./" class="logo"><img src="assets/img/SuccessPointRajasthanlogo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
