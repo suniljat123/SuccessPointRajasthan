@@ -183,25 +183,25 @@ class Navbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
            
           <li>
-            <a class="nav-link scrollto" href="product.html">Home</a>
+            <a class="nav-link scrollto" href="">Home</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Typing</a>
+            <a class="nav-link scrollto" href="">Typing</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Steno</a>
+            <a class="nav-link scrollto" href="">Steno</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Mangal Steno</a>
+            <a class="nav-link scrollto" href="">Mangal Steno</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Hindi Reporter</a>
+            <a class="nav-link scrollto" href="">Hindi Reporter</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Result</a>
+            <a class="nav-link scrollto" href="">Result</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Pricing</a>
+            <a class="nav-link scrollto" href="">Pricing</a>
           </li>
            
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
