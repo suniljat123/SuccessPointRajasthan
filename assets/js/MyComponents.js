@@ -203,10 +203,7 @@ class Navbar extends HTMLElement {
           <li>
             <a class="nav-link scrollto" href="product.html">Pricing</a>
           </li>
-          <li  >
-            <a href="#About"><span>About111</span> <i class="bi bi-chevron-down"></i></a>
-             
-          </li>
+           
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
             <a class="getstarted scrollto RequestDemo" href="#contact" >Request Demo</a>
