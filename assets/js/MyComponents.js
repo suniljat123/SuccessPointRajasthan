@@ -190,7 +190,25 @@ class Navbar extends HTMLElement {
             
           </li>
           <li>
-            <a class="nav-link scrollto" href="product.html">Our Product</a>
+            <a class="nav-link scrollto" href="product.html">Home</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Typing</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Steno</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Mangal Steno</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Hindi Reporter</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Result</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="product.html">Pricing</a>
           </li>
           <li  >
             <a href="#About"><span>About111</span> <i class="bi bi-chevron-down"></i></a>
