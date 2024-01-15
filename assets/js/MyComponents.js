@@ -171,15 +171,7 @@ class Navbar extends HTMLElement {
       <nav id="navbar" class="navbar">
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
- 
-
-          <!-- for Mobile responsive navbar  -->
-          <li class="dropdown dropDownServiceMobile">
-            <a href="#Features"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-             
-          </li>
-          <!-- for Mobile responsive navbar  -->
-
+  
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
            
           <li>
