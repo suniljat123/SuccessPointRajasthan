@@ -171,11 +171,7 @@ class Navbar extends HTMLElement {
       <nav id="navbar" class="navbar">
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
-
-          <li class="dropdown dropDownServiceNormal">
-            <a href="#Features"><span>Cources</span> <i class="bi bi-chevron-down"></i></a>
-             
-          </li>
+ 
 
           <!-- for Mobile responsive navbar  -->
           <li class="dropdown dropDownServiceMobile">
@@ -185,10 +181,7 @@ class Navbar extends HTMLElement {
           <!-- for Mobile responsive navbar  -->
 
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
-          <li class="dropdown">
-            <a href="#Industries"><span>Industries</span> <i class="bi bi-chevron-down"></i></a>
-            
-          </li>
+           
           <li>
             <a class="nav-link scrollto" href="product.html">Home</a>
           </li>
@@ -714,7 +707,7 @@ class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = ` <div style="position: fixed;bottom: 10px;z-index: 36;right: 22px;" class="Whatsapp d-block" id="whatsapp_logo">
-    <a href=" https://wa.me/+919999105081?text=Hello,%20I%20came%20across%20cloud%20certitude%20website.%20I%20want%20to%20know%20more%20about%20the%20company." target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+    <a href=" https://wa.me/+919602596476?text=Hello,%20I%20came%20across%20SuccessPointRajasthan%20website.%20I%20want%20to%20join%20course." target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 
     <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
