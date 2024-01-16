@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
     <div class="container">
       <div style="text-align: center;">
 
-        <img src="assets/img/cloudlogo.png" height="100" width="170" />
+        <img src="assets/img/SuccessPointRajasthanlogo.png" height="100" width="170" />
         <p>Maximize Salesforce User Adoption and Transform Customer Experiences</p>
 
       </div>
@@ -31,8 +31,10 @@ class Footer extends HTMLElement {
             <h4>Reservations</h4>
             <p>
               <strong>Phone:</strong> <a href="tel:+919999105081" style="color: #ffffff">+91 9999105081</a> <br>
-              <strong>Email:</strong> <a href="mailto: info@cloudcertitude.com"
-                style="color: #ffffff; ">info@cloudcertitude.com</a><br>
+              <strong>Email:</strong> <a href="mailto: rakeshchoudhary3658@gmail.com"
+                style="color: #ffffff; ">rakeshchoudhary3658@gmail.com</a><br>
+                <strong>Email:</strong> <a href="mailto: pradeepkoth4@gmail.com"
+                style="color: #ffffff; ">pradeepkoth4@gmail.com</a><br>
             </p>
           </div>
         </div>
