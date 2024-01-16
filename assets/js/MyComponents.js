@@ -164,7 +164,7 @@ class Navbar extends HTMLElement {
     <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="./"><img src="assets/img/SuccessPointRajasthanlogo.png" height="100" width="100" /></a>
+        <a href="./"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="./" class="logo"><img src="assets/img/SuccessPointRajasthanlogo.png" alt="" class="img-fluid"></a>-->
