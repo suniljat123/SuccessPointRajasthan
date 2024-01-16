@@ -18,8 +18,7 @@ class Footer extends HTMLElement {
           <div>
             <h4>Address</h4>
             <p>
-              DG-B-1704 & 05, 17th Floor, Emaar Digital Green, Golf course
-              Extn. Road, Sector-61, Gurugram, Haryana 122011
+              DG-B-1704 & 05, Christian Ganj, Ajmer, Rajasthan 305001
             </p>
           </div>
 
@@ -75,7 +74,7 @@ class Footer extends HTMLElement {
     </div>
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Cloud Certitude </span></strong>. All
+        &copy; Copyright <strong><span>Success Point Rajasthan</span></strong>. All
         Rights Reserved
       </div>
 
