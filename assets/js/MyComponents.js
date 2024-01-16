@@ -31,7 +31,7 @@ class Footer extends HTMLElement {
             <p>
               <strong>Phone:</strong> <a href="tel:+919999105081" style="color: #ffffff">+91 9999105081</a> <br>
               <strong>Email:</strong> <a href="mailto: rakeshchoudhary3658@gmail.com"
-                style="color: #ffffff; ">rakeshchoudhar@gmail.com</a><br>
+                style="color: #ffffff; ">rakesr@gmail.com</a><br>
                 <strong>Email:</strong> <a href="mailto: pradeepkoth4@gmail.com"
                 style="color: #ffffff; ">pradeepkoth4@gmail.com</a><br>
             </p>
