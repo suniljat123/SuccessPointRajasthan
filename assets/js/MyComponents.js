@@ -52,14 +52,12 @@ class Footer extends HTMLElement {
           <h4>Follow Us</h4>
 
           <div class="social-links d-flex">
-            <a href="https://twitter.com/cloudcertitude" target="_blank" class="twitter"><i
-                class="bi bi-twitter"></i></a>
-            <a href="https://www.facebook.com/cloudcertitude" target="_blank" class="facebook"><i
-                class="bi bi-facebook"></i></a>
+            <a href="https://nmuoka.on-app.in/app/home?orgCode=nmuoka&referrer=utm_source=copy-link&utm_medium=tutor-app-referral" target="_blank" class="twitter"><i class="bi bi-app-indicator"></i></a>
+            <a href="https://wa.me/+919602596476?text=Hello,%20I%20came%20across%20SuccessPointRajasthan%20website.%20I%20want%20to%20join%20course." target="_blank" class="facebook"><i class="bi bi-whatsapp"></i></a>
             <a href="https://www.instagram.com/steno_updates?igsh=ZmhiZ2xjcjJyOWZ3" target="_blank" class="instagram"><i
                 class="bi bi-instagram"></i></a>
             <a href="https://t.me/stenoupdates" class="linkedin" target="_blank"><i class="bi bi-telegram"></i></a>
-                <a href="https://join.skype.com/invite/a21730WhsqCt" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="https://youtube.com/@RStenographer?si=wEOivWSja0a3P86W" target="_blank" class="google-plus"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
