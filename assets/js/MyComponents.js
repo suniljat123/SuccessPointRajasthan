@@ -182,13 +182,11 @@ class Navbar extends HTMLElement {
             <a class="nav-link scrollto" href="">Typing</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">Steno</a>
+            <a class="nav-link scrollto" href="">English Steno</a>
           </li>
+           
           <li>
-            <a class="nav-link scrollto" href="">Mangal Steno</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="">Hindi Reporter</a>
+            <a class="nav-link scrollto" href="">Hindi Steno</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="">Result</a>
@@ -199,7 +197,7 @@ class Navbar extends HTMLElement {
            
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
-            <a class="getstarted scrollto RequestDemo" href="#contact" >Request Demo</a>
+            <a class="getstarted scrollto RequestDemo" href="#contact" >Demo</a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
