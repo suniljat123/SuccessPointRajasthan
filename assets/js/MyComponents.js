@@ -63,7 +63,14 @@ class Footer extends HTMLElement {
 
       </div>
     </div>
-   
+     <!--
+    <div class="appExchange" style="display: flex;justify-content:center;flex-wrap:wrap;">
+      <img src="assets/img/f1.png" height="100" width="100" class="m-3" />
+      <img src="assets/img/f2.png" height="100" width="100" class="m-3" />
+      <img src="assets/img/f3.png" height="100" width="100" class="m-3" />
+      <img src="assets/img/f4.jpg" height="100" width="100" class="m-3" />
+    </div>
+    -->
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Success Point Rajasthan</span></strong>. All
