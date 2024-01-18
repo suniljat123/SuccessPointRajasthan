@@ -56,8 +56,7 @@ class Footer extends HTMLElement {
                 class="bi bi-twitter"></i></a>
             <a href="https://www.facebook.com/cloudcertitude" target="_blank" class="facebook"><i
                 class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/cloud_certitude/" target="_blank" class="instagram"><i
-                class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/steno_updates?igsh=ZmhiZ2xjcjJyOWZ3" target="_blank" class="instagram"><i class="bi bi-telegram"></i></a>
             <a href="https://www.linkedin.com/company/cloudcertitude/" class="linkedin" target="_blank"><i
                 class="bi bi-linkedin"></i></a>
                 <a href="https://join.skype.com/invite/a21730WhsqCt" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
