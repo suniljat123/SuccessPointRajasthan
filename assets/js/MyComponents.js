@@ -57,8 +57,8 @@ class Footer extends HTMLElement {
             <a href="https://www.instagram.com/steno_updates?igsh=ZmhiZ2xjcjJyOWZ3" target="_blank" class="instagram"><i
                 class="bi bi-instagram"></i></a>
             <a href="https://t.me/stenoupdates" class="linkedin" target="_blank"><i class="bi bi-telegram"></i></a>
-                <a href="https://youtube.com/@RStenographer?si=wEOivWSja0a3P86W" target="_blank" class="google-plus"><i class="bi bi-youtube"></i></a>
-         <a href="https://nmuoka.on-app.in/app/home?orgCode=nmuoka&referrer=utm_source=copy-link&utm_medium=tutor-app-referral" target="_blank" class="twitter"><i class="bi bi-app-indicator"></i></a>
+                <a href="https://youtube.com/@RStenographer?si=wEOivWSja0a3P86W" target="_blank" class="google-plus"><i class="bi bi-youtube"></i></a>   
+         <a href="https://nmuoka.on-app.in/app/home?orgCode=nmuoka&referrer=utm_source=copy-link&utm_medium=tutor-app-referral" target="_blank" class="twitter"><i class="bi bi-google-play"></i></a>
                 </div>
         </div>
 
