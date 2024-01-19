@@ -179,14 +179,14 @@ class Navbar extends HTMLElement {
             <a class="nav-link scrollto" href="">Home</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">Typing</a>
+            <a class="nav-link scrollto" href="Typing.html">Typing</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">English Steno</a>
+            <a class="nav-link scrollto" href="English-Steno.html">English Steno</a>
           </li>
            
           <li>
-            <a class="nav-link scrollto" href="">Hindi Steno</a>
+            <a class="nav-link scrollto" href="Hindi-Steno.html">Hindi Steno</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="">Result</a>
@@ -463,14 +463,14 @@ class ContactCareerNavbar extends HTMLElement {
             <a class="nav-link scrollto" href="">Home</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">Typing</a>
+            <a class="nav-link scrollto" href="Typing.html">Typing</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">English Steno</a>
+            <a class="nav-link scrollto" href="English-Steno.html">English Steno</a>
           </li>
            
           <li>
-            <a class="nav-link scrollto" href="">Hindi Steno</a>
+            <a class="nav-link scrollto" href="Hindi-Steno.html">Hindi Steno</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="">Result</a>
