@@ -166,7 +166,7 @@ class Navbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
            
           <li>
-            <a class="nav-link scrollto" href="">Home</a>
+            <a class="nav-link scrollto" href="./">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
