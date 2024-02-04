@@ -13,7 +13,7 @@ class Footer extends HTMLElement {
       <br>
 
       <div class="row gy-3 addressDiv">
-        <div class="col-lg-3 col-md-6 d-flex">
+        <div class="col-lg-4 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div>
             <h4>Address</h4>
@@ -24,7 +24,7 @@ class Footer extends HTMLElement {
 
         </div>
 
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
+        <div class="col-lg-4 col-md-6 footer-links d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
             <h4>Reservations</h4>
@@ -37,18 +37,8 @@ class Footer extends HTMLElement {
             </p>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Working Hours</h4>
-            <p> 
-              <strong>Mon - Fri: </strong>10 AM - 7 PM IST<br>
-               <strong>Sat - Sun:</strong> Closed
-            </p>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-6 footer-links">
+ 
+        <div class="col-lg-4 col-md-6 footer-links">
           <h4>Follow Us</h4>
 
           <div class="social-links d-flex">
@@ -460,7 +450,7 @@ class ContactCareerNavbar extends HTMLElement {
       <nav id="navbar" class="navbar">
         <ul>
            <li>
-            <a class="nav-link scrollto" href="">Home</a>
+            <a class="nav-link scrollto" href="./">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
