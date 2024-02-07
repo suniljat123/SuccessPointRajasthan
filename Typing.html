@@ -793,21 +793,28 @@
                         }
                     </style>
                     <!-- Our price plan section -->
-                    <div class="plans-section">
+                    <div class="plans-section" style="padding:21px;">
 
-
+                        <!-- -------------------------- TYping Modal Code is Here   -------------------- -->
                         <!-- Main Body Starts -->
-                        <div class="container" style="
+                         <div id="typingModalId" class="container" style="
     padding: 1px 30px;
    
-    display: inline-block;
+    display: none;
     max-width: 100rem;">
                             <div class="stats" style="    text-align: right;
 font-size: 18px;
 margin-bottom: 30px;
 display: flex;
 justify-content: center;">
-                                <p style="margin-right: 9rem; 
+                <button width="2px" style="    position: absolute;
+                margin-right: 83rem;
+                background-color: #ff4a17;
+                color: white;
+                border-width: 0px;
+                height: 31px;
+                border-radius: 5px;" onclick="handleGoBack()">Go Back</button>                              
+<p style="margin-right: 9rem; 
 padding: 4px;
 border-radius: 6px;   
     
@@ -867,9 +874,126 @@ justify-content: space-around;">
                                     <p>Speed: <span id="wpm"></span></p>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
 
+                    <!-- ----------------------- Table code is here ------------------- -->
+
+                        <table id="datatable"
+                        class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
+                        <!-- add `collapsed` by default ... it will be removed by default -->
+                        <!-- thead with .sticky-nav -->
+                        <thead class="text-secondary-m1 text-uppercase text-85">
+                            <tr>
+                                <th class="bgc-yellow-l3">S.No.</th>
+                                <th class="bgc-yellow-l3">Date</th>
+                                <th class="bgc-yellow-l3">Test Language</th>
+                                <th class="bgc-yellow-l3">Test Name</th>
+                                <th class="bgc-yellow-l3">Dictation Speed</th>
+                                <th class="bgc-yellow-l3">Total Words</th>
+                                <th class="bgc-yellow-l3">Duration</th>
+                                <th class="bgc-yellow-l3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="pos-rel">
+                            <tr class="d-style bgc-h-default-l4">
+                                <td>1</td>
+                                <td>2023-12-21</td>
+                                <td>Hindi</td>
+                                <td>Demo Test 100 wpm (SSC)</td>
+                                <td>100WPM</td>
+                                <td>1000 Words</td>
+                                <td>65 Mins</td>
+
+                                <td>
+                                    <center>
+                                        <a><button
+                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
+                                                Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                            </tr>
+                            <tr class="d-style bgc-h-default-l4">
+                                <td>2</td>
+                                <td>2023-12-13</td>
+                                <td>Hindi</td>
+                                <td>Demo Test 100 wpm (RSMSSB)</td>
+                                <td>100WPM</td>
+                                <td>1000 Words</td>
+                                <td>65 Mins</td>
+
+                                <td>
+                                    <center>
+                                        <a><button
+                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
+                                                Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                            </tr>
+                            <tr class="d-style bgc-h-default-l4">
+                                <td>3</td>
+                                <td>2023-12-11</td>
+                                <td>Hindi</td>
+                                <td>Demo Test 90 wpm</td>
+                                <td>90WPM</td>
+                                <td>890 Words</td>
+                                <td>60 Mins</td>
+
+                                <td>
+                                    <center>
+                                        <a><button
+                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
+                                                Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                            </tr>
+                            <tr class="d-style bgc-h-default-l4">
+                                <td>4</td>
+                                <td>2023-12-11</td>
+                                <td>Hindi</td>
+                                <td>Demo Test 80 wpm</td>
+                                <td>80WPM</td>
+                                <td>805 Words</td>
+                                <td>55 Mins</td>
+
+                                <td>
+                                    <center>
+                                        <a><button
+                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
+                                                Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                            </tr>
+                            <tr class="d-style bgc-h-default-l4">
+                                <td>5</td>
+                                <td>2023-08-27</td>
+                                <td>Hindi</td>
+                                <td>Sunday Special Test 27 Aug</td>
+                                <td>70WPM</td>
+                                <td>417 Words</td>
+                                <td>40 Mins</td>
+
+                                <td>
+                                    <center>
+                                        <a><button
+                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
+                                                Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                            </tr>
+                         
+                        </tbody>
+                    </table>
 
 
                     </div>
@@ -883,6 +1007,23 @@ justify-content: space-around;">
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
+
+     <script>
+        function handleStartTest(){
+            console.log('btn start clicked');
+            var part1 = document.getElementById('datatable');
+            var part2 = document.getElementById('typingModalId');
+            part1.style.display =  'none';
+            part2.style.display='inline-block';
+        }
+        function handleGoBack(){
+            console.log('btn start clicked');
+            var part1 = document.getElementById('datatable');
+            var part2 = document.getElementById('typingModalId');
+            part1.style.display =  'table';
+            part2.style.display='none';
+        }
+     </script>       
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -1062,8 +1203,8 @@ justify-content: space-around;">
 
     <!-- include ace.js -->
     <script src="dist/js/ace.min.js"></script>
-    <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/MyComponents.js"></script>
+    <!-- <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/MyComponents.js"></script> -->
 </body>
 
 </html>
