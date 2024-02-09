@@ -166,7 +166,7 @@ class Navbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
           
           <li style="display:none;" id="drpDownProfileBtn" >
-            <a class="nav-link scrollto" href="profile.html">Profile</a>
+            <a class="nav-link scrollto" href="Profile.html">Profile</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="index.html">Home</a>
@@ -459,7 +459,7 @@ class ContactCareerNavbar extends HTMLElement {
       <nav id="navbar" class="navbar">
         <ul>
         <li>
-            <a style="display:none;" class="nav-link scrollto" id="drpDownProfileBtn" href="profile.html">Profile</a>
+            <a style="display:none;" class="nav-link scrollto" id="drpDownProfileBtn" href="Profile.html">Profile</a>
           </li>
 
            <li>
