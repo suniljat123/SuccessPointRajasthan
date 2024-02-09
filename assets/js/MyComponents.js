@@ -154,7 +154,7 @@ class Navbar extends HTMLElement {
     <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="./"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
+        <a href="index.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="./" class="logo"><img src="assets/img/SuccessPointRajasthanlogo.png" alt="" class="img-fluid"></a>-->
@@ -164,9 +164,12 @@ class Navbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
   
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
-           
+          
+          <li style="display:none;" id="drpDownProfileBtn" >
+            <a class="nav-link scrollto" href="profile.html">Profile</a>
+          </li>
           <li>
-            <a class="nav-link scrollto" href="./">Home</a>
+            <a class="nav-link scrollto" href="index.html">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
@@ -179,15 +182,21 @@ class Navbar extends HTMLElement {
             <a class="nav-link scrollto" href="Hindi-Steno.html">Hindi Steno</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">Result</a>
+            <a class="nav-link scrollto" href="Result.html">Result</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Pricing.html">Pricing</a>
           </li>
            
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <li>
-            <a class="getstarted scrollto RequestDemo" href="#contact" >Demo</a>
+          <li id="mainProfileBtn" class=".profileIconClass" >
+          <a class="scrollto RequestDemo" href="Profile.html" style="
+          border-width: 0px;
+      "><img class="profileIconClass" src="https://static.vecteezy.com/system/resources/previews/010/056/184/non_2x/people-icon-sign-symbol-design-free-png.png" style="
+          height: -9%;
+          width: 47px;
+          position: absolute;
+      "></a>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
@@ -445,12 +454,16 @@ class ContactCareerNavbar extends HTMLElement {
     this.innerHTML = `<header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="./"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
+        <a href="index.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
       </h1>
       <nav id="navbar" class="navbar">
         <ul>
+        <li>
+            <a style="display:none;" class="nav-link scrollto" id="drpDownProfileBtn" href="profile.html">Profile</a>
+          </li>
+
            <li>
-            <a class="nav-link scrollto" href="./">Home</a>
+            <a class="nav-link scrollto" href="index.html">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
@@ -463,19 +476,24 @@ class ContactCareerNavbar extends HTMLElement {
             <a class="nav-link scrollto" href="Hindi-Steno.html">Hindi Steno</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="">Result</a>
+            <a class="nav-link scrollto" href="Result.html">Result</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Pricing.html">Pricing</a>
           </li>
            
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <li>
-            <a class="getstarted scrollto RequestDemo" href="#contact" >Demo</a>
+         <li id="mainProfileBtn" class=".profileIconClass" >
+          <a class="scrollto RequestDemo" href="Profile.html" style="
+          border-width: 0px;
+      "><img class="profileIconClass" src="https://static.vecteezy.com/system/resources/previews/010/056/184/non_2x/people-icon-sign-symbol-design-free-png.png" style="
+          height: -9%;
+          width: 47px;
+          position: absolute;
+      "></a>
           </li>
-        
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
       </nav>
       <!-- .navbar -->
     </div>

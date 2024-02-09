@@ -235,6 +235,14 @@
     return window.pageYOffset || document.documentElement.scrollTop;
   }
 
+  if(screen.availWidth<=991){
+    console.log('size in mobile');
+    var part1 = document.getElementById('drpDownProfileBtn');
+          var part2 = document.getElementById('mainProfileBtn');
+            part1.style.display = 'block';
+            part2.style.display='none';
+  }
+
   /**
    * Porfolio isotope and filter
    */
