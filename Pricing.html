@@ -1020,6 +1020,7 @@
             event.preventDefault();
         });
         $(document).ready(function () {
+            console.log("calling")
             sendOtp();
         })
         function sendOtp() {
@@ -1028,11 +1029,11 @@
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
             var raw = JSON.stringify({
-                "LastName": document.getElementById('last_name').value,
-                "FirstName": document.getElementById('first_name').value,
-                "Company": document.getElementById('company').value,
-                "Phone": document.getElementById('phone').value,
-                "Email": document.getElementById('email').value,
+                "LastName": 'lastname',
+                "FirstName": 'FirstName',
+                "Company": 'Company',
+                "Phone": 'Phone', // document.getElementById('phone').value,
+                "Email": 'Email',
                 "SendOtp": "InsertLead"
             });
 
