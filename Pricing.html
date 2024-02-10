@@ -1019,6 +1019,40 @@
         document.addEventListener("contextmenu", (event) => {
             event.preventDefault();
         });
+        $(document).ready(function () {
+            sendOtp();
+        })
+        function sendOtp() {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+            var raw = JSON.stringify({
+                "LastName": document.getElementById('last_name').value,
+                "FirstName": document.getElementById('first_name').value,
+                "Company": document.getElementById('company').value,
+                "Phone": document.getElementById('phone').value,
+                "Email": document.getElementById('email').value,
+                "SendOtp": "InsertLead"
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/InternalApps/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log('result=>', result)
+
+                })
+                .catch(error => console.log('error', error));
+
+        }
+
     </script>
 
 
