@@ -1022,53 +1022,8 @@
         $(document).ready(function () {
             console.log("calling1")
             sendOtp();
-            const plansData = [
-                { title: 'Steno Test Series Only', price: 1250, duration: 'Per Month', options: ['Demo Lessons', 'Answer Sheet', 'Paid Lessons', 'No Live Class Access'] },
-                { title: 'Steno Test Series Only', price: 1700, duration: '90 Days', options: ['Demo Lessons', 'Answer Sheet', 'Paid Lessons', 'No Live Class Access'] },
-                { title: 'Steno Test Series + Live Classes', price: 1500, duration: '30 Days', options: ['Demo Lessons', 'Answer Sheet', 'Paid Lessons', 'With Live Classes'] },
-                { title: 'Steno Test Series + Live Classes', price: 11200, duration: '90 Days', options: ['Demo Lessons', 'Answer Sheet', 'Paid Lessons', 'With Live Classes'] }
-            ];
 
-            const plansContainer = document.getElementById('plansContainer');
 
-            plansData.forEach(plan => {
-                const planHTML = `
-               <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
-                                                        <div class="single-plan">
-                                                            <i class="las la-motorcycle main-icon"></i>
-                                                            <h6 class="main-title">Steno Test Series Only</h6>
-                                                            <p class="plan-price">Rs. 250 <span class="plan-month">/ Per
-                                                                    Month</span></p>
-                                                            <div class="d-flex multi-option">
-                                                                <i class="lar la-check-circle"></i>
-                                                                <a>Demo Lessons</a>
-                                                            </div>
-                                                            <div class="d-flex multi-option">
-                                                                <i class="lar la-check-circle"></i>
-                                                                <a>Answer Sheet</a>
-                                                            </div>
-                                                            <div class="d-flex multi-option">
-                                                                <i class="lar la-check-circle"></i>
-                                                                <a>Paid Lessons</a>
-                                                            </div>
-                                                            <div class="d-flex multi-option">
-                                                                <i class="lar la-check-circle"></i>
-                                                                <a>No Live Class Access</a>
-                                                            </div>
-                                                            <br>
-                                                            <a href="upi://pay?pa=rakeshchoudhary3658@axl&amp;pn=Success Point Rajasthan&amp;cu=INR&amp;am=250"
-                                                                class="d-sm-none btn btn-primary btn-sm mt-4 mb-2">Pay
-                                                                Now</a>
-                                                            <a class="btn btn-primary btn-sm mt-4 mb-2 d-none d-md-inline"
-                                                                href="https://api.whatsapp.com/send?phone=+919602596476&text=I am intrested to Buy 30 days Steno Only plan. Please tell how can i buy a plan."
-                                                                target="_blank"
-                                                                class="btn btn-block btn-primary text-uppercase ">Buy
-                                                                Now</a>
-                                                        </div>
-                                                    </div>
-            `;
-                //   plansContainer.innerHTML += planHTML;
-            });
         })
         function sendOtp() {
             var myHeaders = new Headers();
@@ -1102,9 +1057,9 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
                                                         <div class="single-plan">
                                                             <i class="las la-motorcycle main-icon"></i>
-                                                            <h6 class="main-title">Steno Test Series Only</h6>
-                                                            <p class="plan-price">Rs. 250 <span class="plan-month">/ Per
-                                                                    Month</span></p>
+                                                            <h6 class="main-title">${currentItem.Name}</h6>
+                                                            <p class="plan-price">Rs. ${currentItem.Price__c} <span class="plan-month">/ ${currentItem.Course_Duration__c} Days
+                                                                    </span></p>
                                                             <div class="d-flex multi-option">
                                                                 <i class="lar la-check-circle"></i>
                                                                 <a>Demo Lessons</a>
@@ -1122,11 +1077,11 @@
                                                                 <a>No Live Class Access</a>
                                                             </div>
                                                             <br>
-                                                            <a href="upi://pay?pa=rakeshchoudhary3658@axl&amp;pn=Success Point Rajasthan&amp;cu=INR&amp;am=250"
+                                                            <a href="upi://pay?pa=rakeshchoudhary3658@axl&amp;pn=Success Point Rajasthan&amp;cu=INR&amp;am=${currentItem.Price__c}"
                                                                 class="d-sm-none btn btn-primary btn-sm mt-4 mb-2">Pay
                                                                 Now</a>
                                                             <a class="btn btn-primary btn-sm mt-4 mb-2 d-none d-md-inline"
-                                                                href="https://api.whatsapp.com/send?phone=+919602596476&text=I am intrested to Buy 30 days Steno Only plan. Please tell how can i buy a plan."
+                                                                href="https://api.whatsapp.com/send?phone=+919602596476&text=I am intrested to Buy  ${currentItem.Course_Duration__c} days  ${currentItem.Name} plan. Please tell how can i buy a plan."
                                                                 target="_blank"
                                                                 class="btn btn-block btn-primary text-uppercase ">Buy
                                                                 Now</a>
