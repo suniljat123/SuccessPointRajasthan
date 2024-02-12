@@ -45,7 +45,7 @@
     <!-- ======= Hero Section ======= -->
 
     <div class="section-title" style="padding-left: 4rem; padding-top: 10rem">
-        <h2>User Result</h2>
+        <h2>Your Result</h2>
         <p>Scorecard</p>
     </div>
     <div class="body-container">
@@ -1194,6 +1194,16 @@
                     result = JSON.parse(result);
                     console.log(result);
                     result.forEach((currentItem, idx) => {
+                        const dateString = currentItem.CreatedDate;
+                        const dateObject = new Date(dateString);
+
+                        const formattedDate = dateObject.toLocaleDateString("en-US", {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                        });
+
+                        console.log(formattedDate);
                         const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>${idx + 1}</td>
