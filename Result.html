@@ -1191,6 +1191,7 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
+                    result = json.parse(result);
                     console.log('result=>', result)
                     result.forEach(currentItem => {
                         const tableHTML = `
