@@ -1168,7 +1168,7 @@
     <script>
         $(document).ready(function () {
             document.getElementById('header').style.backgroundColor = '#38434b'
-            console.log("calling11")
+            console.log("calling1")
             getResult();
         })
 
@@ -1189,7 +1189,7 @@
             };
             const TableData = document.getElementById('TableData');
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
-                .then(response => response.json())
+                .then(response => json.parse(response))
                 .then(result => {
                     result = json.parse(result);
                     console.log('result=>', result)
