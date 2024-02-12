@@ -795,189 +795,61 @@
                     <!-- Our price plan section -->
                     <div class="plans-section" id="planTableId" style="padding:21px;">
 
-                        <!-- -------------------------- TYping Modal Code is Here   -------------------- -->
                         <!-- Main Body Starts -->
                         <div class="page-content">
                             <!-- "DataTables" page styles, specific to this page for demo only -->
-                          <style>
-                          .body-container {
-                          /* so that sticky thead works */
-                          overflow: visible;
-                          }
-                          
-                          thead.is-stuck>tr>th {
-                          border-bottom: 1px solid #e8e8e8 !important;
-                          }
-                          
-                          </style>
-                     
-                          
-                          
-                                      <div class="card bcard h-auto" style="overflow-x:scroll!important;">
-                                          <table id="datatable" class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
-                                            <!-- add `collapsed` by default ... it will be removed by default -->
-                                            <!-- thead with .sticky-nav -->
-                                            <thead class="text-secondary-m1 text-uppercase text-85">
-                                              <tr>
-                                                <th class="bgc-yellow-l3">S.No.</th>
-                                                <th class="bgc-yellow-l3">Date</th>
-                                                <th class="bgc-yellow-l3">Test  Name</th>
-                                                <th class="bgc-yellow-l3">Total Words</th>
-                                                <th class="bgc-yellow-l3">Total Typed</th>
-                                                <th class="bgc-yellow-l3">Incorrect</th>
-                                                <th class="bgc-yellow-l3">Mark</th>
-                                                <th class="bgc-yellow-l3">Rank</th>
-                                                <th class="bgc-yellow-l3">Answer Sheet</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody class="pos-rel">
-                                                                 <tr class="d-style bgc-h-default-l4">				
-                                                <td>1</td>
-                                                <td>28-Jan-2024</td>
-                                                <td>Test 23 Jan 70 wpm legal</td>
-                                                <td>555</td>
-                                                <td>0</td>
-                                                <td>555</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              87                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()" class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=7e61a038ea6e300c5eeefd1c7b003dc8" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>2</td>
-                                                <td>28-Jan-2024</td>
-                                                <td>Test 26 Jan 70 wpm legal</td>
-                                                <td>558</td>
-                                                <td>0</td>
-                                                <td>556</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              106                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()" class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=c1924eb87cb273036acc4250979e0d54" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>3</td>
-                                                <td>26-Jan-2024</td>
-                                                <td>Test 26 Jan 80 wpm legal</td>
-                                                <td>638</td>
-                                                <td>0</td>
-                                                <td>636</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              68                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=c9216cf8071022d23a7cf5ae28c58e9d" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>4</td>
-                                                <td>30-Jan-2024</td>
-                                                <td>Test 30 Jan 70 wpm legal</td>
-                                                <td>552</td>
-                                                <td>0</td>
-                                                <td>552</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              146                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=e67b62e44b1e02a7a6ac62824790aef8" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>5</td>
-                                                <td>31-Jan-2024</td>
-                                                <td>Test 30 Jan 90 wpm legal</td>
-                                                <td>695</td>
-                                                <td>0</td>
-                                                <td>695</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              24                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=b58df0bc3c3de12cb8c5641c554c1dd1" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>6</td>
-                                                <td>31-Jan-2024</td>
-                                                <td>Test 31 Jan 70 wpmlegal</td>
-                                                <td>560</td>
-                                                <td>0</td>
-                                                <td>559</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              164                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=e6eaf149fc2dce231783a9126d40ecbb" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>7</td>
-                                                <td>02-Feb-2024</td>
-                                                <td>Test 02 Feb 80 wpm legal</td>
-                                                <td>648</td>
-                                                <td>0</td>
-                                                <td>646</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              72                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=60d0762ba28c0e3824b183e4be36dcb7" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                  <tr class="d-style bgc-h-default-l4">				
-                                                <td>8</td>
-                                                <td>09-Feb-2024</td>
-                                                <td>Test 05 Feb 80 wpm legal</td>
-                                                <td>630</td>
-                                                <td>0</td>
-                                                <td>628</td>                      
-                                                <td>0  </td>
-                                                <td>
-                                              105                      </td>
-                                                 <td style="    justify-content: center;
-    display: flex;">
-                                                 <a  onclick="handleShowbtn()"  class="btn btn-xs btn-info"><i class="fas fa-list"></i>  Show</a>
-                                                 <!-- <a href="result_comp.php?test_id=10309c857c6dcd2c0322867b20c2a424" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
-                                                </td>
-                                              </tr>
-                                                                </tbody>
-                                          </table>
-                          
-                                      </div>
-                                   
-                          
-                              <!-- include common vendor scripts used in demo pages -->
-                              <script src="js/jquery.min.js"></script>
-                          
-                            
-                          
-                                      
-                          
-                                      
-                                      </div>
+                            <style>
+                                .body-container {
+                                    /* so that sticky thead works */
+                                    overflow: visible;
+                                }
+
+                                thead.is-stuck>tr>th {
+                                    border-bottom: 1px solid #e8e8e8 !important;
+                                }
+                            </style>
+
+
+
+                            <div class="card bcard h-auto" style="overflow-x:scroll!important;">
+                                <table id="datatable"
+                                    class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
+                                    <!-- add `collapsed` by default ... it will be removed by default -->
+                                    <!-- thead with .sticky-nav -->
+                                    <thead class="text-secondary-m1 text-uppercase text-85">
+                                        <tr>
+                                            <th class="bgc-yellow-l3">S.No.</th>
+                                            <th class="bgc-yellow-l3">Date</th>
+                                            <th class="bgc-yellow-l3">Test Name</th>
+                                            <th class="bgc-yellow-l3">Total Words</th>
+                                            <th class="bgc-yellow-l3">Total Typed</th>
+                                            <th class="bgc-yellow-l3">Incorrect</th>
+                                            <th class="bgc-yellow-l3">Mark</th>
+                                            <th class="bgc-yellow-l3">Rank</th>
+                                            <th class="bgc-yellow-l3">Answer Sheet</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="pos-rel" id="TableData">
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+                            <!-- include common vendor scripts used in demo pages -->
+                            <script src="js/jquery.min.js"></script>
+
+
+
+
+
+
+                        </div>
 
 
                     </div>
-                 
+
                     <!-- End of result table code -->
                     <div id="showMoreSection" style="display:none;" class="page-content">
                         <button width="2px" style="    background-color: #ff4a17;
@@ -985,168 +857,193 @@
                         border-width: 0px;
                         height: 31px;
                         border-radius: 5px;
-                        margin-left: 80vw;" onclick="handleGoBack()">Go Back</button>      
+                        margin-left: 80vw;" onclick="handleGoBack()">Go Back</button>
+
                         <head>
-                         <link rel="stylesheet" href="js/custom.css">
-                        <style>
-                          .timer {
-                            width: 100px;
-                            font-size: 2.5em;
-                            text-align: center;
-                        }
-                        @font-face {
-                            font-family: Hindi;
-                            src: url(font/Hindi.ttf);
-                        }
-                        @font-face {
-                          font-family: 'Hindi';
-                          src: url('font/Hindi.ttf')  format('truetype');
-                          font-weight: normal;
-                          font-style: normal;
-                        }
-                        .hindiFont{
-                        font-family:'Hindi';  
-                        font-size: 22px!important;
-                        }
-                        textarea
-                        {
-                          border:1px solid #999999;
-                          width:100%;
-                          margin:5px 0;
-                          padding:3px;
-                           font-size: 25px!important;
-                        }
-                        </style>
-                        <script src="js/ajax.js"></script>
-                        <title>Answer Sheet | Gurukul Steno Jodhpur</title>
+                            <link rel="stylesheet" href="js/custom.css">
+                            <style>
+                                .timer {
+                                    width: 100px;
+                                    font-size: 2.5em;
+                                    text-align: center;
+                                }
+
+                                @font-face {
+                                    font-family: Hindi;
+                                    src: url(font/Hindi.ttf);
+                                }
+
+                                @font-face {
+                                    font-family: 'Hindi';
+                                    src: url('font/Hindi.ttf') format('truetype');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                .hindiFont {
+                                    font-family: 'Hindi';
+                                    font-size: 22px !important;
+                                }
+
+                                textarea {
+                                    border: 1px solid #999999;
+                                    width: 100%;
+                                    margin: 5px 0;
+                                    padding: 3px;
+                                    font-size: 25px !important;
+                                }
+                            </style>
+                            <script src="js/ajax.js"></script>
+                            <title>Answer Sheet | Success Point Rajasthan</title>
                         </head>
-                            <!-- Header -->
-                            <center>
-                                    <h4>Gurukul Steno Jodhpur</h4></center>
-                                    
+                        <!-- Header -->
+                        <center>
+                            <h4>Success Point Rajasthan</h4>
+                        </center>
+
                         <div class="container border">
-                          <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Roll Number: GSJ3210</span>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Roll Number: GSJ3210</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Student Name: Rakesh Choudhary </span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Test Name: Test 23 Jan 70 wpm legal</span>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Student Name: Rakesh Choudhary </span>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Test Speed: (Hindi-70WPM)</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Duration: 55 Mins</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <span>Submitted On: 2024-01-28 08:12:46</span>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Test Name: Test 23 Jan 70 wpm legal</span>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Test Speed:  (Hindi-70WPM)</span>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Duration: 55 Mins</span>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6">
-                              <span>Submitted On: 2024-01-28 08:12:46</span>
-                            </div>
-                          </div>
                         </div>
                         <br>
-                          <style>
-                        skip-tag {
-                            color: red!important;
-                        }
-                        del {
-                            color: green!important;
-                        }
-                        ins {
-                            color: red!important;
-                        }
-                        ins2 {
-                            color: red!important;
-                        }
-                        
-                        
-                        ins::before {
-                            content: "¿";
-                        }
-                        ins::after {
-                         content: "À";
-                        }
-                        ins2::before {
-                            content: "¿";
-                        }
-                        ins2::after {
-                        content: "À ";
-                        }
-                        del::before {
-                           content: "¿";
-                        }
-                        del::after {
-                        content: "À";
-                        }
-                        skip-tag::before {
-                           content: "¿";
-                        }
-                        skip-tag::after {
-                        content: "À";
-                        }
-                        p{
-                           white-space:pre-wrap!important;
-                        }
-                        .containerbackground {
-                            text-align: center;
-                            justify-content: justify!important;
-                            margin: 0;
-                            left:0;
-                            right:0;
-                            position: absolute;
-                            top: 50%;
-                            z-index: 2;
-                            transform: rotate(300deg);
-                            -webkit-transform: rotate(300deg);
-                            color: #c6afaf61;
-                        }
-                            </style>
-                            <!-- Page content -->
-                            <div class="container-fluid mt-0">
-                            
+                        <style>
+                            skip-tag {
+                                color: red !important;
+                            }
+
+                            del {
+                                color: green !important;
+                            }
+
+                            ins {
+                                color: red !important;
+                            }
+
+                            ins2 {
+                                color: red !important;
+                            }
+
+
+                            ins::before {
+                                content: "¿";
+                            }
+
+                            ins::after {
+                                content: "À";
+                            }
+
+                            ins2::before {
+                                content: "¿";
+                            }
+
+                            ins2::after {
+                                content: "À ";
+                            }
+
+                            del::before {
+                                content: "¿";
+                            }
+
+                            del::after {
+                                content: "À";
+                            }
+
+                            skip-tag::before {
+                                content: "¿";
+                            }
+
+                            skip-tag::after {
+                                content: "À";
+                            }
+
+                            p {
+                                white-space: pre-wrap !important;
+                            }
+
+                            .containerbackground {
+                                text-align: center;
+                                justify-content: justify !important;
+                                margin: 0;
+                                left: 0;
+                                right: 0;
+                                position: absolute;
+                                top: 50%;
+                                z-index: 2;
+                                transform: rotate(300deg);
+                                -webkit-transform: rotate(300deg);
+                                color: #c6afaf61;
+                            }
+                        </style>
+                        <!-- Page content -->
+                        <div class="container-fluid mt-0">
+
                             <center>
                                 <div class="mt-0">
-                                    <span class="badge bgc-white border-2 brc-blue text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-blue-l3" style="    border: 2px solid #3e89e4;
+                                    <span
+                                        class="badge bgc-white border-2 brc-blue text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-blue-l3"
+                                        style="    border: 2px solid #3e89e4;
     color: black;
     padding: .275rem .5rem;
     font-size: 17px;
     line-height: 2.1;
     height: 2.75rem;
     width: 141px;
-    border-radius: 38px;margin-right: 5px;"  >Total: 555</span>
-                                    <span class="badge bgc-white border-2 brc-green-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-green-l4" style="    border: 2px solid #57c19b;
+    border-radius: 38px;margin-right: 5px;">Total: 555</span>
+                                    <span
+                                        class="badge bgc-white border-2 brc-green-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-green-l4"
+                                        style="    border: 2px solid #57c19b;
     color: black;
     padding: .275rem .5rem;
     font-size: 17px;
     line-height: 2.1;
     height: 2.75rem;
     width: 141px;
-    border-radius: 38px;margin-right: 5px;"  >Typed: 0</span>
-                                    <span class="badge bgc-white border-2 brc-red-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-red-l3" style="    border: 2px solid red;
+    border-radius: 38px;margin-right: 5px;">Typed: 0</span>
+                                    <span
+                                        class="badge bgc-white border-2 brc-red-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-red-l3"
+                                        style="    border: 2px solid red;
     color: black;
     padding: .275rem .5rem;
     font-size: 17px;
     line-height: 2.1;
     height: 2.75rem;
     width: 141px;
-    border-radius: 38px;margin-right: 5px;"  >Incorrect: 555</span>
-                                    <span class="badge bgc-white border-2 brc-blue-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-blue-l3" style="    border: 2px solid #5b9be8;
+    border-radius: 38px;margin-right: 5px;">Incorrect: 555</span>
+                                    <span
+                                        class="badge bgc-white border-2 brc-blue-m1 text-dark-tp3 badge-pill badge-lg pb-4 px-3 bgc-h-blue-l3"
+                                        style="    border: 2px solid #5b9be8;
     color: black;
     padding: .275rem .5rem;
     font-size: 17px;
     line-height: 2.1;
     height: 2.75rem;
     width: 141px;
-    border-radius: 38px;margin-right: 5px;"  >Marks: 0</span>
+    border-radius: 38px;margin-right: 5px;">Marks: 0</span>
                                 </div>
                             </center>
-                                        
+
                             <br>
-                                    
+
                             <div style="padding:2rem;" class="row">
                                 <div style="    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
                                 border-radius: .5rem;
@@ -1154,32 +1051,80 @@
                                 background-color: #fff;
                                 position: relative;" class="col-12 p-0 pos-rel text-justify">
                                     <div class="ccard h-100 d-flex flex-column mx-2 px-2 py-3">
-                                      <div class="d-flex text-justify">
-                                        <div class="flex-grow-1" style="position: relative;">				   
-                                        <!-- use this line as watermark if needed <div class="containerbackground h1">gurukulsteno.com</div>  -->
-                                        <p class="hindiFont result-text scrollable-result-box"><skip-tag>izfroknh</skip-tag> <skip-tag>dk ,d ckM+k Hkw[kaM la[;k 149] okds xzke iky] rglhy o ftyk tks/kiqj esa ckykth eafnj ds lkeus [kljk la[;k 234 dh ckykth uxj ;kstuk esa vk;k gqvk gSA mDr Hkw[kaM ds iwohZ Hkkx esa edku cuk gqvk gS vkSj 'ks"k Hkkx [kkyh iM+k gqvk gSA izfroknh mDr ckM+s Hkw[kaM ds ,d Hkkx dks cspuk pkgrk Fkk] ftl gsrq okfnuh ds ifr ls laidZ fd;k ,oa mDr mYysf[kr Hkw[kaM ds iwohZ Hkkx] ftl ij vkoklh;uqek edku cuk gqvk gS] dks cspus dh bPNk tkfgj dhA okfnuh o mlds ifr dks edku ilan vk;k] rc izfrokfnuh o okfnuh ds e/; jtkeanh ls 13]61]000@&amp; #i;s esa mDr Hkw[kaM dk iwohZ Hkkx uhao ds vuqlkj cuki 160 oxZxt cspus dk fyf[kr bdjkjukek fnukad 31-03-2010 dks fu"ikfnr fd;k x;kA mlh jkst xokgksa ds le{k okfnuh ds ifr us isVs 11]000@&amp; #i;s jksdM+ o 5]000@&amp; #i;s dk pSd fnukad 31-03-2010 dk izfroknh dks fn;kA oknxzLr tk;nkn ftls fnukad 31-03-2010 dks cspus dk bdjkj gqvkA okfnuh bdjkjukes dh ikyuk gsrq lnSo rS;kj o rRij gS rFkk rS;kj o rRij jgsxhA okfnuh dks ;g Kkr gqvk fd izfroknh bdjkjukes ckcr lkbZ dh jde ysus ds ckotwn mDr laifÙk vf/kd dher ij fdlh vU; dks xqIr :i ls cspus dh fQjkd esa gS] rc okfnuh o mlds ifr izfroknh ls feys rFkk cdk;k jde ysdj cspkuukek fu"ikfnr djus ds fy, dgkA izfroknh us okfnuh o mlds ifr dks vk'oklu fn;k fd og mDr Hkw[kaM fdlh vU; dks vf/kd dher ij ugha cspsxkA bdjkjukek cspku dh 'krksZa ds vuqlkj izfroknh dks fnukad 30-06-2010 ls iwoZ cdk;k jde ysdj cspkuukek okfnuh ds gd esa iathc) djokuk Fkk] ijarq izfroknh }kjk bl ckcr dksbZ larks"ktud dk;Zokgh ugha djus ij okfnuh dks izfroknh dh uh;r ij 'kd gqvk] rc okfnuh us vius vf/koDrk ds ekQZ~r fnukad 23-06-2010 dks izfroknh dks ,d jftLVMZ uksfVl izfroknh ds fuokl LFkku ij o dk;kZy; ds nks lgh irksa ij tfj, jftLVMZ ,Mh fHktok;kA
-                        okLro esa bdjkjukek izfroknh }kjk rgjhj o rdehy fd;k gqvk ugha gS ,oa u gh LVkEi izfroknh }kjk [kjhn fd;k gqvk gSA fof/k ds vuqlkj rFkkdfFkr bdjkjukes ds tfj, 61]000@&amp; #i;s nsus ds rF; fy[ks gSa] ftl ij LVkEi M~;wVh Hkh fof/kd :i ls ns; ugha gSA vr% rFkkdfFkr bdjkjukek lk{; esa xzkg~; ugha gS ,oa u gh mlds vk/kkj ij okfnuh dk okn pyus ;ksX; gSA mDr Hkw[kaM dk ,dek= ekfyd o dkfct izfroknh ugha gS vkSj ftls cspku djus dk izfroknh dks dksbZ vf/kdkj ugha gSA okfnuh us okni= esa mYysf[kr bl rF; dks xyr crk;k fd izfroknh us okfnuh ds ifr ls laidZ dj oknxzLr Hkw[kaM ij iwohZ Hkkx esa cus vkoklh; edku dks cspus dh bPNk tkfgj dh gksA izfroknh ds lkFk okfnuh dk bdjkj ugha gqvk vkSj u gh dksbZ bdjkjukek fyf[kr esa rgjhj o rdehy gqvkA rFkkdfFkr bdjkjukek QthZ o cukoVh gS o bdjkjukek ij izfroknh ds gLrk{kj Hkh ugha gSaA oknh i{k }kjk izfroknh dks dksbZ jde jksdM+ ;k pSd }kjk lkbZ isVs ugha nh xbZ gSA tc cspku bdjkj gh ugha gqvk rks lkbZ isVs jde nsus dk iz'u ugha mRiUu ugha gksrkA okni= esa fojks/kkHkklh rF; vafdr fd, x, gSa] ftlesa ;g mYysf[kr fd;k x;k gS fd tk;nkn iwoZ esa fdlh vU; O;fDr ;k laLFkk dks foØ; ca/kd ugha fd;k gSA ;fn izfroknh ds }kjk mDr vof/k esa iathc) foØ; foys[k okfnuh ds i{k esa fu"ikfnr djok;k tkrk gSA
-                        </skip-tag></p>			   
-                                       </div>
-                                      </div>
+                                        <div class="d-flex text-justify">
+                                            <div class="flex-grow-1" style="position: relative;">
+                                                <!-- use this line as watermark if needed <div class="containerbackground h1">gurukulsteno.com</div>  -->
+                                                <p class="hindiFont result-text scrollable-result-box">
+                                                    <skip-tag>izfroknh</skip-tag> <skip-tag>dk ,d ckM+k Hkw[kaM la[;k
+                                                        149] okds xzke iky] rglhy o ftyk tks/kiqj esa ckykth eafnj ds
+                                                        lkeus [kljk la[;k 234 dh ckykth uxj ;kstuk esa vk;k gqvk gSA mDr
+                                                        Hkw[kaM ds iwohZ Hkkx esa edku cuk gqvk gS vkSj 'ks"k Hkkx [kkyh
+                                                        iM+k gqvk gSA izfroknh mDr ckM+s Hkw[kaM ds ,d Hkkx dks cspuk
+                                                        pkgrk Fkk] ftl gsrq okfnuh ds ifr ls laidZ fd;k ,oa mDr mYysf[kr
+                                                        Hkw[kaM ds iwohZ Hkkx] ftl ij vkoklh;uqek edku cuk gqvk gS] dks
+                                                        cspus dh bPNk tkfgj dhA okfnuh o mlds ifr dks edku ilan vk;k] rc
+                                                        izfrokfnuh o okfnuh ds e/; jtkeanh ls 13]61]000@&amp; #i;s esa
+                                                        mDr Hkw[kaM dk iwohZ Hkkx uhao ds vuqlkj cuki 160 oxZxt cspus dk
+                                                        fyf[kr bdjkjukek fnukad 31-03-2010 dks fu"ikfnr fd;k x;kA mlh
+                                                        jkst xokgksa ds le{k okfnuh ds ifr us isVs 11]000@&amp; #i;s
+                                                        jksdM+ o 5]000@&amp; #i;s dk pSd fnukad 31-03-2010 dk izfroknh
+                                                        dks fn;kA oknxzLr tk;nkn ftls fnukad 31-03-2010 dks cspus dk
+                                                        bdjkj gqvkA okfnuh bdjkjukes dh ikyuk gsrq lnSo rS;kj o rRij gS
+                                                        rFkk rS;kj o rRij jgsxhA okfnuh dks ;g Kkr gqvk fd izfroknh
+                                                        bdjkjukes ckcr lkbZ dh jde ysus ds ckotwn mDr laifÙk vf/kd dher
+                                                        ij fdlh vU; dks xqIr :i ls cspus dh fQjkd esa gS] rc okfnuh o
+                                                        mlds ifr izfroknh ls feys rFkk cdk;k jde ysdj cspkuukek fu"ikfnr
+                                                        djus ds fy, dgkA izfroknh us okfnuh o mlds ifr dks vk'oklu fn;k
+                                                        fd og mDr Hkw[kaM fdlh vU; dks vf/kd dher ij ugha cspsxkA
+                                                        bdjkjukek cspku dh 'krksZa ds vuqlkj izfroknh dks fnukad
+                                                        30-06-2010 ls iwoZ cdk;k jde ysdj cspkuukek okfnuh ds gd esa
+                                                        iathc) djokuk Fkk] ijarq izfroknh }kjk bl ckcr dksbZ larks"ktud
+                                                        dk;Zokgh ugha djus ij okfnuh dks izfroknh dh uh;r ij 'kd gqvk]
+                                                        rc okfnuh us vius vf/koDrk ds ekQZ~r fnukad 23-06-2010 dks
+                                                        izfroknh dks ,d jftLVMZ uksfVl izfroknh ds fuokl LFkku ij o
+                                                        dk;kZy; ds nks lgh irksa ij tfj, jftLVMZ ,Mh fHktok;kA
+                                                        okLro esa bdjkjukek izfroknh }kjk rgjhj o rdehy fd;k gqvk ugha
+                                                        gS ,oa u gh LVkEi izfroknh }kjk [kjhn fd;k gqvk gSA fof/k ds
+                                                        vuqlkj rFkkdfFkr bdjkjukes ds tfj, 61]000@&amp; #i;s nsus ds rF;
+                                                        fy[ks gSa] ftl ij LVkEi M~;wVh Hkh fof/kd :i ls ns; ugha gSA vr%
+                                                        rFkkdfFkr bdjkjukek lk{; esa xzkg~; ugha gS ,oa u gh mlds vk/kkj
+                                                        ij okfnuh dk okn pyus ;ksX; gSA mDr Hkw[kaM dk ,dek= ekfyd o
+                                                        dkfct izfroknh ugha gS vkSj ftls cspku djus dk izfroknh dks
+                                                        dksbZ vf/kdkj ugha gSA okfnuh us okni= esa mYysf[kr bl rF; dks
+                                                        xyr crk;k fd izfroknh us okfnuh ds ifr ls laidZ dj oknxzLr
+                                                        Hkw[kaM ij iwohZ Hkkx esa cus vkoklh; edku dks cspus dh bPNk
+                                                        tkfgj dh gksA izfroknh ds lkFk okfnuh dk bdjkj ugha gqvk vkSj u
+                                                        gh dksbZ bdjkjukek fyf[kr esa rgjhj o rdehy gqvkA rFkkdfFkr
+                                                        bdjkjukek QthZ o cukoVh gS o bdjkjukek ij izfroknh ds gLrk{kj
+                                                        Hkh ugha gSaA oknh i{k }kjk izfroknh dks dksbZ jde jksdM+ ;k pSd
+                                                        }kjk lkbZ isVs ugha nh xbZ gSA tc cspku bdjkj gh ugha gqvk rks
+                                                        lkbZ isVs jde nsus dk iz'u ugha mRiUu ugha gksrkA okni= esa
+                                                        fojks/kkHkklh rF; vafdr fd, x, gSa] ftlesa ;g mYysf[kr fd;k x;k
+                                                        gS fd tk;nkn iwoZ esa fdlh vU; O;fDr ;k laLFkk dks foØ; ca/kd
+                                                        ugha fd;k gSA ;fn izfroknh ds }kjk mDr vof/k esa iathc) foØ;
+                                                        foys[k okfnuh ds i{k esa fu"ikfnr djok;k tkrk gSA
+                                                    </skip-tag>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div><!-- /.ccard -->
                                 </div>
                             </div>
-                            </div>	
+                        </div>
                         <script>
-                        if ( window.history.replaceState ) {
-                          window.history.replaceState( null, null, window.location.href );
-                        }
-                        </script> 
-                        
-                                    
-                                    </div>
-</div>                        
+                            if (window.history.replaceState) {
+                                window.history.replaceState(null, null, window.location.href);
+                            }
+                        </script>
 
 
+                    </div>
                 </div>
+
+
             </div>
-        </div><!-- .modal-aside -->
+        </div>
+    </div><!-- .modal-aside -->
     </div>
     </div>
     <app-whatsapp></app-whatsapp>
@@ -1188,23 +1133,23 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-     <script>
-        function handleShowbtn(){
+    <script>
+        function handleShowbtn() {
             console.log('btn start clicked');
             var part1 = document.getElementById('planTableId');
-        
-          var part2 = document.getElementById('showMoreSection');
+
+            var part2 = document.getElementById('showMoreSection');
             part1.style.display = 'none';
-            part2.style.display='inline-block';
+            part2.style.display = 'inline-block';
         }
-        function handleGoBack(){
+        function handleGoBack() {
             console.log('btn start clicked');
             var part1 = document.getElementById('planTableId');
             var part2 = document.getElementById('showMoreSection');
-            part1.style.display =  'block';
-            part2.style.display='none';
+            part1.style.display = 'block';
+            part2.style.display = 'none';
         }
-     </script>       
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -1223,7 +1168,58 @@
     <script>
         $(document).ready(function () {
             document.getElementById('header').style.backgroundColor = '#38434b'
+            console.log("calling1")
+            getResult();
         })
+
+        function getResult() {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+            var raw = JSON.stringify({
+                "getResult": "getResult"
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            const TableData = document.getElementById('TableData');
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log('result=>', result)
+                    result.forEach(currentItem => {
+                        const tableHTML = `
+                        <tr class="d-style bgc-h-default-l4">
+                                            <td>8</td>
+                                            <td>09-Feb-2024</td>
+                                            <td>Test 05 Feb 80 wpm legal</td>
+                                            <td>630</td>
+                                            <td>0</td>
+                                            <td>628</td>
+                                            <td>0 </td>
+                                            <td>
+                                                105 </td>
+                                            <td style="    justify-content: center;
+    display: flex;">
+                                                <a onclick="handleShowbtn()" class="btn btn-xs btn-info"><i
+                                                        class="fas fa-list"></i> Show</a>
+                                                <!-- <a href="result_comp.php?test_id=10309c857c6dcd2c0322867b20c2a424" class="btn btn-xs btn-warning"><i class="fas fa-balance-scale"></i> Compare</a> -->
+                                            </td>
+                                        </tr>
+               `;
+                        TableData.innerHTML += tableHTML;
+                    })
+
+                })
+                .catch(error => console.log('error=', error));
+
+        }
+
     </script>
     <Script>
         //Random Quotes Api URL
