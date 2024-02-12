@@ -591,7 +591,6 @@ class ShowToast extends HTMLElement {
     </div>
   </div>`;
   }
-  
 }
 class NotLoginIndexPage extends HTMLElement {
   constructor() {
@@ -669,8 +668,8 @@ class NotLoginIndexPage extends HTMLElement {
         The best online courses you'll find
       </h2>
       <div class="d-flex">
-        <!-- <a href="tel:+919999105081" style="color: #ffffff">+91 9999105081</a> -->
-        <a class="btn-get-started scrollto" href="tel:+919999105081" style="color: #ffffff">Speak To An Expert</a>
+        <!-- <a href="tel:+919999105081" style="color: #ffffff">+91 9602596476</a> -->
+        <a class="btn-get-started scrollto" href="tel:+919602596476" style="color: #ffffff">Speak To An Expert</a>
       </div>
     </div>
   </section>
@@ -693,7 +692,7 @@ class NotLoginIndexPage extends HTMLElement {
                 <div class="section-full bg-white content-inner-2" style="background-image:url(images/pattern/pt1.png);">
                     <div class="container">
               <div class="section-head text-center">
-                <h2 class="title">गुरुकुल स्टेनो एवं टाइपिंग क्लासेज, जोधपुर</h2>
+                <h2 class="title">Success Point Rajasthan Steno and Typing Classes, Ajmer.</h2>
                 <p class="ext">(स्टेनो एवं टाइपिंग हेतु सर्वश्रेष्ठ शिक्षण संस्थान)</p>
               </div>
               <div class="row align-items-center about-bx2">
@@ -703,10 +702,10 @@ class NotLoginIndexPage extends HTMLElement {
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                   <div class="about-box">
                     <h3 class="title"><center>स्टेनो एवं टाइपिंग प्रतियोगी परीक्षाओं की तैयारी हेतु सर्वश्रेष्ठ शिक्षण संस्थान</h3>
-                    <p align="justify" class="ext">"गुरुकुल स्टेनो एवं टाइपिंग क्लासेज स्टेनो एवं टाइपिंग की प्रतियोगी परीक्षाओं की तैयारी हेतु सर्वश्रेष्ठ विश्वसनीय संस्थान है। गुरुकुल ने अब तक स्टेनो एवं टाइपिंग के क्षेत्र में कई विद्यार्थियों को सफलता के शिखर तक पहुंचाने में सफल प्रयास किए हैं। साथ ही अपने ऑनलाइन प्लेटफार्म के माध्यम से स्टेनो के क्षेत्र में एक ऑनलाइन क्रांति लाकर दूर दराज तक विद्यार्थियों को सुविधाएं पहुंचाकर उन्हें सफलता का मार्ग दिखाया है। गुरुकुल अपने निरंतर परिश्रम और प्रयास से विद्यार्थियों को उनकी मंजिल तक पहुंचाने में अपना योगदान देने में अग्रणी रहा है और सदैव रहेगा।"
+                    <p align="justify" class="ext">"Success Point Rajasthan स्टेनो एवं टाइपिंग क्लासेज स्टेनो एवं टाइपिंग की प्रतियोगी परीक्षाओं की तैयारी हेतु सर्वश्रेष्ठ विश्वसनीय संस्थान है। Success Point Rajasthan ने अब तक स्टेनो एवं टाइपिंग के क्षेत्र में कई विद्यार्थियों को सफलता के शिखर तक पहुंचाने में सफल प्रयास किए हैं। साथ ही अपने ऑनलाइन प्लेटफार्म के माध्यम से स्टेनो के क्षेत्र में एक ऑनलाइन क्रांति लाकर दूर दराज तक विद्यार्थियों को सुविधाएं पहुंचाकर उन्हें सफलता का मार्ग दिखाया है। Success Point Rajasthan अपने निरंतर परिश्रम और प्रयास से विद्यार्थियों को उनकी मंजिल तक पहुंचाने में अपना योगदान देने में अग्रणी रहा है और सदैव रहेगा।"
     
     </p>
-    <p class="ext">गुरुकुल द्वारा दी जाने वाली सुविधाएं :-</p>
+    <p class="ext">Success Point Rajasthan द्वारा दी जाने वाली सुविधाएं :-</p>
                     <ul class="list-check">	
                       <li>कुशल एवं अनुभवी विशेषज्ञों द्वारा अध्यापन।</li>
                       <li>ऑनलाइन टेस्ट सीरीज द्वारा स्टेनो दक्षता मूल्यांकन।</li>								
