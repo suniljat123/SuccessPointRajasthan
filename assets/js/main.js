@@ -108,6 +108,12 @@
     onscroll(document, toggleBacktotop);
   }
 
+  // console.log('main part code started');
+  // var part1 = document.getElementById('NotLoginMainBodyId');
+  // var part2 = document.getElementById('LoginMainBodyId');
+  // // part1.style.display =  'block';
+  
+
   /**
    * Mobile nav toggle
    */

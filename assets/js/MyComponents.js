@@ -591,7 +591,749 @@ class ShowToast extends HTMLElement {
     </div>
   </div>`;
   }
+  
 }
+class NotLoginIndexPage extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = ` 
+     
+   
+    <head>
+     
+      <!-- FAVICONS ICON -->
+       
+     
+      <!-- MOBILE SPECIFIC -->
+       
+       
+      
+      <!-- STYLESHEETS -->
+      <link rel="stylesheet" type="text/css" href="assets/css/plugins.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/plugins/line-awesome/css/line-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/plugins/flaticon/flaticon.css">
+      <link rel="stylesheet" type="text/css" href="assets/plugins/themify/themify-icons.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+      <link class="skin" rel="stylesheet" type="text/css" href="assets/css/skin/skin-1.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/templete.min.css">
+      
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+      
+    .notification-bx{margin:0;padding:0;list-style:none}
+    .notification-bx li{border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:10px;margin-bottom:10px}
+    .notification-bx li a{font-weight:500;font-size:14px;line-height:28px;color:#666;padding:0 0 0 40px;display:block;font-family:Roboto;position:relative}
+    .notification-bx li a:after{content:"\f0ca";font-family:FontAwesome;color:#4582ff;position:absolute;left:4px;top:2px;font-size:22px}	
+      
+    .admitcard-bx{margin:0;padding:0;list-style:none}
+    .admitcard-bx li{border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:10px;margin-bottom:10px}
+    .admitcard-bx li a{font-weight:500;font-size:14px;line-height:28px;color:#666;padding:0 0 0 40px;display:block;font-family:Roboto;position:relative}
+    .admitcard-bx li a:after{content:"\f2c2";font-family:FontAwesome;color:#4582ff;position:absolute;left:4px;top:2px;font-size:22px}	
+      
+    .results-bx{margin:0;padding:0;list-style:none}
+    .results-bx li{border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:10px;margin-bottom:10px}
+    .results-bx li a{font-weight:500;font-size:14px;line-height:28px;color:#666;padding:0 0 0 40px;display:block;font-family:Roboto;position:relative}
+    .results-bx li a:after{content:"\f00a";font-family:FontAwesome;color:#4582ff;position:absolute;left:4px;top:2px;font-size:22px}	
+    
+    .DZ-theme-btn.DZ-bt-support-now {
+    display:none;
+    }.DZ-theme-btn.DZ-bt-buy-now  {
+    display:none;
+    }
+      </style>
+    </head>
+    <body id="bg">
+    <div class="page-wraper">
+    
+     
+        
+        <!-- header END --><style>
+    @media screen and (max-width: 576px) {
+    .slide-item-img img {
+        height: 200px;
+    }
+    }
+    </style>
+    <header>
+    <!-- Navbar section  -->
+    <app-NotLoginPageNavbar></app-NotLoginPageNavbar>
+    </header>
+    <section id="hero" style="margin-top: -20px;">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+      <div class="d-flex">
+        <img class="HeroImage" src="assets/img/SuccessPointRajasthanlogo.png" />
+      </div>
+      <!-- <h1>#YourCloudSuccessPartner</h1> --><br />
+      <h2>
+        The best online courses you'll find
+      </h2>
+      <div class="d-flex">
+        <!-- <a href="tel:+919999105081" style="color: #ffffff">+91 9999105081</a> -->
+        <a class="btn-get-started scrollto" href="tel:+919999105081" style="color: #ffffff">Speak To An Expert</a>
+      </div>
+    </div>
+  </section>
+
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <marquee><b style="font-size:2rem;">गहरे सागरों को पी लें, फिर भी होंठ न हिलें, ऐसी रीत चाहिए।</b></marquee>
+            <!-- Slider Banner -->
+            <!-- Main Slider -->
+            <div class="owl-slider owl-carousel owl-theme owl-btn-center-lr dots-none">
+          <div class="item slide-item">
+            <div class="slide-item-img"><img src="images/main-slider/img3.8.jpg" /></div>
+          </div>
+        </div> 
+        <!-- Slider Banner -->
+        <div class="content-block">
+            
+            
+                <!-- About Us -->
+                <div class="section-full bg-white content-inner-2" style="background-image:url(images/pattern/pt1.png);">
+                    <div class="container">
+              <div class="section-head text-center">
+                <h2 class="title">गुरुकुल स्टेनो एवं टाइपिंग क्लासेज, जोधपुर</h2>
+                <p class="ext">(स्टेनो एवं टाइपिंग हेतु सर्वश्रेष्ठ शिक्षण संस्थान)</p>
+              </div>
+              <div class="row align-items-center about-bx2">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                  <img src="main/img/gurukul_icon.png" class="img" alt=""/>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="about-box">
+                    <h3 class="title"><center>स्टेनो एवं टाइपिंग प्रतियोगी परीक्षाओं की तैयारी हेतु सर्वश्रेष्ठ शिक्षण संस्थान</h3>
+                    <p align="justify" class="ext">"गुरुकुल स्टेनो एवं टाइपिंग क्लासेज स्टेनो एवं टाइपिंग की प्रतियोगी परीक्षाओं की तैयारी हेतु सर्वश्रेष्ठ विश्वसनीय संस्थान है। गुरुकुल ने अब तक स्टेनो एवं टाइपिंग के क्षेत्र में कई विद्यार्थियों को सफलता के शिखर तक पहुंचाने में सफल प्रयास किए हैं। साथ ही अपने ऑनलाइन प्लेटफार्म के माध्यम से स्टेनो के क्षेत्र में एक ऑनलाइन क्रांति लाकर दूर दराज तक विद्यार्थियों को सुविधाएं पहुंचाकर उन्हें सफलता का मार्ग दिखाया है। गुरुकुल अपने निरंतर परिश्रम और प्रयास से विद्यार्थियों को उनकी मंजिल तक पहुंचाने में अपना योगदान देने में अग्रणी रहा है और सदैव रहेगा।"
+    
+    </p>
+    <p class="ext">गुरुकुल द्वारा दी जाने वाली सुविधाएं :-</p>
+                    <ul class="list-check">	
+                      <li>कुशल एवं अनुभवी विशेषज्ञों द्वारा अध्यापन।</li>
+                      <li>ऑनलाइन टेस्ट सीरीज द्वारा स्टेनो दक्षता मूल्यांकन।</li>								
+                      <li>ऑनलाइन लाइव क्लास द्वारा घर बैठे स्टेनो की बेहतर तैयारी।</li>
+                      <li> pdf द्वारा आउटलाइन एवं नोट्स की सुविधा।</li>
+                      <li>ऑफलाइन क्लास एवं लैब में परीक्षा के माहौल के साथ तैयारी।</li>
+                    </ul> 
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+          <div class="section-full content-inner-2 bg-gray">
+                    <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="action-box">
+                    <div class="head">
+                      <h4 class="title">Notifications</h4>
+                    </div>
+                    <div class="action-area">
+                      <ul class="notification-bx">
+                                            <li><a href="https://hcraj.nic.in/hcraj/hcraj_admin/uploadfile/recruitment/JPAH170556741512.pdf">Rajasthan High Court Junior Personal Assistant Hindi Steno 2024</a></li>
+                                            <li><a href="https://biharvidhanparishad.gov.in/Recruitment%202024/01-2024.pdf">Bihar Vidhan Parishad Reporter (Hindi) Vacancy 2024</a></li>
+                                            <li><a href="https://dsssb.delhi.gov.in/sites/default/files/DSSSB/circulars-orders/final_05-23_advt_combined_1.pdf">Delhi Subordinate Service Selection Board  Steno (Hindi/English) Vacancy 2023</a></li>
+                                            <li><a href="https://www.aiimsexams.ac.in/info/Important_Notice.html">AIIMS Steno/PA/PS Result 2023</a></li>
+                                          </ul>
+                      <a href="notifications.php" class="btn btn-sm">View All</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="action-box">
+                    <div class="head">
+                      <h4 class="title">Admit Cards</h4>
+                    </div>
+                    <div class="action-area">
+                      <ul class="admitcard-bx">
+                                            <li><a href="https://sscnr.nic.in/newlook/Admitcard_Steno_Grade_CD_SkillTest_TESTURL_2023/Instructions.aspx">SSC Grade C & D Steno Skill Test Admit Card</a></li>
+                                            <li><a href="http://103.203.137.249/rhcsteno2023/">Rajasthan High Court Steno 2023 Admit Card</a></li>
+                                          </ul>
+                      <a href="admit_cards.php" class="btn btn-sm">View All</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="action-box">
+                    <div class="head">
+                      <h4 class="title">Results</h4>
+                    </div>
+                    <div class="action-area">
+                      <ul class="results-bx">
+                                            <li><a href="https://hcraj.nic.in/hcraj/hcraj_admin/uploadfile/recruitment/notice170287831377.pdf">Rajasthan High Court Steno 2023 Final Result</a></li>
+                                            <li><a href="https://ssc.nic.in/portal/results">SSC Grade C & D Steno 2023 Written Exam Result</a></li>
+                                          </ul>
+                      <a href="results.php" class="btn btn-sm">View All</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="section-full content-inner bg-white" style="background-image:url(images/background/bg1.jpg)">
+                <div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-12 student-bx">
+							<div class="section-head">
+								<h2 class="title">Student Reviews</h2>
+								<div class="dlab-separator bg-primary"></div>
+							</div>
+							<div class="client-box2">
+								<div class="client-carousel-2 owl-carousel owl-theme owl-loaded owl-drag">
+								    
+								    										
+																		<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1920px, 0px, 0px); transition: all 0s ease 0s; width: 4800px;"><div class="owl-item cloned" style="width: 960px;"><div class="item">
+										<div class="client-box style-2">
+											<div class="testimonial-pic" style="height:100px!important;width:100px!important;">
+												<img src="images/student_review/035427Gurukol Steno_Award_2023.png" style="height:100px!important;width:100px!important;">
+											</div>
+											<div class="testimonial-text" style="height:120px!important;">
+												<p>stenographer</p>
+												<div class="testimonial-detail clearfix">
+													<h5 class="testimonial-name m-t0 m-b5">mahiram</h5> 
+													<span></span> 
+												</div>
+											</div>
+										</div>
+									</div></div><div class="owl-item cloned" style="width: 960px;"><div class="item">
+										<div class="client-box style-2">
+											<div class="testimonial-pic" style="height:100px!important;width:100px!important;">
+												<img src="images/student_review/035427Gurukol Steno_Award_2023.png" style="height:100px!important;width:100px!important;">
+											</div>
+											<div class="testimonial-text" style="height:120px!important;">
+												<p>stenographer</p>
+												<div class="testimonial-detail clearfix">
+													<h5 class="testimonial-name m-t0 m-b5">mahiram</h5> 
+													<span></span> 
+												</div>
+											</div>
+										</div>
+									</div></div><div class="owl-item active" style="width: 960px;"><div class="item">
+										<div class="client-box style-2">
+											<div class="testimonial-pic" style="height:100px!important;width:100px!important;">
+												<img src="images/student_review/035427Gurukol Steno_Award_2023.png" style="height:100px!important;width:100px!important;">
+											</div>
+											<div class="testimonial-text" style="height:120px!important;">
+												<p>stenographer</p>
+												<div class="testimonial-detail clearfix">
+													<h5 class="testimonial-name m-t0 m-b5">mahiram</h5> 
+													<span></span> 
+												</div>
+											</div>
+										</div>
+									</div></div><div class="owl-item cloned" style="width: 960px;"><div class="item">
+										<div class="client-box style-2">
+											<div class="testimonial-pic" style="height:100px!important;width:100px!important;">
+												<img src="images/student_review/035427Gurukol Steno_Award_2023.png" style="height:100px!important;width:100px!important;">
+											</div>
+											<div class="testimonial-text" style="height:120px!important;">
+												<p>stenographer</p>
+												<div class="testimonial-detail clearfix">
+													<h5 class="testimonial-name m-t0 m-b5">mahiram</h5> 
+													<span></span> 
+												</div>
+											</div>
+										</div>
+									</div></div><div class="owl-item cloned" style="width: 960px;"><div class="item">
+										<div class="client-box style-2">
+											<div class="testimonial-pic" style="height:100px!important;width:100px!important;">
+												<img src="images/student_review/035427Gurukol Steno_Award_2023.png" style="height:100px!important;width:100px!important;">
+											</div>
+											<div class="testimonial-text" style="height:120px!important;">
+												<p>stenographer</p>
+												<div class="testimonial-detail clearfix">
+													<h5 class="testimonial-name m-t0 m-b5">mahiram</h5> 
+													<span></span> 
+												</div>
+											</div>
+										</div>
+									</div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><i class="la la-arrow-left"></i></div><div class="owl-next"><i class="la la-arrow-right"></i></div></div><div class="owl-dots disabled"></div></div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+        </div>
+        </div>
+    
+      <!-- Content END-->
+      <!-- Footer  
+        <footer class="site-footer">
+            <div class="footer-top">
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12 footer-col-4">
+                            <div class="widget widget_getintuch">
+                                <h4 class="footer-title">Contact Us</h4>
+                                <div class="dlab-separator bg-primary"></div>
+                                <ul class="info-contact">
+                    <li>
+                      <span>
+                        <i class="fa fa-map-marker"></i> 2nd Polo Paota, Backside of Kamdar Eye Hospital, Near Ship House, Jodhpur
+                      </span>
+                    </li>
+    
+                    <li>
+                      <span>
+                        <i class="fa fa-phone"></i>Mobile: 8949287761
+                      </span>
+                    </li>
+    
+                    <li>
+                      <span>
+                        <i class="fa fa-envelope-o"></i>Mail: gurukulstenoclassesjodhpur@gmail.com
+                      </span>
+                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            <div class="clearfix">
+              <ul class="full-social-icon row">
+                <li class="gplus col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <a href="https://www.youtube.com/channel/UCUJL5NbVmRvFZbdUdBdUbgg"><i class="fa fa-youtube"></i> Youtube </a>
+                </li>
+                <li class="tw col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <a href="https://t.me/gurukulsteno"><i class="fa fa-telegram"></i> Telegram </a>
+                </li>
+                <li class="gplus col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <a href="#!"><i class="fa fa-google-plus"></i> Google Plus </a>
+                </li>
+                <li class="linkd col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <a href="https://api.whatsapp.com/send?phone=+918949287761&text=Hello..! Please help my out regarding Gurukul Steno Portal"><i class="fa fa-whatsapp"></i> Whatsapp </a>
+                </li>
+              </ul>
+            </div>
+                </div>
+            </div>
+           
+        </footer>
+        -->
+        <button class="scroltop fa fa-chevron-up" ></button>
+    </div>
+    <!-- JAVASCRIPT FILES ========================================= -->
+    <script src="js/combining.js"></script><!-- Combining JS  -->
+    <script src="js/jquery.marquee.js"></script><!-- LOADING JS -->
+    <script>
+      $(function(){
+        $('.marquee').marquee({
+          speed: 100,
+          gap: 0,
+          delayBeforeStart: 0,
+          direction: 'left',
+          duplicated: true,
+          pauseOnHover: true
+        });	
+        $('.marquee1').marquee({
+          speed: 50,
+          gap: 0,
+          delayBeforeStart: 0,
+          direction: 'up',
+          duplicated: true,
+          pauseOnHover: true
+        });	
+      });
+    </script>
+    </body>
+    
+    
+    `;
+  }
+}
+class NotLoginPageNavbar extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = ` <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo">
+        <a href="index.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="./" class="logo"><img src="assets/img/SuccessPointRajasthanlogo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
+  
+          <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
+          
+          <li style="display:none;" id="drpDownProfileBtn" >
+            <a class="nav-link scrollto" href="Profile.html">Profile</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="index.html">Home</a>
+          </li>
+         
+          <li>
+            <a class="nav-link scrollto" href="LoginForm.html">Login</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle " id="crossBttn"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>`;
+  }
+}
+class LoginForm extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = ` 
+    <div class="body-container">
+
+    <div class="main-container container bgc-transparent">
+
+      <div class="main-content minh-100 justify-content-center">
+        <div class="p-2 p-md-4">
+          <div class="row" id="row-1">
+            <div class="col-12 col-xl-10 offset-xl-1 bgc-white shadow radius-1 overflow-hidden">
+
+              <div class="row" id="row-2">
+
+                <div id="id-col-intro" class="col-lg-5 d-none d-lg-flex border-r-1 brc-default-l3 px-0">
+                  <!-- the left side section is carousel in this demo, to show some example variations -->
+
+                  <div id="loginBgCarousel" class="carousel slide minw-100 h-100">
+                    
+                    <div class="carousel-inner minw-100 h-100">
+                      <div class="carousel-item active minw-100 h-100">
+                        <!-- default carousel section that you see when you open login page -->
+                        <div style="background-image: url(img/login-bg-1.svg);" class="px-3 bgc-blue-l4 d-flex flex-column align-items-center justify-content-center">
+                          <a class="mt-5 mb-2" href="#">
+                            <img src="img/ins_logo.png" width="125px" height="125px">
+                          </a>
+
+                          <h2 class="text-primary-d1">
+                            Gurukul <span class="text-80 text-dark-l1">Steno Classes</span>
+                          </h2>
+
+                          <div class="mt-5 mx-4 text-dark-tp3">
+                            <span class="text-120">
+                         Join our Plateform to make Your,<br> Score Better &amp; Practice well!
+                     </span>
+                            <hr class="mb-1 brc-black-tp10">
+                          
+                          </div>
+
+                          <div class="mt-auto mb-4 text-dark-tp2">
+                           
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="carousel-item minw-100 h-100">
+                        <!-- the second carousel item with dark background -->
+                        <div style="background-image: url(img/login-bg-2.svg);" class="d-flex flex-column align-items-center justify-content-start">
+                          
+                        </div>
+                      </div>
+
+                      <div class="carousel-item minw-100 h-100">
+                        <div style="background-image: url(img/login-bg-3.jpg);" class="d-flex flex-column align-items-center justify-content-start">
+                         
+                        </div>
+                      </div>
+
+                      <div class="carousel-item minw-100 h-100">
+                        <div style="background-image: url(img/login-bg-4.jpg);" class="d-flex flex-column align-items-center justify-content-start">
+                         
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div id="id-col-main" class="col-12 col-lg-7 py-lg-5 bgc-white px-0">
+                  <!-- you can also use these tab links -->
+                  <ul class="d-none mt-n4 mb-4 nav nav-tabs nav-tabs-simple justify-content-end bgc-black-tp11" role="tablist">
+                    <li class="nav-item mx-2">
+                      <a class="nav-link active px-2" data-toggle="tab" href="#id-tab-login" role="tab" aria-controls="id-tab-login" aria-selected="true">
+                        Login
+                      </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link px-2" data-toggle="tab" href="#id-tab-signup" role="tab" aria-controls="id-tab-signup" aria-selected="false">
+                        Signup
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content tab-sliding border-0 p-0" data-swipe="right">
+
+                    <div class="tab-pane active show mh-100 px-3 px-lg-0 pb-3" id="id-tab-login">
+                      <!-- show this in desktop -->
+                      <div class="d-none d-lg-block col-md-6 offset-md-3 mt-lg-4 px-0">
+                        <h4 class="text-dark-tp4 border-b-1 brc-secondary-l2 pb-1 text-130">
+                          <i class="fa fa-user text-orange-m1 mr-1"></i>
+                          Welcome
+                        </h4>
+                      </div>
+
+                      <!-- show this in mobile device -->
+                      <div class="d-lg-none text-secondary-m1 my-4 text-center">
+                                                 Welcome
+                      </div>
+
+                      <form autocomplete="off" class="form-row" id="loginForm">
+          <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+           <center><span id="loginStatus"></span></center>
+           </div>
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                          <div class="d-flex align-items-center input-floating-label text-blue brc-blue-m2">
+                            <input placeholder="Username" type="text" class="form-control form-control-lg pr-4 shadow-none" value="9602596476" name="login_mobile" required="">
+                            <i class="fa fa-phone text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 ml-n3" for="id-login-username">
+                              Mobile
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-2 mt-md-1">
+                          <div class="d-flex align-items-center input-floating-label text-blue brc-blue-m2">
+                            <input placeholder="Password" type="password" class="form-control form-control-lg pr-4 shadow-none" value="rakeshjaat" name="login_password" required="">
+                            <i class="fa fa-key text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 ml-n3" for="id-login-password">
+                              Password
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-right text-md-right mt-n2">
+                          <a href="#" class="text-primary-m1 text-95" data-toggle="tab" data-target="#id-tab-forgot">
+                            Forgot Password?
+                          </a>
+                        </div>
+
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                          <label class="d-inline-block  mb-0 text-dark-l1">
+                            <input type="checkbox" class="mr-1" id=" customCheckLogin" name="remember" checked="">
+                            Remember me
+                          </label>
+
+                          <button type="submit" class="btn btn-primary btn-block px-4 btn-bold mt-2 mb-1">
+                            Sign In
+                          </button>
+                        </div>
+                      </form>
+          
+                      <div class="form-row">
+                        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 d-flex flex-column align-items-center justify-content-center">
+
+                          <hr class="brc-default-l2 mt-0 mb-2 w-100">
+            <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-secondary-d3 text-90"> Join Us</div>
+                          <br>
+                          <hr class="brc-default-l2 mt-0 mb-2 w-100">
+            <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-secondary-d3 text-90">8949287761</div>
+
+                          <div class="p-0 px-md-2 text-dark-tp3 my-3">
+                            <a class="text-success-m1 text-600 mx-1" data-toggle="tab" data-target="#id-tab-signup" href="#">
+                              Click Here To Register
+                            </a>
+                          </div>
+
+                         <hr class="brc-default-l2 w-100">
+                          <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-secondary-d3 text-90">Stay Connected With Us Using</div>
+
+                            <div class="my-2">
+             
+            <a href="https://t.me/gurukulsteno" target="_blank">
+                            <button type="button" class="btn btn-bgc-white btn-lighter-info btn-h-info btn-a-info border-2 radius-round btn-lg px-25 mx-1">
+                              <i class="fab fa-telegram text-110"></i>
+                            </button></a>
+              
+                          <a href="https://www.youtube.com/channel/UCUJL5NbVmRvFZbdUdBdUbgg" target="_blank">
+                            <button type="button" class="btn btn-bgc-white btn-lighter-red btn-h-red btn-a-red border-2 radius-round btn-lg px-25 mx-1">
+                              <i class="fab fa-youtube text-110"></i>
+                            </button></a>
+
+            <a href="https://api.whatsapp.com/send?phone=+918949287761&amp;text=Hello..! Please help my out regarding Gurukul Steno Portal" target="_blank">
+                            <button type="button" class="btn btn-bgc-white btn-lighter-green btn-h-green btn-a-green border-2 radius-round btn-lg px-25 mx-1">
+                              <i class="fab fa-whatsapp text-110"></i>
+                            </button></a>
+                            
+                            
+            <a href="tel:8949287761" target="_blank">
+                            <button type="button" class="btn btn-bgc-white btn-lighter-warning btn-h-warning btn-a-green border-2 radius-round btn-lg px-25 mx-1">
+                              <i class="fa fa-phone text-100"></i>
+                            </button></a>
+                          </div>
+            <hr class="brc-default-l2 w-100 mb-2">
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="tab-pane mh-100 px-3 px-lg-0 pb-3" id="id-tab-signup" data-swipe-prev="#id-tab-login">
+                      <div class="position-tl ml-3 mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-light-default btn-h-light-default btn-a-light-default btn-bgc-tp" data-toggle="tab" data-target="#id-tab-login">
+                          <i class="fa fa-arrow-left"></i>
+                        </a>
+                      </div>
+
+                      <!-- show this in desktop -->
+                      <div class="d-none d-lg-block col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-lg-4 px-0">
+                        <h4 class="text-dark-tp4 border-b-1 brc-grey-l1 pb-1 text-130">
+                          <i class="fa fa-user text-purple mr-1"></i>
+                          Create an Account
+                        </h4>
+                      </div>
+
+                      <!-- show this in mobile device -->
+                      <div class="d-lg-none text-secondary-m1 my-4 text-center">
+                       <img src="img/ins_logo.png" height="75px" width="75px">
+                        <h1 class="text-170">
+                          <span class="text-blue-d1">Gurukul <span class="text-80 text-dark-tp4">Steno</span></span>
+                        </h1>
+
+                        Create an Account
+           
+                      </div>
+
+
+                      <form autocomplete="off" class="form-row " id="registerForm" name="registerForm">
+           <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+           <center><span id="RegistrationStatus"></span></center>
+           </div>
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                          <div class="d-flex align-items-center input-floating-label text-success brc-success-m2">
+                            <input placeholder="Email" type="email" class="form-control form-control-lg pr-4 shadow-none" name="email" required="">
+                            <i class="fa fa-envelope text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-email">
+                              Email
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 ">
+                          <div class="d-flex align-items-center input-floating-label text-success brc-success-m2">
+                            <input placeholder="Mobile Number" type="text" pattern="[6789][0-9]{9}" title="Please Enter Valid 10 Digit Mobile Number" class="form-control form-control-lg pr-4 shadow-none" name="mobile" required="">
+                            <i class="fa fa-phone text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-username">
+                              Mobile
+                            </label>
+                          </div>
+                        </div>
+            
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 ">
+                          <div class="d-flex align-items-center input-floating-label text-success brc-success-m2">
+                            <input placeholder="Username" type="text" class="form-control form-control-lg pr-4 shadow-none" name="username" required="" onkeypress="return ((event.charCode >= 65 &amp;&amp; event.charCode <= 90) || (event.charCode >= 97 &amp;&amp; event.charCode <= 122) || (event.charCode == 32))" title="Only alphabets are allowed.">
+                            <i class="fa fa-user text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-username">
+                              Name
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 ">
+                          <div class="d-flex align-items-center input-floating-label text-success brc-success-m2">
+                            <input placeholder="Password" type="password" class="form-control form-control-lg pr-4 shadow-none" name="password" required="">
+                            <i class="fa fa-key text-grey-m2 ml-n4"></i>
+                            <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-password">
+                              Password
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 ">
+                          <label class="d-inline-block mt-1 mb-0 text-secondary-d2">
+                            <input type="checkbox" class="mr-1" id="id-agree" required="">
+                            <span class="text-dark-m3">I have read and agree to <a href="#" class="text-blue-d2">terms</a></span>
+                          </label>
+
+                          <button type="submit" name="signupForm" value="signupForm" class="btn btn-success btn-block px-4 btn-bold mt-1">
+                            Sign Up
+                          </button>
+                        </div>
+                      </form>
+                      
+                      <div class="form-row w-100">
+                        <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 d-flex flex-column align-items-center justify-content-center">
+                          <hr class="brc-default-l2 mt-0 mb-2 w-100">
+                          <div class="p-0 px-md-2 text-dark-tp4 my-3">
+                            Already Joined?
+                            <a class="text-blue-d1 text-600 mx-1" data-toggle="tab" data-target="#id-tab-login" href="#">
+                              Login here
+                            </a>
+                          </div>
+                          <hr class="brc-default-l2 w-100 mb-2">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane mh-100 px-3 px-lg-0 pb-3" id="id-tab-forgot" data-swipe-prev="#id-tab-login">
+                      <div class="position-tl ml-3 mt-2">
+                        <a href="#" class="btn btn-light-default btn-h-light-default btn-a-light-default btn-bgc-tp" data-toggle="tab" data-target="#id-tab-login">
+                          <i class="fa fa-arrow-left"></i>
+                        </a>
+                      </div>
+
+                      <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-5 px-0">
+                        <h4 class="pt-4 pt-md-0 text-dark-tp4 border-b-1 brc-grey-l2 pb-1 text-130">
+                          <i class="fa fa-key text-brown-m1 mr-1"></i>
+                          Recover Password
+                        </h4>
+                      </div>
+
+<center><span id="recoverStatus"></span></center>
+                      <form autocomplete="off" class="form-row" id="recoverForm">
+          <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+          
+           </div>
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                          <label class="text-secondary-d3 mb-3">
+                            Enter your email address and we'll send you the instructions:
+                          </label>
+                          <div class="d-flex align-items-center">
+                            <input type="email" class="form-control form-control-lg pr-4 shadow-none" name="recover_email" required="" placeholder="Email">
+                            <i class="fa fa-envelope text-grey-m2 ml-n4"></i>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3" style="display:none;" id="recovery_opt_section">
+                          
+                          <div class="d-flex align-items-center">
+                            <input type="text" class="form-control form-control-lg pr-4 shadow-none" name="recover_otp" placeholder="OTP">
+                            <i class="fa fa-key text-grey-m2 ml-n4"></i>
+                          </div>
+                        </div>
+
+                        <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                          <button type="submit" class="btn btn-orange btn-block px-4 btn-bold mt-2 ">
+                            Continue
+                          </button>
+                        </div>
+                      </form>
+
+                      <div class="form-row w-100">
+                        <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 d-flex flex-column align-items-center justify-content-center">
+                          <hr class="brc-default-l2 mt-0 mb-2 w-100">
+                          <div class="p-0 px-md-2 text-dark-tp4 my-3">
+                            <a class="text-blue-d1 text-600 btn-text-slide-x" data-toggle="tab" data-target="#id-tab-login" href="#">
+                              <i class="btn-text-2 fa fa-arrow-left text-110 align-text-bottom mr-2"></i>Back to Login
+                            </a>
+                          </div>
+<hr class="brc-default-l2 mt-0 mb-2 w-100">
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- .tab-content -->
+                </div>
+              </div><!-- /.row -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+          <div class="d-lg-none my-3 text-white-tp1 text-center">
+    Deisgn &amp; Developed for Gurukul Steno.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+  }
+}
+customElements.define("app-notloginindexpage", NotLoginIndexPage);
+customElements.define("app-notloginpagenavbar", NotLoginPageNavbar);
+customElements.define("app-loginform", LoginForm);
 customElements.define("app-showtoast", ShowToast);
 customElements.define("app-whatsapp", Whatsapp_Chat);
 customElements.define("app-contactcareernavbar", ContactCareerNavbar);
