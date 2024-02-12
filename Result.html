@@ -1188,13 +1188,12 @@
                 redirect: 'follow'
             };
             const TableData = document.getElementById('TableData');
-            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
-                .then(response => json.parse(response))
-                .then(result => {
-                    result = json.parse(result);
-                    console.log('result=>', result)
-                    result.forEach(currentItem => {
-                        const tableHTML = `
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions).then(result => {
+                console.log('res=' + result)
+                result = json.parse(result);
+                console.log('result=>', result)
+                result.forEach(currentItem => {
+                    const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>8</td>
                                             <td>09-Feb-2024</td>
@@ -1213,10 +1212,10 @@
                                             </td>
                                         </tr>
                `;
-                        TableData.innerHTML += tableHTML;
-                    })
-
+                    TableData.innerHTML += tableHTML;
                 })
+
+            })
                 .catch(error => console.log('error=', error));
 
         }
