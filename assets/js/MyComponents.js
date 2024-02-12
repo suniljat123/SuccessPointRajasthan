@@ -891,13 +891,13 @@ class NotLoginIndexPage extends HTMLElement {
                   <a href="https://www.youtube.com/channel/UCUJL5NbVmRvFZbdUdBdUbgg"><i class="fa fa-youtube"></i> Youtube </a>
                 </li>
                 <li class="tw col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="https://t.me/gurukulsteno"><i class="fa fa-telegram"></i> Telegram </a>
+                  <a href="https://t.me/stenoupdates"><i class="fa fa-telegram"></i> Telegram </a>
                 </li>
                 <li class="gplus col-lg-3 col-md-6 col-sm-6 m-b30">
                   <a href="#!"><i class="fa fa-google-plus"></i> Google Plus </a>
                 </li>
                 <li class="linkd col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="https://api.whatsapp.com/send?phone=+918949287761&text=Hello..! Please help my out regarding Gurukul Steno Portal"><i class="fa fa-whatsapp"></i> Whatsapp </a>
+                  <a href="https://wa.me/+919602596476?text=Hello,%20I%20came%20across%20SuccessPointRajasthan%20website.%20I%20want%20to%20join%20course."><i class="fa fa-whatsapp"></i> Whatsapp </a>
                 </li>
               </ul>
             </div>
@@ -1001,7 +1001,7 @@ class LoginForm extends HTMLElement {
                           </a>
 
                           <h2 class="text-primary-d1">
-                            Gurukul <span class="text-80 text-dark-l1">Steno Classes</span>
+                            Success Point Rajasthan <span class="text-80 text-dark-l1">Steno Classes</span>
                           </h2>
 
                           <div class="mt-5 mx-4 text-dark-tp3">
@@ -1134,7 +1134,7 @@ class LoginForm extends HTMLElement {
 
                             <div class="my-2">
              
-            <a href="https://t.me/gurukulsteno" target="_blank">
+            <a href="https://t.me/stenoupdates" target="_blank">
                             <button type="button" class="btn btn-bgc-white btn-lighter-info btn-h-info btn-a-info border-2 radius-round btn-lg px-25 mx-1">
                               <i class="fab fa-telegram text-110"></i>
                             </button></a>
@@ -1144,7 +1144,7 @@ class LoginForm extends HTMLElement {
                               <i class="fab fa-youtube text-110"></i>
                             </button></a>
 
-            <a href="https://api.whatsapp.com/send?phone=+918949287761&amp;text=Hello..! Please help my out regarding Gurukul Steno Portal" target="_blank">
+            <a href="https://wa.me/+919602596476?text=Hello,%20I%20came%20across%20SuccessPointRajasthan%20website.%20I%20want%20to%20join%20course." target="_blank">
                             <button type="button" class="btn btn-bgc-white btn-lighter-green btn-h-green btn-a-green border-2 radius-round btn-lg px-25 mx-1">
                               <i class="fab fa-whatsapp text-110"></i>
                             </button></a>
@@ -1180,7 +1180,7 @@ class LoginForm extends HTMLElement {
                       <div class="d-lg-none text-secondary-m1 my-4 text-center">
                        <img src="img/ins_logo.png" height="75px" width="75px">
                         <h1 class="text-170">
-                          <span class="text-blue-d1">Gurukul <span class="text-80 text-dark-tp4">Steno</span></span>
+                          <span class="text-blue-d1">Success Point Rajasthan <span class="text-80 text-dark-tp4">Steno</span></span>
                         </h1>
 
                         Create an Account
@@ -1320,7 +1320,7 @@ class LoginForm extends HTMLElement {
             </div><!-- /.col -->
           </div><!-- /.row -->
           <div class="d-lg-none my-3 text-white-tp1 text-center">
-    Deisgn &amp; Developed for Gurukul Steno.
+     
           </div>
         </div>
       </div>
