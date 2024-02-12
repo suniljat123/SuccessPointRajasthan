@@ -30,10 +30,9 @@ class Footer extends HTMLElement {
             <h4>Reservations</h4>
             <p>
               <strong>Phone:</strong> <a href="tel:+919602596476" style="color: #ffffff">+91 9602596476</a> <br>
-              <strong>Email:</strong> <a href="mailto: rakeshchoudhary3658@gmail.com"
-                style="color: #ffffff; ">rakeshchoudhary3658@gmail.com</a><br>
-                <strong>Email:</strong> <a href="mailto: pradeepkoth4@gmail.com"
-                style="color: #ffffff; ">pradeepkoth4@gmail.com</a><br>
+              <strong>Email:</strong> <a href="mailto: successpointrajasthan1@gmail.com"
+                style="color: #ffffff; ">successpointrajasthan1@gmail.com</a><br>
+                
             </p>
           </div>
         </div>
@@ -873,13 +872,13 @@ class NotLoginIndexPage extends HTMLElement {
     
                     <li>
                       <span>
-                        <i class="fa fa-phone"></i>Mobile: 8949287761
+                        <i class="fa fa-phone"></i>Mobile: 9602596476
                       </span>
                     </li>
     
                     <li>
                       <span>
-                        <i class="fa fa-envelope-o"></i>Mail: gurukulstenoclassesjodhpur@gmail.com
+                        <i class="fa fa-envelope-o"></i>Mail: successpointrajasthan1@gmail.com
                       </span>
                     </li>
                                 </ul>
