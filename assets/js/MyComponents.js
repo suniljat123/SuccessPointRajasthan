@@ -855,56 +855,7 @@ class NotLoginIndexPage extends HTMLElement {
     
       <!-- Content END-->
       <!-- Footer  
-        <footer class="site-footer">
-            <div class="footer-top">
-                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12 footer-col-4">
-                            <div class="widget widget_getintuch">
-                                <h4 class="footer-title">Contact Us</h4>
-                                <div class="dlab-separator bg-primary"></div>
-                                <ul class="info-contact">
-                    <li>
-                      <span>
-                        <i class="fa fa-map-marker"></i> 2nd Polo Paota, Backside of Kamdar Eye Hospital, Near Ship House, Jodhpur
-                      </span>
-                    </li>
-    
-                    <li>
-                      <span>
-                        <i class="fa fa-phone"></i>Mobile: 9602596476
-                      </span>
-                    </li>
-    
-                    <li>
-                      <span>
-                        <i class="fa fa-envelope-o"></i>Mail: successpointrajasthan1@gmail.com
-                      </span>
-                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-            <div class="clearfix">
-              <ul class="full-social-icon row">
-                <li class="gplus col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="https://www.youtube.com/channel/UCUJL5NbVmRvFZbdUdBdUbgg"><i class="fa fa-youtube"></i> Youtube </a>
-                </li>
-                <li class="tw col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="https://t.me/stenoupdates"><i class="fa fa-telegram"></i> Telegram </a>
-                </li>
-                <li class="gplus col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="#!"><i class="fa fa-google-plus"></i> Google Plus </a>
-                </li>
-                <li class="linkd col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <a href="https://wa.me/+919602596476?text=Hello,%20I%20came%20across%20SuccessPointRajasthan%20website.%20I%20want%20to%20join%20course."><i class="fa fa-whatsapp"></i> Whatsapp </a>
-                </li>
-              </ul>
-            </div>
-                </div>
-            </div>
-           
-        </footer>
+       
         -->
         <button class="scroltop fa fa-chevron-up" ></button>
     </div>
