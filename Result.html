@@ -1192,9 +1192,9 @@
                 .then(response => response.json())
                 .then(result => {
                     console.log('result1=>', result)
-                    const dataArray = JSON.parse(result);
+                    result = JSON.parse(result);
 
-                    console.log(dataArray);
+                    console.log(result);
                     result.forEach(currentItem => {
                         const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
