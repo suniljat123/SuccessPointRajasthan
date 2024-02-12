@@ -681,11 +681,11 @@ class NotLoginIndexPage extends HTMLElement {
             <!-- Main Slider -->
             <div class="owl-slider owl-carousel owl-theme owl-btn-center-lr dots-none">
           <div class="item slide-item">
-            <div class="slide-item-img"><img src="images/main-slider/img3.8.jpg" /></div>
+            <div class="slide-item-img"><img src="assets/img/SuccessPointRajasthanlogo.png" /></div>
           </div>
         </div> 
         <!-- Slider Banner -->
-        <div class="content-block">
+        <div class="content-block"> 
             
             
                 <!-- About Us -->
@@ -697,7 +697,7 @@ class NotLoginIndexPage extends HTMLElement {
               </div>
               <div class="row align-items-center about-bx2">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                  <img src="main/img/gurukul_icon.png" class="img" alt=""/>
+                  <img src="assets/img/SuccessPointRajasthanlogo.png" class="img" alt=""/>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                   <div class="about-box">
