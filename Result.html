@@ -1127,6 +1127,9 @@
     </div><!-- .modal-aside -->
     </div>
     </div>
+    <div id="audioPlay">
+
+    </div>
     <app-whatsapp></app-whatsapp>
     <app-footer></app-footer>
     <div id="preloader"></div>
@@ -1254,8 +1257,8 @@
                     console.log('audio1=', result)
                     result = JSON.parse(result);
                     console.log(result);
-
-
+                    let a = document.getElementById('audioPlay');
+                    a.innerHTML = 'hellooooo'
 
                 })
                 .catch(error => console.log('error=', error));
