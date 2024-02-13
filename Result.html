@@ -1121,14 +1121,13 @@
                     </div>
                 </div>
 
+                <div id="audioPlay">
 
+                </div>
             </div>
         </div>
     </div><!-- .modal-aside -->
     </div>
-    </div>
-    <div id="audioPlay">
-
     </div>
     <app-whatsapp></app-whatsapp>
     <app-footer></app-footer>
@@ -1253,6 +1252,7 @@
             };
             const TableData = document.getElementById('TableData');
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
                 .then(result => {
                     console.log('audio1=', result)
                     result = JSON.parse(result);
@@ -1260,8 +1260,9 @@
                     let a = document.getElementById('audioPlay');
                     a.innerHTML = 'hellooooo'
 
+
                 })
-                .catch(error => console.log('error==', error));
+                .catch(error => console.log('error=', error));
 
         }
 
