@@ -17,7 +17,7 @@ class Footer extends HTMLElement {
           <i class="bi bi-geo-alt icon"></i>
           <div>
             <h4>Address</h4>
-            <p>
+            <p style ="white-space: normal !important;">
               DG-B-1704 & 05, Christian Ganj, Ajmer, Rajasthan 305001
             </p>
           </div>
@@ -28,7 +28,7 @@ class Footer extends HTMLElement {
           <i class="bi bi-telephone icon"></i>
           <div>
             <h4>Reservations</h4>
-            <p>
+            <p style ="white-space: normal !important;">
               <strong>Phone:</strong> <a href="tel:+919602596476" style="color: #ffffff">+91 9602596476</a> <br>
               <strong>Email:</strong> <a href="mailto: successpointrajasthan1@gmail.com"
                 style="color: #ffffff; ">successpointrajasthan1@gmail.com</a><br>
