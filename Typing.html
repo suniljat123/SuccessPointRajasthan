@@ -31,7 +31,23 @@
     <!--  Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/slider.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: Hindi;
+            src: url(font/Hindi.ttf);
+        }
 
+        @font-face {
+            font-family: 'Hindi';
+            src: url('font/Hindi.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .hindiFont {
+            font-family: 'Hindi';
+        }
+    </style>
 
 </head>
 
@@ -797,7 +813,7 @@
 
                         <!-- -------------------------- TYping Modal Code is Here   -------------------- -->
                         <!-- Main Body Starts -->
-                         <div id="typingModalId" class="container" style="
+                        <div id="typingModalId" class="container" style="
     padding: 1px 30px;
    
     display: none;
@@ -807,31 +823,31 @@ font-size: 18px;
 margin-bottom: 30px;
 display: flex;
 justify-content: space-between;">
-            <div style="display:flex; justify-content: center; align-items:center;">    <button width="2px" style=" 
+                                <div style="display:flex; justify-content: center; align-items:center;"> <button
+                                        width="2px" style=" 
                 background-color: #ff4a17;
                 color: white;
                 border-width: 0px;
                 height: 31px;
-                border-radius: 5px;" onclick="handleGoBack()">Go Back</button>                              
-            </div>
-            <div style="display:flex; justify-content:center;">
-<p style="margin-right: 9rem; 
-padding: 4px;
+                border-radius: 5px;" onclick="handleGoBack()">Go Back</button>
+                                </div>
+                                <div style="display:flex; justify-content:center;">
+                                    <p style="padding: 4px;
 border-radius: 6px;   
     
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: " Poppins", sans-serif; color: #263d4d; }">Time: <span id="timer">0s</span></p>
-                                <p style=" 
+                                    <!-- <p style=" 
 padding: 4px;
 border-radius: 6px;    margin: 0;
     margin: 0;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: " Poppins", sans-serif; color: #263d4d; }">Mistakes: <span id="mistakes">0</span></p>
-</div>
+    font-family: " Poppins", sans-serif; color: #263d4d; }">Mistakes: <span id="mistakes">0</span></p> -->
+                                </div>
 
                             </div>
                             <div id="quote" style="    text-align: justify;
@@ -851,7 +867,8 @@ padding: 10px 5px;
 font-size: 16px;
 font-family: monospace;
     font-weight: 700;
-    font-size: 23px;" rows="3" id="quote-input" placeholder="Type here when the test starts.."></textarea>
+    font-size: 23px;" rows="3" id="quote-input" placeholder="Type here when the test starts.."
+                                class="hindiFont"></textarea>
                             <button class="button" style="float: right;
   margin-top: 20px;
   background-color: rgb(25 45 102);
@@ -875,128 +892,129 @@ display: none;">
 justify-content: space-around;">
                                     <p>Accuracy: <span id="accuracy"></span></p>
                                     <p>Speed: <span id="wpm"></span></p>
+                                    <p>Mistakes: <span id="mistakes"></span></p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
 
 
-                    <!-- ----------------------- Table code is here ------------------- -->
+                        <!-- ----------------------- Table code is here ------------------- -->
 
                         <table id="datatable"
-                        class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
-                        <!-- add `collapsed` by default ... it will be removed by default -->
-                        <!-- thead with .sticky-nav -->
-                        <thead class="text-secondary-m1 text-uppercase text-85">
-                            <tr>
-                                <th class="bgc-yellow-l3">S.No.</th>
-                                <th class="bgc-yellow-l3">Date</th>
-                                <th class="bgc-yellow-l3">Test Language</th>
-                                <th class="bgc-yellow-l3">Test Name</th>
-                                <th class="bgc-yellow-l3">Dictation Speed</th>
-                                <th class="bgc-yellow-l3">Total Words</th>
-                                <th class="bgc-yellow-l3">Duration</th>
-                                <th class="bgc-yellow-l3">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="pos-rel">
-                            <tr class="d-style bgc-h-default-l4">
-                                <td>1</td>
-                                <td>2023-12-21</td>
-                                <td>Hindi</td>
-                                <td>Demo Test 100 wpm (SSC)</td>
-                                <td>100WPM</td>
-                                <td>1000 Words</td>
-                                <td>65 Mins</td>
+                            class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
+                            <!-- add `collapsed` by default ... it will be removed by default -->
+                            <!-- thead with .sticky-nav -->
+                            <thead class="text-secondary-m1 text-uppercase text-85">
+                                <tr>
+                                    <th class="bgc-yellow-l3">S.No.</th>
+                                    <th class="bgc-yellow-l3">Date</th>
+                                    <th class="bgc-yellow-l3">Test Language</th>
+                                    <th class="bgc-yellow-l3">Test Name</th>
+                                    <th class="bgc-yellow-l3">Dictation Speed</th>
+                                    <th class="bgc-yellow-l3">Total Words</th>
+                                    <th class="bgc-yellow-l3">Duration</th>
+                                    <th class="bgc-yellow-l3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="pos-rel">
+                                <tr class="d-style bgc-h-default-l4">
+                                    <td>1</td>
+                                    <td>2023-12-21</td>
+                                    <td>Hindi</td>
+                                    <td>Demo Test 100 wpm (SSC)</td>
+                                    <td>100WPM</td>
+                                    <td>1000 Words</td>
+                                    <td>65 Mins</td>
 
-                                <td>
-                                    <center>
-                                        <a><button
-                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
-                                                Typing</button></a>
+                                    <td>
+                                        <center>
+                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                                        class="fas fa-play"></i> Start
+                                                    Typing</button></a>
 
-                                    </center>
-                                </td>
+                                        </center>
+                                    </td>
 
-                            </tr>
-                            <tr class="d-style bgc-h-default-l4">
-                                <td>2</td>
-                                <td>2023-12-13</td>
-                                <td>Hindi</td>
-                                <td>Demo Test 100 wpm (RSMSSB)</td>
-                                <td>100WPM</td>
-                                <td>1000 Words</td>
-                                <td>65 Mins</td>
+                                </tr>
+                                <tr class="d-style bgc-h-default-l4">
+                                    <td>2</td>
+                                    <td>2023-12-13</td>
+                                    <td>Hindi</td>
+                                    <td>Demo Test 100 wpm (RSMSSB)</td>
+                                    <td>100WPM</td>
+                                    <td>1000 Words</td>
+                                    <td>65 Mins</td>
 
-                                <td>
-                                    <center>
-                                        <a><button
-                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
-                                                Typing</button></a>
+                                    <td>
+                                        <center>
+                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                                        class="fas fa-play"></i> Start
+                                                    Typing</button></a>
 
-                                    </center>
-                                </td>
+                                        </center>
+                                    </td>
 
-                            </tr>
-                            <tr class="d-style bgc-h-default-l4">
-                                <td>3</td>
-                                <td>2023-12-11</td>
-                                <td>Hindi</td>
-                                <td>Demo Test 90 wpm</td>
-                                <td>90WPM</td>
-                                <td>890 Words</td>
-                                <td>60 Mins</td>
+                                </tr>
+                                <tr class="d-style bgc-h-default-l4">
+                                    <td>3</td>
+                                    <td>2023-12-11</td>
+                                    <td>Hindi</td>
+                                    <td>Demo Test 90 wpm</td>
+                                    <td>90WPM</td>
+                                    <td>890 Words</td>
+                                    <td>60 Mins</td>
 
-                                <td>
-                                    <center>
-                                        <a><button
-                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
-                                                Typing</button></a>
+                                    <td>
+                                        <center>
+                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                                        class="fas fa-play"></i> Start
+                                                    Typing</button></a>
 
-                                    </center>
-                                </td>
+                                        </center>
+                                    </td>
 
-                            </tr>
-                            <tr class="d-style bgc-h-default-l4">
-                                <td>4</td>
-                                <td>2023-12-11</td>
-                                <td>Hindi</td>
-                                <td>Demo Test 80 wpm</td>
-                                <td>80WPM</td>
-                                <td>805 Words</td>
-                                <td>55 Mins</td>
+                                </tr>
+                                <tr class="d-style bgc-h-default-l4">
+                                    <td>4</td>
+                                    <td>2023-12-11</td>
+                                    <td>Hindi</td>
+                                    <td>Demo Test 80 wpm</td>
+                                    <td>80WPM</td>
+                                    <td>805 Words</td>
+                                    <td>55 Mins</td>
 
-                                <td>
-                                    <center>
-                                        <a><button
-                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
-                                                Typing</button></a>
+                                    <td>
+                                        <center>
+                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                                        class="fas fa-play"></i> Start
+                                                    Typing</button></a>
 
-                                    </center>
-                                </td>
+                                        </center>
+                                    </td>
 
-                            </tr>
-                            <tr class="d-style bgc-h-default-l4">
-                                <td>5</td>
-                                <td>2023-08-27</td>
-                                <td>Hindi</td>
-                                <td>Sunday Special Test 27 Aug</td>
-                                <td>70WPM</td>
-                                <td>417 Words</td>
-                                <td>40 Mins</td>
+                                </tr>
+                                <tr class="d-style bgc-h-default-l4">
+                                    <td>5</td>
+                                    <td>2023-08-27</td>
+                                    <td>Hindi</td>
+                                    <td>Sunday Special Test 27 Aug</td>
+                                    <td>70WPM</td>
+                                    <td>417 Words</td>
+                                    <td>40 Mins</td>
 
-                                <td>
-                                    <center>
-                                        <a><button
-                                                class="btn btn-sm btn-success" onclick="handleStartTest()"><i class="fas fa-play"></i> Start
-                                                Typing</button></a>
+                                    <td>
+                                        <center>
+                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                                        class="fas fa-play"></i> Start
+                                                    Typing</button></a>
 
-                                    </center>
-                                </td>
+                                        </center>
+                                    </td>
 
-                            </tr>
-                         
-                        </tbody>
-                    </table>
+                                </tr>
+
+                            </tbody>
+                        </table>
 
 
                     </div>
@@ -1011,22 +1029,22 @@ justify-content: space-around;">
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-     <script>
-        function handleStartTest(){
+    <script>
+        function handleStartTest() {
             console.log('btn start clicked');
             var part1 = document.getElementById('datatable');
             var part2 = document.getElementById('typingModalId');
-            part1.style.display =  'none';
-            part2.style.display='inline-block';
+            part1.style.display = 'none';
+            part2.style.display = 'inline-block';
         }
-        function handleGoBack(){
-            console.log('btn start clicked');
+        function handleGoBack() {
+            window.location.reload()
             var part1 = document.getElementById('datatable');
             var part2 = document.getElementById('typingModalId');
-            part1.style.display =  'table';
-            part2.style.display='none';
+            part1.style.display = 'table';
+            part2.style.display = 'none';
         }
-     </script>       
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -1056,7 +1074,43 @@ justify-content: space-around;">
         let time = 60;
         let timer = "";
         let mistakes = 0;
+        userInput.addEventListener("input", () => {
+            calculateTypingAccuracy()
+        })
+        function calculateTypingAccuracy() {
+            // console.log('referenceText=', document.getElementById('quote-input').value.length)
+            console.log('referenceText=', quoteSection.innerText.length)
+            let referenceText = quoteSection.innerText;
+            let userInput = document.getElementById('quote-input').value;
+            referenceText = referenceText.split(' ');
+            userInput = userInput.split(' ');
+            let correctWords = 0;
+            let incorrectWords = 0;
+            for (let i = 0; i < userInput.length; i++) {
+                if (referenceText[i] === userInput[i]) {
+                    correctWords++;
+                } else {
+                    incorrectWords++;
+                }
+            }
+            if (incorrectWords > 0) {
+                incorrectWords += ' Words'
+            } else {
+                incorrectWords += ' Word'
+            }
+            document.getElementById("mistakes").innerText = incorrectWords;
+            const accuracy = (correctWords / userInput.length) * 100;
+            console.log('Typing Accuracy = ', accuracy);
+            return accuracy;
+        }
 
+        // Example usage
+        //const referenceText = "The quick brown fox jumps over the lazy dog.";
+        //const userInput = prompt("Type the given text:");
+
+        //const accuracy = calculateTypingAccuracy(referenceText, userInput);
+
+        // console.log(`Typing accuracy: ${accuracy.toFixed(2)}%`);
         //Display random quotes
         const renderNewQuote = async () => {
             //Fetch contents from url
@@ -1077,52 +1131,7 @@ justify-content: space-around;">
             quoteSection.innerHTML += arr.join("");
         };
 
-        //Logic for comparing input words with quote
-        userInput.addEventListener("input", () => {
-            let quoteChars = document.querySelectorAll(".quote-chars");
-            //Create an arrat from received span tags
-            quoteChars = Array.from(quoteChars);
 
-            //array of user input characters
-            let userInputChars = userInput.value.split("");
-
-            //loop through each character in quote
-            quoteChars.forEach((char, index) => {
-                //Check if char(quote character) = userInputChars[index](input character)
-                if (char.innerText == userInputChars[index]) {
-                    char.classList.add("success");
-                }
-                //If user hasn't entered anything or backspaced
-                else if (userInputChars[index] == null) {
-                    //Remove class if any
-                    if (char.classList.contains("success")) {
-                        char.classList.remove("success");
-                    } else {
-                        char.classList.remove("fail");
-                    }
-                }
-                //If user enter wrong character
-                else {
-                    //Checks if we alreasy have added fail class
-                    if (!char.classList.contains("fail")) {
-                        //increment and display mistakes
-                        mistakes += 1;
-                        char.classList.add("fail");
-                    }
-                    document.getElementById("mistakes").innerText = mistakes;
-                }
-                //Returns true if all the characters are entered correctly
-                let check = quoteChars.every((element) => {
-                    return element.classList.contains("success");
-                });
-                //End test if all characters are correct
-                if (check) {
-                    displayResult();
-                }
-            });
-        });
-
-        //Update Timer on screen
         function updateTimer() {
             if (time == 0) {
                 //End test if timer reaches 0
@@ -1137,10 +1146,7 @@ justify-content: space-around;">
             time = 60;
             timer = setInterval(updateTimer, 1000);
         };
-
-        //End Test
         const displayResult = () => {
-            //display result div
             document.querySelector(".result").style.display = "block";
             clearInterval(timer);
             document.getElementById("stop-test").style.display = "none";
@@ -1151,10 +1157,8 @@ justify-content: space-around;">
             }
             document.getElementById("wpm").innerText =
                 (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
-            document.getElementById("accuracy").innerText =
-                Math.round(
-                    ((userInput.value.length - mistakes) / userInput.value.length) * 100
-                ) + " %";
+            let accuracy = calculateTypingAccuracy();
+            document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
         };
 
         //Start Test
