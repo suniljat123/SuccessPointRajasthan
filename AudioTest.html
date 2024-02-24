@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Hindi-Steno | SuccessPointRajasthan</title>
+    <title>Audio Test | SuccessPointRajasthan</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -46,7 +46,7 @@
 
     <div class="section-title" style="padding-left: 4rem; padding-top: 10rem">
         <!-- <h2>Engilsh Steno</h2>  -->
-        <p>Hindi Steno Tests</p>
+        <p>Hindi Audio Test</p>
     </div>
     <div id="audioDiv" style="display: flex;height: 13vh;align-items: center;justify-content: center;">
 
@@ -113,8 +113,7 @@
                 .then(result => {
                     result = result
                     console.log('result=>', result)
-                    //result = result.replace('my.salesforce-sites.com', 'file.force.com');
-                    console.log('audiourl 30 =', result)
+
                     let url = result
                     audioTag.innerHTML = `<audio controls controlsList="nodownload noplaybackrate">
                      <source 
