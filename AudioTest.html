@@ -48,7 +48,8 @@
         <!-- <h2>Engilsh Steno</h2>  -->
         <p>Hindi Steno Tests</p>
     </div>
-    <div id="audioSrc">
+    <div id="audioDiv">
+        Hii
 
     </div>
 
@@ -85,13 +86,9 @@
         })
         function getAudioUrl() {
             console.log('id->>', Id)
-            let audioTag = document.getElementById('audioSrc')
+            let audioTag = document.getElementById('audioDiv')
             console.log('audiontag=', audioTag)
-            // audioTag.src = "https://cloudcertitude15-dev-ed.develop.file.force.com/sfc/servlet.shepherd/version/download/068GA00001B6a2c"
-            //                 https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/sfc/servlet.shepherd/version/download/068GA00001B6a2c
-            // audioTag.innerHTML = ` <source 
-            // src="https://cloudcertitude15-dev-ed.develop.file.force.com/sfc/servlet.shepherd/version/download/068GA00001B6a2c"
-            // type="audio/mpeg">`
+
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
