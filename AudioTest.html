@@ -116,7 +116,7 @@
                     //result = result.replace('my.salesforce-sites.com', 'file.force.com');
                     console.log('audiourl 30 =', result)
                     let url = result
-                    audioTag.innerHTML = `<audio controls>
+                    audioTag.innerHTML = `<audio controls controlsList="nodownload">
                      <source 
              src="${result}"
               type="audio/mpeg">

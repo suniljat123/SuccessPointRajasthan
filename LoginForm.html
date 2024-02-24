@@ -1,7 +1,9 @@
 <html style="background-color:#87b4e2;">
-      
+
 <div class="mainDivForm">
-  <div style="    background-image: url(https://png.pngtree.com/png-vector/20220526/ourmid/pngtree-labour-day-icon-design-vector-png-image_4730509.png);" class="sideOfFormDiv px-3 bgc-blue-l4 d-flex flex-column align-items-center justify-content-center">
+  <div
+    style="    background-image: url(https://png.pngtree.com/png-vector/20220526/ourmid/pngtree-labour-day-icon-design-vector-png-image_4730509.png);"
+    class="sideOfFormDiv px-3 bgc-blue-l4 d-flex flex-column align-items-center justify-content-center">
     <a style="    width: 88%;
     display: flex;
     justify-content: center;
@@ -20,57 +22,58 @@
       <span style="    margin-left: 71px;
       display: block;
       color: white;" class="text-120">
-   Join our Plateform to make Your,<br> Score Better &amp; Practice well!
-</span>
-     
-    
+        Join our Plateform to make Your,<br> Score Better &amp; Practice well!
+      </span>
+
+
     </div>
 
     <div class="mt-auto mb-4 text-dark-tp2">
-     
+
     </div>
   </div>
-<form style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;min-height: 27rem;" class="form"  >
+  <form style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;min-height: 27rem;" class="form">
     <p style="display:none" id="RegisterId" class="title">Register </p>
-    <p id="loginId"  class="title">LogIn </p>
+    <p id="loginId" class="title">LogIn </p>
     <p class="message">Signup now and get full access to our app. </p>
-        <div class="flex">
-        <label id="firstNameId" style="display:none;" >
-            <input required="" placeholder="" type="text" class="input">
-            <span>Firstname</span>
-        </label>
+    <div class="flex">
+      <label id="firstNameId" style="display:none;">
+        <input required="true" onkeyup="setFirstName()" id="firstName" placeholder="" type="text" class="input">
+        <span>Firstname</span>
+      </label>
 
-        <label id="LastNameId" style="display:none;" >
-            <input required="" placeholder="" type="text" class="input">
-            <span>Lastname</span>
-        </label>
-    </div>  
+      <label id="LastNameId" style="display:none;">
+        <input required="true" placeholder="" type="text" class="input">
+        <span>Lastname</span>
+      </label>
+    </div>
 
-    <label id="PhoneId" >
-      <input id="phoneInputId" required="" placeholder="" type="phone" class="input">
+    <label id="PhoneId">
+      <input id="phoneInputId" required="true" placeholder="" type="phone" class="input">
       <span>Phone</span>
-  </label> 
-    
-    <label id="EmailId" style="display:none;" >
-        <input required="" placeholder="" type="email" class="input">
-        <span>Email</span>
-    </label> 
-        
-    <label id="PasswordId" >
-        <input id="passwordInputId" required placeholder="" type="password" class="input">
-        <span>Password</span>
     </label>
-    <label id="confirmPasswordId" style="display:none;" >
-        <input required placeholder="" type="password" class="input">
-        <span>Confirm password</span>
+
+    <label id="EmailId" style="display:none;">
+      <input required="" placeholder="" type="email" class="input">
+      <span>Email</span>
     </label>
-    <button class="submit" onclick="handleSubmitClick()"  >Submit</button>
-    <p id="signInId" style="display:none;" class="signin">Already have an acount ? <a onclick="handleAlreadyHaveAccount()" >Signin</a> </p>
-    <p id="signUpId"  class="signin">Create an Account <a onclick=handleCreateAnAccount() >Signup</a> </p>
-</form>
+
+    <label id="PasswordId">
+      <input id="passwordInputId" required placeholder="" type="password" class="input">
+      <span>Password</span>
+    </label>
+    <label id="confirmPasswordId" style="display:none;">
+      <input required placeholder="" type="password" class="input">
+      <span>Confirm password</span>
+    </label>
+    <button class="submit" onclick="handleSubmitClick()">Submit</button>
+    <p id="signInId" style="display:none;" class="signin">Already have an acount ? <a
+        onclick="handleAlreadyHaveAccount()">Signin</a> </p>
+    <p id="signUpId" class="signin">Create an Account <a onclick=handleCreateAnAccount()>Signup</a> </p>
+  </form>
 </div>
 <script>
-  function handleCreateAnAccount(){
+  function handleCreateAnAccount() {
     console.log('new account method called')
     var part1 = document.getElementById('firstNameId');
     var part2 = document.getElementById('LastNameId');
@@ -81,16 +84,16 @@
     var part7 = document.getElementById('RegisterId');
     var part8 = document.getElementById('loginId');
 
-    part1.style.display =  'block';
-    part2.style.display =  'block';
-    part3.style.display =  'block';
-    part4.style.display =  'block';
-    part5.style.display =  'none';
-    part6.style.display =  'block';
-    part7.style.display =  'block';
-    part8.style.display =  'none';
+    part1.style.display = 'block';
+    part2.style.display = 'block';
+    part3.style.display = 'block';
+    part4.style.display = 'block';
+    part5.style.display = 'none';
+    part6.style.display = 'block';
+    part7.style.display = 'block';
+    part8.style.display = 'none';
   }
-  function handleAlreadyHaveAccount(){
+  function handleAlreadyHaveAccount() {
     console.log('already account called')
     var part1 = document.getElementById('firstNameId');
     var part2 = document.getElementById('LastNameId');
@@ -101,58 +104,63 @@
     var part7 = document.getElementById('loginId');
     var part8 = document.getElementById('RegisterId');
 
-    part1.style.display =  'none';
-    part2.style.display =  'none';
-    part3.style.display =  'none';
-    part4.style.display =  'none';
-    part5.style.display =  'block';
-    part6.style.display =  'none';
-    part7.style.display =  'block';
-    part8.style.display =  'none';
+    part1.style.display = 'none';
+    part2.style.display = 'none';
+    part3.style.display = 'none';
+    part4.style.display = 'none';
+    part5.style.display = 'block';
+    part6.style.display = 'none';
+    part7.style.display = 'block';
+    part8.style.display = 'none';
   }
-  function handleSuybmitClick(){
-   // console.log('submit is clicked');
-   // location.href="Home.html";
+  function handleSuybmitClick() {
+    // console.log('submit is clicked');
+    // location.href="Home.html";
 
+  }
+  function setFirstName(event) {
+    console.log('event=', event)
   }
   function handleSubmitClick() {
     console.log('validate form called');
-   // var firstName = document.getElementById("firstName").value;
-  //  var lastName = document.getElementById("lastName").value;
+
+    var firstName = document.getElementById("firstName");
+    //  var lastName = document.getElementById("lastName").value;
     var phone = document.getElementById("phoneInputId").value;
-  //  var email = document.getElementById("email").value;
+    //  var email = document.getElementById("email").value;
     var password = document.getElementById("passwordInputId").value;
-  //  var confirmPassword = document.getElementById("confirmPassword").value;
+    //  var confirmPassword = document.getElementById("confirmPassword").value;
+    console.log('fIRST Name=', firstName.innerText)
     console.log(phone);
     console.log(password);
 
-    if(phone =='' || password == ''){
+    if (phone == '' || password == '') {
       alert('please fill both the fields');
       return false;
     }
 
 
-  if (phone != '1234567890') {
-    alert("Phone not found.");
-    return false;
-}
+    if (phone != '1234567890') {
+      alert("Phone not found.");
+      return false;
+    }
     // Password confirmation check
     if (password != 'test123') {
-        alert("Passwords do not match.");
-        return false;
+      alert("Passwords do not match.");
+      return false;
     }
 
     // You can add more complex validation here
 
     // If all validation passes, show success message
     alert("Form submitted successfully!");
-    location.href="Home.html";
+    location.href = "Home.html";
     return true;
-}
+  }
 </script>
 <style>
-  .sideOfFormDiv{
-    
+  .sideOfFormDiv {
+
     background-color: royalblue;
     max-width: 350px;
     width: 350px;
@@ -160,144 +168,149 @@
     border-bottom-left-radius: 35px;
     border-top-left-radius: 35px;
   }
-  .mainDivForm{
+
+  .mainDivForm {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     background-color: #87b4e2;
   }
-    .form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 350px;
-        min-width: 350px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 20px;
-        position: relative;
-      }
-      
-      .title {
-        font-size: 28px;
-        color: royalblue;
-        font-weight: 600;
-        letter-spacing: -1px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
-      }
-      
-      .title::before,.title::after {
-        position: absolute;
-        content: "";
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        left: 0px;
-        background-color: royalblue;
-      }
-      
-      .title::before {
-        width: 18px;
-        height: 18px;
-        background-color: royalblue;
-      }
-      
-      .title::after {
-        width: 18px;
-        height: 18px;
-        animation: pulse 1s linear infinite;
-      }
-      
-      .message, .signin {
-        color: rgba(88, 87, 87, 0.822);
-        font-size: 14px;
-      }
-      
-      .signin {
-        text-align: center;
-      }
-      
-      .signin a {
-        color: royalblue;
-      }
-      
-      .signin a:hover {
-        text-decoration: underline royalblue;
-      }
-      
-      .flex {
-        display: flex;
-        width: 100%;
-        gap: 6px;
-      }
-      
-      .form label {
-        position: relative;
-      }
-      
-      .form label .input {
-        width: 100%;
-        padding: 10px 10px 20px 10px;
-        outline: 0;
-        border: 1px solid rgba(105, 105, 105, 0.397);
-        border-radius: 10px;
-      }
-      
-      .form label .input + span {
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        color: grey;
-        font-size: 0.9em;
-        cursor: text;
-        transition: 0.3s ease;
-      }
-      
-      .form label .input:placeholder-shown + span {
-        top: 15px;
-        font-size: 0.9em;
-      }
-      
-      .form label .input:focus + span,.form label .input:valid + span {
-        top: 30px;
-        font-size: 0.7em;
-        font-weight: 600;
-      }
-      
-      .form label .input:valid + span {
-        color: green;
-      }
-      
-      .submit {
-        border: none;
-        outline: none;
-        background-color: royalblue;
-        padding: 10px;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 16px;
-        transform: .3s ease;
-      }
-      
-      .submit:hover {
-        background-color: rgb(56, 90, 194);
-      }
-      
-      @keyframes pulse {
-        from {
-          transform: scale(0.9);
-          opacity: 1;
-        }
-      
-        to {
-          transform: scale(1.8);
-          opacity: 0;
-        }
-      }
 
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    min-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+
+  .message,
+  .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+
+  .signin {
+    text-align: center;
+  }
+
+  .signin a {
+    color: royalblue;
+  }
+
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .form label {
+    position: relative;
+  }
+
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+
+  .form label .input+span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+
+  .form label .input:placeholder-shown+span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+
+  .form label .input:focus+span,
+  .form label .input:valid+span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .form label .input:valid+span {
+    color: green;
+  }
+
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
 </style>
+
 </html>
