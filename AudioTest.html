@@ -48,11 +48,10 @@
         <!-- <h2>Engilsh Steno</h2>  -->
         <p>Hindi Steno Tests</p>
     </div>
-    <audio controls id="audioSrc">
+    <div id="audioSrc">
 
+    </div>
 
-
-    </audio>
 
     </div>
     <app-whatsapp></app-whatsapp>
@@ -120,9 +119,11 @@
                     result = result.replace('my.salesforce-sites.com', 'file.force.com');
                     console.log('audiourl =', result)
 
-                    audioTag.innerHTML = ` <source 
+                    audioTag.innerHTML = `<audio controls>
+                     <source 
              src="${result}"
-              type="audio/mpeg">`
+              type="audio/mpeg">
+              </audio>`;
 
                 })
                 .catch(error => console.log('error=', error));
