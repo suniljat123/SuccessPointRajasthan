@@ -113,8 +113,8 @@
                 .then(result => {
                     result = result
                     console.log('result=>', result)
-                    result = result.replace('my.salesforce-sites.com', 'file.force.com');
-                    console.log('audiourl =?', result)
+                    // result = result.replace('my.salesforce-sites.com', 'file.force.com');
+                    console.log('audiourl =', result)
                     let url = result
                     audioTag.innerHTML = `<audio controls>
                      <source 
