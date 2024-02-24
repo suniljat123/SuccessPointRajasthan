@@ -108,18 +108,17 @@
                 body: raw,
                 redirect: 'follow'
             };
-            const plansContainer = document.getElementById('plansContainer');
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     result = result
                     console.log('result=>', result)
                     result = result.replace('my.salesforce-sites.com', 'file.force.com');
-                    console.log('audiourl =?=', result)
-
+                    console.log('audiourl =?', result)
+                    let url = result
                     audioTag.innerHTML = `<audio controls>
                      <source 
-             src="https://cloudcertitude15-dev-ed.develop.file.force.com/services/apexrest/SuccessPointRajasthan"
+             src="${result}"
               type="audio/mpeg">
               </audio>`;
 
