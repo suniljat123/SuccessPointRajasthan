@@ -833,9 +833,8 @@
                                         </span>
                                         <h3></h3>
                                         <div class="h5 mt-0">
-                                            <i class="ni business_briefcase-24 mr-2"></i>
-                                            <!-- <span id="StudentName"></span> -->
-                                            <span></span>
+
+                                            <span id="SPRNAme"></span>
 
                                             <i class="ni business_briefcase-24 mr-2"></i><span id="StudentName"></span>
                                             <span id="StudentPhone"></span>
@@ -983,7 +982,8 @@
                     console.log('name', name)
                     name.innerText = result.Name;
                     Phone = document.getElementById("StudentPhone");
-                    console.log('Phone', Phone)
+                    document.getElementById("SPRNAme").innerText = result.Name;
+                    console.log('Phone', document.getElementById("SPRNAme"))
                     Phone.innerText = result.Phone__c;
 
                 })
