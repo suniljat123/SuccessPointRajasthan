@@ -974,6 +974,7 @@
                 .then(result => {
                     result = JSON.parse(result);
                     console.log('Student result=>>', result)
+                    console.log('Student name=>>', result.Name)
                     rollNo = document.getElementById("StudentRollNumber");
                     rollNo.innerText = 'SPR_' + result.Roll_Number__c;
                     name = document.getElementById("StudentName");
