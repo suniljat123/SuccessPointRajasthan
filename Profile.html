@@ -979,7 +979,7 @@
                     name = document.getElementById("StudentName");
                     name.innerText = result.Name;
                     Phone = document.getElementById("StudentPhone")
-                    Phone.innerText = 'SPR_' + result.Phone__c;
+                    Phone.innerText = result.Phone__c;
 
                 })
                 .catch(error => console.log('error=', error));
