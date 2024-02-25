@@ -816,7 +816,11 @@
                                         <div class="font-weight-300"></div>
 
                                     </div>
-                                    <span class="h5" style="float:right!important"> Your Roll Number: GS_3210</span>
+                                    <span class="h5" style="float:right!important"> Your Roll Number: <span
+                                            id="StudentRollNumber">
+
+                                        </span>
+                                    </span>
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="text-center">
@@ -969,6 +973,8 @@
                 .then(result => {
                     result = JSON.parse(result);
                     console.log('Student result=>>', result)
+                    rollNo = document.getElementById("StudentRollNumber")
+                    rollNo.innerText = result.Roll_Number__c;
 
 
 
