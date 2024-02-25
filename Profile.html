@@ -947,7 +947,6 @@
     <script>
         $(document).ready(function () {
             document.getElementById('header').style.backgroundColor = '#38434b'
-            console.log('Profile')
             getStudentDetails();
         })
         function getStudentDetails() {
@@ -975,7 +974,6 @@
                 .then(response => response.json())
                 .then(result => {
                     result = JSON.parse(result);
-                    console.log('Student result=>>', result)
                     document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
                     document.getElementById("StudentPhone").innerText = result.Phone__c;
                     document.getElementById("SPRNAme").innerText = result.Name;
