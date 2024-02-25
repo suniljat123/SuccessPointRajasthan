@@ -833,8 +833,9 @@
                                         </span>
                                         <h3></h3>
                                         <div class="h5 mt-0">
-                                            <i class="ni business_briefcase-24 mr-2"></i>Rakesh Choudhary <br>
-                                            <i class="ni business_briefcase-24 mr-2"></i>9602596476
+                                            <i class="ni business_briefcase-24 mr-2"></i><span
+                                                id="StudentName"></span><br>
+                                            <i class="ni business_briefcase-24 mr-2"></i><span id="StudentPhone"></span>
                                         </div>
                                         <div><i class="ni education_hat mr-2"></i>Account Type: Paid </div>
 
@@ -973,10 +974,12 @@
                 .then(result => {
                     result = JSON.parse(result);
                     console.log('Student result=>>', result)
-                    rollNo = document.getElementById("StudentRollNumber")
-                    rollNo.innerText = result.Roll_Number__c;
-
-
+                    rollNo = document.getElementById("StudentRollNumber");
+                    rollNo.innerText = 'SPR_' + result.Roll_Number__c;
+                    name = document.getElementById("StudentName");
+                    name.innerText = result.Name;
+                    Phone = document.getElementById("StudentPhone")
+                    Phone.innerText = 'SPR_' + result.Phone__c;
 
                 })
                 .catch(error => console.log('error=', error));
