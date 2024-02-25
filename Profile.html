@@ -944,9 +944,6 @@
             getStudentDetails();
         })
         function getStudentDetails() {
-            console.log('id->', Id)
-            let audioTag = document.getElementById('audioDiv')
-            console.log('audiontag=', audioTag)
 
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -957,7 +954,7 @@
                 "FirstName": 'FirstName',
                 "Company": 'Company',
                 //"Phone": 'Phone', // document.getElementById('phone').value,
-                "Phone": 7878438668,
+                "Phone": '7878438668',
                 "getStudentDetails": "getStudentDetails"
             });
 
@@ -971,7 +968,7 @@
                 .then(response => response.json())
                 .then(result => {
                     result = JSON.parse(result);
-                    console.log('Student result=>', result)
+                    console.log('Student result=>>', result)
 
 
 
