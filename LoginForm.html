@@ -126,6 +126,8 @@
   }
   function handleAlreadyHaveAccount() {
     console.log('already account called')
+    document.getElementById("phoneInputId").value = '';
+    document.getElementById("passwordInputId").value = '';
     var part1 = document.getElementById('firstNameId');
     var part2 = document.getElementById('LastNameId');
     var part3 = document.getElementById('EmailId');
@@ -285,7 +287,8 @@
           alert(result);
         } else {
           console.log('Id=', result)
-          localStorage.setItem("SPR_StudentPhone", result);
+          alert('Account Created Successfully.')
+          //localStorage.setItem("SPR_StudentPhone", result);
           //  result = JSON.parse(result);
         }
 
