@@ -975,7 +975,7 @@
                 .then(response => response.json())
                 .then(result => {
                     result = JSON.parse(result);
-                    document.getElementById("StudentRollNumber").innerText = 'SPR_' //+ result.Roll_Number__c;
+                    document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
                     document.getElementById("StudentPhone").innerText = result.Phone__c;
                     document.getElementById("SPRNAme").innerText = result.Name;
 
