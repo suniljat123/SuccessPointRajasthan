@@ -155,12 +155,8 @@
 
   }
   function handleLogIn() {
-    console.log('Login')
-
     var phone = document.getElementById("phoneInputId").value.trim();
-    //  var email = document.getElementById("email").value;
     var password = document.getElementById("passwordInputId").value;
-
     console.log(phone);
     console.log(password);
 
@@ -169,23 +165,38 @@
       return false;
     }
 
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-    if (phone != '1234567890') {
-      alert("Phone not found.");
-      return false;
-    }
-    // Password confirmation check
-    if (password != 'test123') {
-      alert("Passwords do not match.");
-      return false;
-    }
+    var raw = JSON.stringify({
+      "Password": password,
+      "Phone": phone,
+      "loginStudent": "loginStudent"
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log('result=', result)
+
+
+
+      })
+      .catch(error => console.log('error=', error));
+
+
 
     // You can add more complex validation here
 
     // If all validation passes, show success message
-    alert("Form submitted successfully!");
-    location.href = "Home.html";
-    return true;
+    //location.href = "Home.html";
   }
   function callToast() {
     const toastDiv = document.getElementById("toastDiv");
