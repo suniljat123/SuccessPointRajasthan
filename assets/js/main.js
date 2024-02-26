@@ -505,7 +505,7 @@ function goBack() {
 function checkIsSprStudent() {
   console.log("hiiii");
   let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
-
+  console.log("SPR_StudentPhone=", SPR_StudentPhone);
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append(
