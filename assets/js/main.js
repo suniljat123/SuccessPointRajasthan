@@ -503,3 +503,32 @@ function goBack() {
   $("#exampleModalToggle2").modal("hide");
   $("#staticBackdrop").modal("show");
 }
+function checkIsSprStudent() {
+   let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone")
+           
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+            var raw = JSON.stringify({
+                 
+                "Phone": SPR_StudentPhone,
+                "isSPRStudent": "isSPRStudent"
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                   console.log('reload =',result)
+
+                })
+                .catch(error => console.log('error=', error));
+
+        } 
+}
