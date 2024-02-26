@@ -525,7 +525,10 @@ function checkIsSprStudent() {
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                   console.log('reload =',result)
+                  console.log('reload =', result)
+                  if (result == 'No Account found.') {
+                    location.href = "LoginForm.html";
+                  }
 
                 })
                 .catch(error => console.log('error=', error));
