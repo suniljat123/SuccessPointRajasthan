@@ -185,6 +185,11 @@
       .then(response => response.json())
       .then(result => {
         console.log('result=', result)
+        if (result == 'No Account Found.') {
+          alert(result)
+        } else {
+          localStorage.setItem("SPR_StudentPhone", result);
+        }
 
 
 
