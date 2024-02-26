@@ -503,6 +503,7 @@ function goBack() {
   $("#staticBackdrop").modal("show");
 }
 function checkIsSprStudent() {
+  console.log("hiiii");
   let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
 
   var myHeaders = new Headers();
