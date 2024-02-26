@@ -503,7 +503,7 @@ function goBack() {
   $("#staticBackdrop").modal("show");
 }
 function checkIsSprStudent() {
-  console.log("hiiii");
+  console.log("hello");
   let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
   if (SPR_StudentPhone) {
     console.log("SPR_StudentPhone=", SPR_StudentPhone);
