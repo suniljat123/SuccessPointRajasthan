@@ -948,6 +948,7 @@
         $(document).ready(function () {
             document.getElementById('header').style.backgroundColor = '#38434b'
             getStudentDetails();
+            checkIsSprStudent();
         })
         function getStudentDetails() {
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone")

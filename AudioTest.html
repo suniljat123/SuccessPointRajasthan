@@ -78,6 +78,7 @@
     <script>
         let Id = '';
         $(document).ready(function () {
+            checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
