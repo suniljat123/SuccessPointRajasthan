@@ -1730,3 +1730,9 @@ section {
 .footer .credits a {
   color: #fff;
 }
+#SignUpBtn {
+  display: none;
+}
+#loginBtn {
+  display: block;
+}

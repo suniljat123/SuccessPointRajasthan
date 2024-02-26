@@ -1,5 +1,29 @@
 <html style="background-color:#87b4e2;">
 
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>SuccessPointRajasthan</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/SuccessPointRajasthanlogo.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+
+  <!--   Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/slider.css" rel="stylesheet" />
+
+</head>
+
 <div class="mainDivForm">
   <div
     style="    background-image: url(https://png.pngtree.com/png-vector/20220526/ourmid/pngtree-labour-day-icon-design-vector-png-image_4730509.png);"
@@ -35,26 +59,26 @@
   <form style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;min-height: 27rem;" class="form">
     <p style="display:none" id="RegisterId" class="title">Register </p>
     <p id="loginId" class="title">LogIn </p>
-    <p class="message">Signup now and get full access to our app. </p>
+    <p class="message" id="modalMessage">Log In now and get full access to our app.</p>
     <div class="flex">
       <label id="firstNameId" style="display:none;">
-        <input required="true" onkeyup="setFirstName()" id="firstName" placeholder="" type="text" class="input">
+        <input required="true" id="firstName" placeholder="" type="text" class="input">
         <span>Firstname</span>
       </label>
 
       <label id="LastNameId" style="display:none;">
-        <input required="true" placeholder="" type="text" class="input">
+        <input required="" id="lastName" placeholder="" type="text" class="input">
         <span>Lastname</span>
       </label>
     </div>
 
     <label id="PhoneId">
-      <input id="phoneInputId" required="true" placeholder="" type="phone" class="input">
+      <input id="phoneInputId" required="true" placeholder="" maxlength="10" type="Number" class="input">
       <span>Phone</span>
     </label>
 
     <label id="EmailId" style="display:none;">
-      <input required="" placeholder="" type="email" class="input">
+      <input required="" id="email" placeholder="" type="email" class="input">
       <span>Email</span>
     </label>
 
@@ -63,16 +87,20 @@
       <span>Password</span>
     </label>
     <label id="confirmPasswordId" style="display:none;">
-      <input required placeholder="" type="password" class="input">
+      <input required placeholder="" id="confirmPassword" type="password" class="input">
       <span>Confirm password</span>
     </label>
-    <button class="submit" onclick="handleSubmitClick()">Submit</button>
+    <button class="submit signup" id="SignUpBtn" onclick="handleSubmitClick()">Submit</button>
+    <button class="submit" id="loginBtn" style="display:block;" onclick="handleLogIn()">Log In</button>
     <p id="signInId" style="display:none;" class="signin">Already have an acount ? <a
-        onclick="handleAlreadyHaveAccount()">Signin</a> </p>
-    <p id="signUpId" class="signin">Create an Account <a onclick=handleCreateAnAccount()>Signup</a> </p>
+        onclick="handleAlreadyHaveAccount()" style="cursor: pointer;">Signin</a> </p>
+    <p id="signUpId" class="signin">Create an Account <a onclick=handleCreateAnAccount()
+        style="cursor: pointer;">Signup</a> </p>
   </form>
+  <app-showtoast></app-showtoast>
 </div>
 <script>
+
   function handleCreateAnAccount() {
     console.log('new account method called')
     var part1 = document.getElementById('firstNameId');
@@ -92,6 +120,9 @@
     part6.style.display = 'block';
     part7.style.display = 'block';
     part8.style.display = 'none';
+    document.getElementById('loginBtn').style.display = 'none';
+    document.getElementById('SignUpBtn').style.display = 'block';
+    document.getElementById('modalMessage').innerText = 'Signup now and get full access to our app.'
   }
   function handleAlreadyHaveAccount() {
     console.log('already account called')
@@ -112,25 +143,22 @@
     part6.style.display = 'none';
     part7.style.display = 'block';
     part8.style.display = 'none';
+    document.getElementById('loginBtn').style.display = 'block';
+    document.getElementById('SignUpBtn').style.display = 'none';
+    document.getElementById('modalMessage').innerText = 'Log In now and get full access to our app.'
   }
   function handleSuybmitClick() {
     // console.log('submit is clicked');
     // location.href="Home.html";
 
   }
-  function setFirstName(event) {
-    console.log('event=', event)
-  }
-  function handleSubmitClick() {
-    console.log('validate form called');
+  function handleLogIn() {
+    console.log('Login')
 
-    var firstName = document.getElementById("firstName");
-    //  var lastName = document.getElementById("lastName").value;
-    var phone = document.getElementById("phoneInputId").value;
+    var phone = document.getElementById("phoneInputId").value.trim();
     //  var email = document.getElementById("email").value;
     var password = document.getElementById("passwordInputId").value;
-    //  var confirmPassword = document.getElementById("confirmPassword").value;
-    console.log('fIRST Name=', firstName.innerText)
+
     console.log(phone);
     console.log(password);
 
@@ -157,6 +185,112 @@
     location.href = "Home.html";
     return true;
   }
+  function callToast() {
+    const toastDiv = document.getElementById("toastDiv");
+    toastDiv.style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("successDiv").style.display = "none";
+    }, 4000);
+    const toastEement = document.getElementById("formendSuccess");
+    const toastEl = new bootstrap.Toast(toastEement, {
+      animation: true,
+      delay: 4000,
+    });
+    toastEl.show();
+  }
+  function callError() {
+    const toastDiv = document.getElementById("toastDiv");
+    toastDiv.style.display = "flex";
+    setTimeout(() => {
+      console;
+      document.getElementById("toastDiv").style.display = "none";
+    }, 4000);
+    const toastEement = document.getElementById("formendError");
+    const toastEl = new bootstrap.Toast(toastEement, {
+      animation: true,
+      delay: 4000,
+    });
+    toastEl.show();
+  }
+  function handleSubmitClick() {
+    console.log('validate form called');
+    let isFormFilledCompletely = true;
+    var firstName = document.getElementById("firstName").value.trim();
+    var lastName = document.getElementById("lastName").value.trim();
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phoneInputId").value.trim();
+    var password = document.getElementById("passwordInputId").value;
+
+    document.getElementById("firstName").value = document.getElementById("firstName").value.trim();
+    document.getElementById("lastName").value = document.getElementById("lastName").value.trim();
+    document.getElementById("email").value = document.getElementById("email").value.trim();
+    document.getElementById("phoneInputId").value = document.getElementById("phoneInputId").value.trim();
+
+    if (firstName.length > 0) {
+      isFormFilledCompletely = true;
+    } else {
+      isFormFilledCompletely = false;
+      alert('Please enter your first name.');
+      return false;
+    }
+    if (phone.length > 0) {
+      isFormFilledCompletely = true;
+    } else {
+      isFormFilledCompletely = false;
+      alert('Please enter phone.');
+      return false;
+    }
+    if (password.length > 0) {
+      isFormFilledCompletely = true;
+    } else {
+      isFormFilledCompletely = false;
+      alert('Please enter password.');
+      return false;
+    }
+    if (password == confirmPassword) {
+      isFormFilledCompletely = true;
+    } else {
+      isFormFilledCompletely = false;
+      alert('Password doesn\'t match.');
+      return false;
+    }
+
+
+
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+    var raw = JSON.stringify({
+      "LastName": lastName,
+      "FirstName": firstName,
+      "Email": email,
+      "Password": password,
+      "Phone": phone,
+      "fillStudentDetails": "fillStudentDetails"
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log('result=', result)
+        result = JSON.parse(result);
+
+      })
+      .catch(error => console.log('error=', error));
+
+    return true;
+  }
+
+
 </script>
 <style>
   .sideOfFormDiv {
