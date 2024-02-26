@@ -282,7 +282,12 @@
       .then(response => response.json())
       .then(result => {
         console.log('result=', result)
-        result = JSON.parse(result);
+        if (result == 'Account already exist with this number.') {
+          alert(result);
+        } else {
+          result = JSON.parse(result);
+        }
+
 
       })
       .catch(error => console.log('error=', error));
