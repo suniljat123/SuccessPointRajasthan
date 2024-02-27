@@ -1024,7 +1024,7 @@ justify-content: space-around;">
 
                                          <td>
                                     <center>
-                                        <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                        <a><button class="btn btn-sm btn-success" onclick="handleStartTest('gii')"><i
                                             class="fas fa-play"></i> Start
                                             Typing</button></a>
 
@@ -1085,7 +1085,8 @@ justify-content: space-around;">
             console.log('Typing Accuracy = ', accuracy);
             return accuracy;
         }
-        function handleStartTest() {
+        function handleStartTest(id) {
+            console.log('id=', id)
             console.log('btn start clicked');
             renderNewQuote();
             var part1 = document.getElementById('datatable');
