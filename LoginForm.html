@@ -238,13 +238,13 @@
     var firstName = document.getElementById("firstName").value.trim();
     var lastName = document.getElementById("lastName").value.trim();
     var confirmPassword = document.getElementById("confirmPassword").value;
-    var email = document.getElementById("email").value.trim();
+    // var email = document.getElementById("email").value.trim();
     var phone = document.getElementById("phoneInputId").value.trim();
     var password = document.getElementById("passwordInputId").value;
 
     document.getElementById("firstName").value = document.getElementById("firstName").value.trim();
     document.getElementById("lastName").value = document.getElementById("lastName").value.trim();
-    document.getElementById("email").value = document.getElementById("email").value.trim();
+    // document.getElementById("email").value = document.getElementById("email").value.trim();
     document.getElementById("phoneInputId").value = document.getElementById("phoneInputId").value.trim();
 
     if (firstName.length > 0) {
@@ -302,17 +302,17 @@
       .then(result => {
 
         alert('re=', result)
-        setTimeout(() => {
-          console.log('result=>', result)
-          if (result == 'Account already exist with this number.') {
-            alert(result);
-          } else {
-            console.log('Id=', result)
-            alert('Account Created Successfully.')
-            //localStorage.setItem("SPR_StudentPhone", result);
-            //  result = JSON.parse(result);
-          }
-        }, 1500)
+        // setTimeout(() => {
+        console.log('result=>', result)
+        if (result == 'Account already exist with this number.') {
+          alert(result);
+        } else {
+          console.log('Id=', result)
+          alert('Account Created Successfully.')
+          //localStorage.setItem("SPR_StudentPhone", result);
+          //  result = JSON.parse(result);
+        }
+        // }, 1500)
 
 
 
