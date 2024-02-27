@@ -898,15 +898,15 @@
                                 day: "numeric",
                                 year: "numeric",
                             });
-
+                            let SRNo = idx + 1;
                             const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td>1</td>
-                                        <td>2023-12-21</td>
-                                        <td>Hindi</td>
-                                        <td>Demo Test 100 wpm (SSC)</td>
-                                        <td>100WPM</td>
-                                        <td>1000 Words</td>
-                                        <td>65 Mins</td>
+                                        <td>${SRNo}</td>
+                                        <td>${currentItem.LastModifiedDate}</td>
+                                        <td>${currentItem.Test_Language__c}</td>
+                                        <td>${currentItem.Name}</td>
+                                        <td>${currentItem.Dictation_Speed__c} WPM</td>
+                                        <td>${currentItem.Total_Words__c} Words</td>
+                                        <td>${currentItem.Duration__c} Mins</td>
 
                                         <td>
                                             <center>
