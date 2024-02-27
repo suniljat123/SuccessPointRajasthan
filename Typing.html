@@ -916,7 +916,7 @@ justify-content: space-around;">
                                     <th class="bgc-yellow-l3">Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="pos-rel">
+                            <tbody class="pos-rel" id="TableData">
                                 <tr class="d-style bgc-h-default-l4">
                                     <td>1</td>
                                     <td>2023-12-21</td>
@@ -925,82 +925,6 @@ justify-content: space-around;">
                                     <td>100WPM</td>
                                     <td>1000 Words</td>
                                     <td>65 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr>
-                                <tr class="d-style bgc-h-default-l4">
-                                    <td>2</td>
-                                    <td>2023-12-13</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 100 wpm (RSMSSB)</td>
-                                    <td>100WPM</td>
-                                    <td>1000 Words</td>
-                                    <td>65 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr>
-                                <tr class="d-style bgc-h-default-l4">
-                                    <td>3</td>
-                                    <td>2023-12-11</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 90 wpm</td>
-                                    <td>90WPM</td>
-                                    <td>890 Words</td>
-                                    <td>60 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr>
-                                <tr class="d-style bgc-h-default-l4">
-                                    <td>4</td>
-                                    <td>2023-12-11</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 80 wpm</td>
-                                    <td>80WPM</td>
-                                    <td>805 Words</td>
-                                    <td>55 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr>
-                                <tr class="d-style bgc-h-default-l4">
-                                    <td>5</td>
-                                    <td>2023-08-27</td>
-                                    <td>Hindi</td>
-                                    <td>Sunday Special Test 27 Aug</td>
-                                    <td>70WPM</td>
-                                    <td>417 Words</td>
-                                    <td>40 Mins</td>
 
                                     <td>
                                         <center>
@@ -1067,6 +991,77 @@ justify-content: space-around;">
         })
     </script>
     <Script>
+        $(document).ready(function () {
+            const TableData = document.getElementById('TableData');
+            let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+            var raw = JSON.stringify({
+                "Phone": SPR_StudentPhone,
+                "getTypingContent": 'getTypingContent'
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
+                        result = JSON.parse(result);
+                        console.log('result=>', result)
+                        result.forEach((currentItem, idx) => {
+                            const dateString = currentItem.LastModifiedDate;
+                            const dateObject = new Date(dateString);
+
+                            const formattedDate = dateObject.toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                            });
+                            let SRNo = idx + 1;
+
+                            const tableHTML = `<tr class="d-style bgc-h-default-l4">
+                                        <td>${SRNo}</td>
+                                        <td>${formattedDate}</td>
+                                        <td>${currentItem.Courses__r.Name}</td>
+                                        <td>${currentItem.Test_Language__c}</td>
+                                        <td>${currentItem.Name}</td>
+                                        <td>${currentItem.Dictation_Speed__c} WPM</td>
+                                        <td>${currentItem.Total_Words__c} Words</td>
+                                        <td>${currentItem.Duration__c} Mins</td>
+
+                                         <td>
+                                    <center>
+                                        <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
+                                            class="fas fa-play"></i> Start
+                                            Typing</button></a>
+
+                                    </center>
+                                </td>
+
+                                    </tr>`;
+                            TableData.innerHTML += tableHTML;
+                        })
+
+                    } else {
+                        const tableHTML = `<tr class="d-style bgc-h-default-l4">
+                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
+                                         
+
+                                    </tr>`;
+                        TableData.innerHTML += tableHTML;
+                    }
+
+                })
+                .catch(error => console.log('error=', error));
+
+        })
         //Random Quotes Api URL
         const quoteApiUrl = "https://api.quotable.io/random?minLength=80&maxLength=100";
         const quoteSection = document.getElementById("quote");
@@ -1105,13 +1100,6 @@ justify-content: space-around;">
             return accuracy;
         }
 
-        // Example usage
-        //const referenceText = "The quick brown fox jumps over the lazy dog.";
-        //const userInput = prompt("Type the given text:");
-
-        //const accuracy = calculateTypingAccuracy(referenceText, userInput);
-
-        // console.log(`Typing accuracy: ${accuracy.toFixed(2)}%`);
         //Display random quotes
         const renderNewQuote = async () => {
             //Fetch contents from url
@@ -1121,6 +1109,7 @@ justify-content: space-around;">
             let data = await response.json();
             //Access quote
             quote = data.content;
+
             quote = 'A steno machine, stenotype machine, shorthand machine, stenograph or steno writer is a specialized chorded keyboard or typewriter used by stenographers for shorthand use. In order to pass the United States Registered Professional Reporter test, a trained court reporter or closed captioner must write speeds of approximately 180, 200, and 225 words per minute (wpm) at very high accuracy in the categories of literary, jury charge, and testimony, respectively.[1] Some stenographers can reach 300 words per minute. The website of the California Official Court Reporters Association (COCRA) gives the official record for American English as 375 wpm.[2]  Duration: 1 minute and 14 seconds.1:14 Demonstration Marc Grandjean (1928) The stenotype keyboard has far fewer keys than a conventional alphanumeric keyboard. Multiple keys are pressed simultaneously (known as "chording" or "stroking") to spell out whole syllables, words, and phrases with a single hand motion. This system makes realtime transcription practical for court reporting and live closed captioning. Because the keyboard does not contain all the letters of the English alphabet, letter combinations are substituted for the missing letters. There are several schools of thought on how to record various sounds, such as the StenEd, Phoenix, and Magnum Steno theories.';
             //quote = 'मेरा नाम सुनील है'
             //Array of characters in the quote
