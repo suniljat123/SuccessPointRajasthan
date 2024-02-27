@@ -1180,8 +1180,9 @@
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
-
+            let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var raw = JSON.stringify({
+                "Phone": SPR_StudentPhone,
                 "studentId": "a01GA00002LQoKlYAL",
                 "getResult": "getResult"
             });
