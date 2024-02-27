@@ -890,7 +890,7 @@
                         result = JSON.parse(result);
                         console.log('result=>', result)
                         result.forEach((currentItem, idx) => {
-                            const dateString = currentItem.CreatedDate;
+                            const dateString = currentItem.LastModifiedDate;
                             const dateObject = new Date(dateString);
 
                             const formattedDate = dateObject.toLocaleDateString("en-US", {
@@ -901,7 +901,7 @@
                             let SRNo = idx + 1;
                             const tableHTML = `<tr class="d-style bgc-h-default-l4">
                                         <td>${SRNo}</td>
-                                        <td>${currentItem.LastModifiedDate}</td>
+                                        <td>${formattedDate}</td>
                                         <td>${currentItem.Test_Language__c}</td>
                                         <td>${currentItem.Name}</td>
                                         <td>${currentItem.Dictation_Speed__c} WPM</td>
