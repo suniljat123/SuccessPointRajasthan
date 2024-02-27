@@ -954,22 +954,7 @@ justify-content: space-around;">
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <script>
-        function handleStartTest() {
-            console.log('btn start clicked');
-            var part1 = document.getElementById('datatable');
-            var part2 = document.getElementById('typingModalId');
-            part1.style.display = 'none';
-            part2.style.display = 'inline-block';
-        }
-        function handleGoBack() {
-            window.location.reload()
-            var part1 = document.getElementById('datatable');
-            var part2 = document.getElementById('typingModalId');
-            part1.style.display = 'table';
-            part2.style.display = 'none';
-        }
-    </script>
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -1100,7 +1085,22 @@ justify-content: space-around;">
             console.log('Typing Accuracy = ', accuracy);
             return accuracy;
         }
+        function handleStartTest() {
+            console.log('btn start clicked');
+            renderNewQuote();
+            var part1 = document.getElementById('datatable');
+            var part2 = document.getElementById('typingModalId');
+            part1.style.display = 'none';
+            part2.style.display = 'inline-block';
 
+        }
+        function handleGoBack() {
+            window.location.reload()
+            var part1 = document.getElementById('datatable');
+            var part2 = document.getElementById('typingModalId');
+            part1.style.display = 'table';
+            part2.style.display = 'none';
+        }
         //Display random quotes
         const renderNewQuote = async () => {
             //Fetch contents from url
@@ -1110,6 +1110,29 @@ justify-content: space-around;">
             let data = await response.json();
             //Access quote
             quote = data.content;
+            let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
+
+            var raw = JSON.stringify({
+                "Phone": SPR_StudentPhone,
+                "getTypingTestContent": 'getTypingTestContent'
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log('result typing=>', result)
+
+                })
+                .catch(error => console.log('error=', error));
 
             quote = 'A steno machine, stenotype machine, shorthand machine, stenograph or steno writer is a specialized chorded keyboard or typewriter used by stenographers for shorthand use. In order to pass the United States Registered Professional Reporter test, a trained court reporter or closed captioner must write speeds of approximately 180, 200, and 225 words per minute (wpm) at very high accuracy in the categories of literary, jury charge, and testimony, respectively.[1] Some stenographers can reach 300 words per minute. The website of the California Official Court Reporters Association (COCRA) gives the official record for American English as 375 wpm.[2]  Duration: 1 minute and 14 seconds.1:14 Demonstration Marc Grandjean (1928) The stenotype keyboard has far fewer keys than a conventional alphanumeric keyboard. Multiple keys are pressed simultaneously (known as "chording" or "stroking") to spell out whole syllables, words, and phrases with a single hand motion. This system makes realtime transcription practical for court reporting and live closed captioning. Because the keyboard does not contain all the letters of the English alphabet, letter combinations are substituted for the missing letters. There are several schools of thought on how to record various sounds, such as the StenEd, Phoenix, and Magnum Steno theories.';
             //quote = 'मेरा नाम सुनील है'
@@ -1167,7 +1190,7 @@ justify-content: space-around;">
             document.getElementById("start-test").style.display = "block";
             document.getElementById("stop-test").style.display = "none";
             userInput.disabled = true;
-            renderNewQuote();
+            // renderNewQuote();
         };
     </Script>
 
