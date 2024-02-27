@@ -930,10 +930,12 @@
                                     </tr>`;
                         TableData.innerHTML += tableHTML;
                     }
+                    const tableHTML = `<tr class="d-style bgc-h-default-l4">
+                                        <td>${result}</td>
+                                         
 
-
-
-
+                                    </tr>`;
+                    TableData.innerHTML += tableHTML;
                 })
                 .catch(error => console.log('error=', error));
 
