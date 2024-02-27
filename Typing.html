@@ -1132,8 +1132,9 @@ justify-content: space-around;">
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    console.log('result typing=>', result)
+
                     result = JSON.parse(result);
+                    console.log('result typing=>', result)
                     // quote = 'A steno machine, stenotype machine, shorthand machine, stenograph or steno writer is a specialized chorded keyboard or typewriter used by stenographers for shorthand use. In order to pass the United States Registered Professional Reporter test, a trained court reporter or closed captioner must write speeds of approximately 180, 200, and 225 words per minute (wpm) at very high accuracy in the categories of literary, jury charge, and testimony, respectively.[1] Some stenographers can reach 300 words per minute. The website of the California Official Court Reporters Association (COCRA) gives the official record for American English as 375 wpm.[2]  Duration: 1 minute and 14 seconds.1:14 Demonstration Marc Grandjean (1928) The stenotype keyboard has far fewer keys than a conventional alphanumeric keyboard. Multiple keys are pressed simultaneously (known as "chording" or "stroking") to spell out whole syllables, words, and phrases with a single hand motion. This system makes realtime transcription practical for court reporting and live closed captioning. Because the keyboard does not contain all the letters of the English alphabet, letter combinations are substituted for the missing letters. There are several schools of thought on how to record various sounds, such as the StenEd, Phoenix, and Magnum Steno theories.';
                     quote = result[0].Audio_Text__c
                     //Array of characters in the quote
