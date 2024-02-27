@@ -810,6 +810,7 @@
                                     <tr>
                                         <th class="bgc-yellow-l3">S.No.</th>
                                         <th class="bgc-yellow-l3">Date</th>
+                                        <th class="bgc-yellow-l3">Course Name</th>
                                         <th class="bgc-yellow-l3">Test Language</th>
                                         <th class="bgc-yellow-l3">Test Name</th>
                                         <th class="bgc-yellow-l3">Dictation Speed</th>
@@ -902,6 +903,7 @@
                             const tableHTML = `<tr class="d-style bgc-h-default-l4">
                                         <td>${SRNo}</td>
                                         <td>${formattedDate}</td>
+                                         <td>${currentItem.Courses__r.Name}</td>
                                         <td>${currentItem.Test_Language__c}</td>
                                         <td>${currentItem.Name}</td>
                                         <td>${currentItem.Dictation_Speed__c} WPM</td>
@@ -923,7 +925,7 @@
 
                     } else {
                         const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td style="text-align: center;background: #8c93aa;" colspan="8">${result}</td>
+                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
                                          
 
                                     </tr>`;
