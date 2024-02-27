@@ -188,7 +188,7 @@
         if (result == 'No Account Found.') {
           alert(result)
         } else {
-          alert('Account Created Successfully.')
+
           localStorage.setItem("SPR_StudentPhone", result);
           location.href = "Home.html";
         }
@@ -301,6 +301,7 @@
       .then(response => response.json())
       .then(result => {
         console.log('result=', result)
+        alert('re=', result)
         if (result == 'Account already exist with this number.') {
           alert(result);
         } else {
