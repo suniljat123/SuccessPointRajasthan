@@ -1088,7 +1088,7 @@ justify-content: space-around;">
         function handleStartTest(id) {
             console.log('id=', id)
             console.log('btn start clicked');
-            renderNewQuote();
+            renderNewQuote(id);
             var part1 = document.getElementById('datatable');
             var part2 = document.getElementById('typingModalId');
             part1.style.display = 'none';
@@ -1103,8 +1103,9 @@ justify-content: space-around;">
             part2.style.display = 'none';
         }
         //Display random quotes
-        const renderNewQuote = async () => {
+        const renderNewQuote = async (id) => {
             //Fetch contents from url
+            console.log('Id in ren=', id)
             const response = await fetch(quoteApiUrl);
 
             //Store response
