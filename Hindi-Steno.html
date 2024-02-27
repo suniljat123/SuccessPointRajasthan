@@ -1080,7 +1080,7 @@
 
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
-                "getHindiCource": "getHindiCource"
+                "getHindiCourse": "getHindiCourse"
             });
 
             var requestOptions = {
@@ -1092,8 +1092,13 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    result = JSON.parse(result);
-                    console.log('result=>', result)
+
+                    if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
+                        result = JSON.parse(result);
+                        console.log('result=>', result)
+                    } else {
+                        alert(result)
+                    }
 
 
 

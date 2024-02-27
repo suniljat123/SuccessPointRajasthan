@@ -1079,7 +1079,7 @@
 
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
-                "getEnglishCource": "getEnglishCource"
+                "getEnglishCourse": "getEnglishCourse"
             });
 
             var requestOptions = {
@@ -1092,9 +1092,12 @@
                 .then(response => response.json())
                 .then(result => {
 
-                    console.log('result=>', result)
-
-
+                    if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
+                        result = JSON.parse(result);
+                        console.log('result=>', result)
+                    } else {
+                        alert(result)
+                    }
 
 
                 })
