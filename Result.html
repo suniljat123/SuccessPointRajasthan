@@ -1197,19 +1197,27 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
+                    if (result == 'No result found.') {
+                        alert('No result found.')
+                        const tableHTML = `<tr class="d-style bgc-h-default-l4">
+                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
+                                         
 
-                    result = JSON.parse(result);
-                    result.forEach((currentItem, idx) => {
-                        const dateString = currentItem.CreatedDate;
-                        const dateObject = new Date(dateString);
+                                    </tr>`;
+                        TableData.innerHTML += tableHTML;
+                    } else {
+                        result = JSON.parse(result);
+                        result.forEach((currentItem, idx) => {
+                            const dateString = currentItem.CreatedDate;
+                            const dateObject = new Date(dateString);
 
-                        const formattedDate = dateObject.toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                        });
+                            const formattedDate = dateObject.toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                            });
 
-                        const tableHTML = `
+                            const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>${idx + 1}</td>
                                             <td>${formattedDate}</td>
@@ -1228,8 +1236,10 @@
                                             </td>
                                         </tr>
                `;
-                        TableData.innerHTML += tableHTML;
-                    })
+                            TableData.innerHTML += tableHTML;
+                        })
+
+                    }
 
                 })
                 .catch(error => console.log('error=', error));
