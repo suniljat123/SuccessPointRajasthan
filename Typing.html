@@ -1184,8 +1184,8 @@ justify-content: space-around;">
                 (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
             let accuracy = calculateTypingAccuracy();
             console.log('acc=', accuracy);
-            let wrongWords = accuracy.substr(accuracy.indexOf('@'), accuracy.length)
-            accuracy = accuracy.substr(0, accuracy.indexOf('@'))
+            let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
+            accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
             console.log('accu=', accuracy);
             console.log('wr=', wrongWords);
             document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
