@@ -1059,6 +1059,7 @@ justify-content: space-around;">
         let courseDataId = ''
         let timer = "";
         let mistakes = 0;
+        let totaltypewords = 0;
         userInput.addEventListener("input", () => {
             calculateTypingAccuracy()
         })
@@ -1072,6 +1073,7 @@ justify-content: space-around;">
             userInput = userInput.split(' ');
             let correctWords = 0;
             let incorrectWords = 0;
+            totaltypewords = userInput.length;
             document.getElementById("TotalTyped").innerText = userInput.length;
             for (let i = 0; i < userInput.length; i++) {
                 if (referenceText[i] === userInput[i]) {
@@ -1192,8 +1194,7 @@ justify-content: space-around;">
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
-            let totaltypewords = userInput.split(' ').length;
-            console.log('userInput.length=', totaltypewords)
+
             console.log('quoteSection.innerText.length=', quoteSection.innerText.length)
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
