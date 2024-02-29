@@ -1065,6 +1065,7 @@ justify-content: space-around;">
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
             referenceText = referenceText.split(' ');
+            userInput = userInput.trim();
             userInput = userInput.split(' ');
             let correctWords = 0;
             let incorrectWords = 0;
