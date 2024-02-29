@@ -1192,7 +1192,8 @@ justify-content: space-around;">
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
-            console.log('userInput.length=', userInput.length)
+            let totaltypewords = userInput.split(' ').length;
+            console.log('userInput.length=', totaltypewords)
             console.log('quoteSection.innerText.length=', quoteSection.innerText.length)
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
@@ -1201,7 +1202,7 @@ justify-content: space-around;">
                 "wrongWords": wrongWords,
                 "speed": (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm",
                 "totalWords": quoteSection.innerText.length,
-                "totalType": userInput.length,
+                "totalType": totaltypewords,
                 "submitTypedData": 'submitTypedData'
             });
 
