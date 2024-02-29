@@ -1068,6 +1068,7 @@ justify-content: space-around;">
             userInput = userInput.split(' ');
             let correctWords = 0;
             let incorrectWords = 0;
+            console.log('1=', incorrectWords)
             for (let i = 0; i < userInput.length; i++) {
                 if (referenceText[i] === userInput[i]) {
                     correctWords++;
@@ -1075,11 +1076,13 @@ justify-content: space-around;">
                     incorrectWords++;
                 }
             }
+            console.log('2=', incorrectWords)
             if (incorrectWords > 0) {
                 incorrectWords += ' Words'
             } else {
                 incorrectWords += ' Word'
             }
+            console.log('3=', incorrectWords)
             document.getElementById("mistakes").innerText = incorrectWords;
             const accuracy = (correctWords / userInput.length) * 100;
             console.log('Typing Accuracy = ', accuracy);
