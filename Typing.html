@@ -1147,6 +1147,7 @@ justify-content: space-around;">
                     time = parseInt(result.Duration__c) * 60;
                     totalTimeInSecond = parseInt(result.Duration__c) * 60;
                     document.getElementById("timer").innerText = time + "s";
+                    console.log('time=', time)
                     let content = result[0].Audio_Text__c;
                     content = content.replace('<p>', '');
                     content = content.replace('</p>', '');
