@@ -1183,6 +1183,7 @@ justify-content: space-around;">
             clearInterval(timer);
             document.getElementById("stop-test").style.display = "none";
             userInput.disabled = true;
+            userInput = userInput.trim();
             let timeTaken = 1;
             if (time != 0) {
                 timeTaken = (60 - time) / 100;
