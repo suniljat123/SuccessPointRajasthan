@@ -1173,7 +1173,7 @@
             document.getElementById('header').style.backgroundColor = '#38434b'
             console.log("calling31")
             getResult();
-            getAudio();
+            // getAudio();
         })
 
         function getResult() {
@@ -1198,7 +1198,7 @@
                 .then(response => response.json())
                 .then(result => {
                     if (result == 'No result found.') {
-                        alert('No result found.')
+                        // alert('No result found.')
                         const tableHTML = `<tr class="d-style bgc-h-default-l4">
                                         <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
                                          
