@@ -892,6 +892,7 @@ display: none;">
 justify-content: space-around;">
                                     <p>Accuracy: <span id="accuracy"></span></p>
                                     <p>Speed: <span id="wpm"></span></p>
+                                    <p>Total Type: <span id="TotalTyped"></span></p>
                                     <p>Mistakes: <span id="mistakes"></span></p>
                                 </div>
                             </div>
@@ -1074,7 +1075,7 @@ justify-content: space-around;">
             console.log('referenceText=', referenceText)
             console.log('userInput=', userInput)
             console.log('userInput[0].length=', userInput[0].length)
-
+            document.getElementById("TotalTyped").innerText = userInput.length;
             for (let i = 0; i < userInput.length; i++) {
                 if (referenceText[i] === userInput[i]) {
                     correctWords++;
