@@ -984,9 +984,9 @@ justify-content: space-around;">
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
                 document.getElementById("stop-test").disabled = false;
-                document.getElementById("stop-test").style.cursor = pointer;
+                document.getElementById("stop-test").style.cursor = "pointer";
             } else {
-                document.getElementById("stop-test").style.cursor = notallowed;
+                document.getElementById("stop-test").style.cursor = "not-allowed";
                 document.getElementById("stop-test").disabled = true;
             }
             referenceText = referenceText.split(' ');
