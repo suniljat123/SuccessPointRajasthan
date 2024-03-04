@@ -124,6 +124,7 @@
         function stopAudio() {
             var audio = document.getElementById("myAudio");
             audio.pause();
+            window.location.href = 'TypingBox.html?ID=' + Id;
             var audioWave = document.getElementById("audioWaveImg");
             audioWave.style.display = "none";
             var start_test = document.getElementById("start_test");
@@ -168,11 +169,12 @@
                     console.log('result=>>', result)
 
                     let url = result
-                    audioTag.innerHTML = `  
-  <source 
+                    audioTag.innerHTML = ` 
+        
+            <source 
     src="${result}"
      type="audio/mpeg">
-    
+     
               `;
 
                 })
