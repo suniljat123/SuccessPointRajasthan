@@ -859,7 +859,7 @@ border-radius: 6px;    margin: 0;
     height: 14rem;
     font-family: monospace;
     font-weight: 700;
-    font-size: 23px;" onmousedown="return false" onselectstart="return false"></div>
+    font-size: 23px;" onmousedown="return false" onselectstart="return false" onkeyup="setTextarea()"></div>
                             <textarea style="resize: none;
 width: 100%;
 border-radius: 5px;
@@ -937,6 +937,17 @@ justify-content: space-around;">
             checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
         })
+        function setTextarea(event) {
+            console.log('setTextarea');
+            let userInput = document.getElementById('quote-input').value;
+            console.log('setTextarea', userInput);
+            if (userInput.length > 0) {
+                document.getElementById("stop-test").disabled = false;
+            } else {
+                document.getElementById("stop-test").disabled = true;
+            }
+
+        }
     </script>
     <Script>
         let time = 60;
@@ -1143,6 +1154,8 @@ justify-content: space-around;">
             timeReduce();
             document.getElementById("start-test").style.display = "none";
             document.getElementById("stop-test").style.display = "block";
+            document.getElementById("stop-test").disabled = true;
+
         };
 
         window.onload = () => {
