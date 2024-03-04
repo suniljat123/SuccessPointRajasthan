@@ -943,7 +943,9 @@ justify-content: space-around;">
             console.log('setTextarea', userInput);
             if (userInput.length > 0) {
                 document.getElementById("stop-test").disabled = false;
+                document.getElementById("stop-test").style.cursor = pointer;
             } else {
+                document.getElementById("stop-test").style.cursor = notallowed;
                 document.getElementById("stop-test").disabled = true;
             }
 
