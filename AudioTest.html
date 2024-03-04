@@ -48,7 +48,7 @@
         <!-- <h2>Engilsh Steno</h2>  -->
         <p>Hindi Audio Test</p>
     </div>
-    <div id="audioDiv" style="display: flex;height: 13vh;align-items: center;justify-content: center;">
+    <div id="audioDiv" style="display: flex;align-items: center;justify-content: center;">
 
 
     </div>
@@ -139,7 +139,7 @@
                 .then(response => response.json())
                 .then(result => {
                     result = result
-                    console.log('result=>', result)
+                    console.log('result=>>', result)
 
                     let url = result
                     audioTag.innerHTML = ` 
