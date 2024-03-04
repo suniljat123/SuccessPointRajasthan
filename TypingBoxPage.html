@@ -813,10 +813,10 @@
 
                         <!-- -------------------------- TYping Modal Code is Here   -------------------- -->
                         <!-- Main Body Starts -->
-                        <div id="typingModalId" class="container" style="
+                        <div id="" class="container" style="
     padding: 1px 30px;
    
-    display: none;
+   
     max-width: 100rem;">
                             <div class="stats" style="    text-align: right;
 font-size: 18px;
@@ -901,46 +901,7 @@ justify-content: space-around;">
 
                         <!-- ----------------------- Table code is here ------------------- -->
 
-                        <table id="datatable"
-                            class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
-                            <!-- add `collapsed` by default ... it will be removed by default -->
-                            <!-- thead with .sticky-nav -->
-                            <thead class="text-secondary-m1 text-uppercase text-85">
-                                <tr>
-                                    <th class="bgc-yellow-l3">S.No.</th>
-                                    <th class="bgc-yellow-l3">Date</th>
-                                    <th class="bgc-yellow-l3">Course Name</th>
-                                    <th class="bgc-yellow-l3">Test Language</th>
-                                    <th class="bgc-yellow-l3">Test Name</th>
-                                    <th class="bgc-yellow-l3">Dictation Speed</th>
-                                    <th class="bgc-yellow-l3">Total Words</th>
-                                    <th class="bgc-yellow-l3">Duration</th>
-                                    <th class="bgc-yellow-l3">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="pos-rel" id="TableData">
-                                <!-- <tr class="d-style bgc-h-default-l4">
-                                    <td>1</td>
-                                    <td>2023-12-21</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 100 wpm (SSC)</td>
-                                    <td>100WPM</td>
-                                    <td>1000 Words</td>
-                                    <td>65 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr> -->
-
-                            </tbody>
-                        </table>
+                  
 
 
                     </div>
@@ -973,7 +934,7 @@ justify-content: space-around;">
     <script src="assets/js/MyComponents.js"></script>
     <script>
         $(document).ready(function () {
-            checkIsSprStudent();
+         //   checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
         })
     </script>
@@ -1027,7 +988,7 @@ justify-content: space-around;">
 
                                          <td>
                                     <center>
-                                        <a href="TypingBoxPage.html?Id=${currentItem.Id}"><button class="btn btn-sm btn-success" onclick="handleStartTest('${currentItem.Id}')"><i
+                                        <a><button class="btn btn-sm btn-success" onclick="handleStartTest('${currentItem.Id}')"><i
                                             class="fas fa-play"></i> Start
                                             Typing</button></a>
 
@@ -1226,6 +1187,9 @@ justify-content: space-around;">
 
         //Start Test
         const startTest = () => {
+
+            indow.location.href = "";
+
             mistakes = 0;
             timer = "";
 
@@ -1235,13 +1199,13 @@ justify-content: space-around;">
             document.getElementById("stop-test").style.display = "block";
         };
 
-        window.onload = () => {
+    /*    window.onload = () => {
             userInput.value = "";
             document.getElementById("start-test").style.display = "block";
             document.getElementById("stop-test").style.display = "none";
             userInput.disabled = true;
             // renderNewQuote();
-        };
+        };  */
     </Script>
 
     <script>
