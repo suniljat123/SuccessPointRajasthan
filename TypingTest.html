@@ -948,14 +948,9 @@ justify-content: space-around;">
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             let id = urlParams.get('Id')
-            console.log('queryString=', queryString)
-            console.log('urlParams=', urlParams)
-            console.log('id=', id)
             if (id == null) {
-                console.log('null id')
                 id = queryString.substring(queryString.indexOf('D=') + 2, queryString.length)
             }
-            console.log('id after =', id)
             renderNewQuote(id)
 
         })
