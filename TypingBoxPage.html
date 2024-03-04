@@ -901,7 +901,7 @@ justify-content: space-around;">
 
                         <!-- ----------------------- Table code is here ------------------- -->
 
-                  
+
 
 
                     </div>
@@ -934,7 +934,7 @@ justify-content: space-around;">
     <script src="assets/js/MyComponents.js"></script>
     <script>
         $(document).ready(function () {
-         //   checkIsSprStudent();
+            checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
         })
     </script>
@@ -944,72 +944,10 @@ justify-content: space-around;">
         $(document).ready(function () {
             const TableData = document.getElementById('TableData');
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-            myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
-
-            var raw = JSON.stringify({
-                "Phone": SPR_StudentPhone,
-                "getTypingContent": 'getTypingContent'
-            });
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-            fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
-                .then(response => response.json())
-                .then(result => {
-                    if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
-                        result = JSON.parse(result);
-                        console.log('result=>', result)
-                        result.forEach((currentItem, idx) => {
-                            const dateString = currentItem.LastModifiedDate;
-                            const dateObject = new Date(dateString);
-
-                            const formattedDate = dateObject.toLocaleDateString("en-US", {
-                                month: "short",
-                                day: "numeric",
-                                year: "numeric",
-                            });
-                            let SRNo = idx + 1;
-
-                            const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td>${SRNo}</td>
-                                        <td>${formattedDate}</td>
-                                        <td>${currentItem.Courses__r.Name}</td>
-                                        <td>${currentItem.Test_Language__c}</td>
-                                        <td>${currentItem.Name}</td>
-                                        <td>${currentItem.Dictation_Speed__c} WPM</td>
-                                        <td>${currentItem.Total_Words__c} Words</td>
-                                        <td>${currentItem.Duration__c} Mins</td>
-
-                                         <td>
-                                    <center>
-                                        <a><button class="btn btn-sm btn-success" onclick="handleStartTest('${currentItem.Id}')"><i
-                                            class="fas fa-play"></i> Start
-                                            Typing</button></a>
-
-                                    </center>
-                                </td>
-
-                                    </tr>`;
-                            TableData.innerHTML += tableHTML;
-                        })
-
-                    } else {
-                        const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
-                                         
-
-                                    </tr>`;
-                        TableData.innerHTML += tableHTML;
-                    }
-
-                })
-                .catch(error => console.log('error=', error));
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            let id = urlParams.get('Id')
+            renderNewQuote(id)
 
         })
         //Random Quotes Api URL
@@ -1199,13 +1137,13 @@ justify-content: space-around;">
             document.getElementById("stop-test").style.display = "block";
         };
 
-    /*    window.onload = () => {
-            userInput.value = "";
-            document.getElementById("start-test").style.display = "block";
-            document.getElementById("stop-test").style.display = "none";
-            userInput.disabled = true;
-            // renderNewQuote();
-        };  */
+        /*    window.onload = () => {
+                userInput.value = "";
+                document.getElementById("start-test").style.display = "block";
+                document.getElementById("stop-test").style.display = "none";
+                userInput.disabled = true;
+                // renderNewQuote();
+            };  */
     </Script>
 
     <script>
