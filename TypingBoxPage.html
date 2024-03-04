@@ -813,51 +813,95 @@
 
                         <!-- -------------------------- TYping Modal Code is Here   -------------------- -->
                         <!-- Main Body Starts -->
+                        <div id="" class="container" style="
+    padding: 1px 30px;
+   
+   
+    max-width: 100rem;">
+                            <div class="stats" style="    text-align: right;
+font-size: 18px;
+margin-bottom: 30px;
+display: flex;
+justify-content: space-between;">
+                                <div style="display:flex; justify-content: center; align-items:center;"> <button
+                                        width="2px" style=" 
+                background-color: #ff4a17;
+                color: white;
+                border-width: 0px;
+                height: 31px;
+                border-radius: 5px;" onclick="handleGoBack()">Go Back</button>
+                                </div>
+                                <div style="display:flex; justify-content:center;">
+                                    <p style="padding: 4px;
+border-radius: 6px;   
+    
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: " Poppins", sans-serif; color: #263d4d; }">Time: <span id="timer">0s</span></p>
+                                    <!-- <p style=" 
+padding: 4px;
+border-radius: 6px;    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: " Poppins", sans-serif; color: #263d4d; }">Mistakes: <span id="mistakes">0</span></p> -->
+                                </div>
 
+                            </div>
+                            <div id="quote" style="    text-align: justify;
+    margin: 50px 0 30px 0;
+    border: solid rgb(25 45 102) 2px;
+    padding: 2rem;
+    border-radius: 16px;
+    overflow: auto;
+    height: 14rem;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 23px;" onmousedown="return false" onselectstart="return false"></div>
+                            <textarea style="resize: none;
+width: 100%;
+border-radius: 5px;
+padding: 10px 5px;
+font-size: 16px;
+font-family: monospace;
+    font-weight: 700;
+    font-size: 23px;" rows="3" id="quote-input" placeholder="Type here when the test starts.."
+                                class="hindiFont"></textarea>
+                            <button class="button" style="float: right;
+  margin-top: 20px;
+  background-color: rgb(25 45 102);
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 18px;" id="start-test" onclick="startTest()">Start Test</button>
+                            <button class="button" style="float: right;
+  margin-top: 20px;
+ background-color: rgb(25 45 102);
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 18px;" id="stop-test" onclick="displayResult()">Stop Test</button>
+                            <div class="result" style="margin-top: 40px;
+display: none;">
+                                <h3>Result</h3>
+                                <div class="wrapper" style="  display: flex;
+justify-content: space-around;">
+                                    <p>Accuracy: <span id="accuracy"></span></p>
+                                    <p>Speed: <span id="wpm"></span></p>
+                                    <p>Total Type: <span id="TotalTyped"></span></p>
+                                    <p>Mistakes: <span id="mistakes"></span></p>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <!-- ----------------------- Table code is here ------------------- -->
 
-                        <table id="datatable"
-                            class="d-style w-100 table text-dark-m1 text-95 border-y-1 brc-black-tp11 collapsed dtr-table">
-                            <!-- add `collapsed` by default ... it will be removed by default -->
-                            <!-- thead with .sticky-nav -->
-                            <thead class="text-secondary-m1 text-uppercase text-85">
-                                <tr>
-                                    <th class="bgc-yellow-l3">S.No.</th>
-                                    <th class="bgc-yellow-l3">Date</th>
-                                    <th class="bgc-yellow-l3">Course Name</th>
-                                    <th class="bgc-yellow-l3">Test Language</th>
-                                    <th class="bgc-yellow-l3">Test Name</th>
-                                    <th class="bgc-yellow-l3">Dictation Speed</th>
-                                    <th class="bgc-yellow-l3">Total Words</th>
-                                    <th class="bgc-yellow-l3">Duration</th>
-                                    <th class="bgc-yellow-l3">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="pos-rel" id="TableData">
-                                <!-- <tr class="d-style bgc-h-default-l4">
-                                    <td>1</td>
-                                    <td>2023-12-21</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 100 wpm (SSC)</td>
-                                    <td>100WPM</td>
-                                    <td>1000 Words</td>
-                                    <td>65 Mins</td>
-
-                                    <td>
-                                        <center>
-                                            <a><button class="btn btn-sm btn-success" onclick="handleStartTest()"><i
-                                                        class="fas fa-play"></i> Start
-                                                    Typing</button></a>
-
-                                        </center>
-                                    </td>
-
-                                </tr> -->
-
-                            </tbody>
-                        </table>
+                  
 
 
                     </div>
@@ -890,7 +934,7 @@
     <script src="assets/js/MyComponents.js"></script>
     <script>
         $(document).ready(function () {
-            checkIsSprStudent();
+         //   checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
         })
     </script>
@@ -1010,15 +1054,13 @@
             return accuracy + '@' + incorrectWords;
         }
         function handleStartTest(id) {
-
-            window.location.href = '/TypingBoxPage?id=' + id;
-            //console.log('id=', id)
-            // console.log('btn start clicked');
-            // renderNewQuote(id);
-            /* var part1 = document.getElementById('datatable');
+            console.log('id=', id)
+            console.log('btn start clicked');
+            renderNewQuote(id);
+            var part1 = document.getElementById('datatable');
             var part2 = document.getElementById('typingModalId');
             part1.style.display = 'none';
-            part2.style.display = 'inline-block'; */
+            part2.style.display = 'inline-block';
 
         }
         function handleGoBack() {
@@ -1145,6 +1187,9 @@
 
         //Start Test
         const startTest = () => {
+
+            indow.location.href = "";
+
             mistakes = 0;
             timer = "";
 
@@ -1154,13 +1199,13 @@
             document.getElementById("stop-test").style.display = "block";
         };
 
-        window.onload = () => {
+    /*    window.onload = () => {
             userInput.value = "";
             document.getElementById("start-test").style.display = "block";
             document.getElementById("stop-test").style.display = "none";
             userInput.disabled = true;
             // renderNewQuote();
-        };
+        };  */
     </Script>
 
     <script>
