@@ -77,6 +77,7 @@
     <script src="assets/js/MyComponents.js"></script>
     <script>
         let Id = '';
+
         $(document).ready(function () {
             checkIsSprStudent();
             document.getElementById('header').style.backgroundColor = '#38434b'
@@ -85,6 +86,33 @@
             Id = urlParams.get('Id')
             getAudioUrl()
         })
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            var audioWave = document.getElementById("audioWaveImg");
+            audioWave.style.display = "block";
+            var start_test = document.getElementById("start_test");
+            start_test.style.display = "block";
+        }
+
+        function stopAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.pause();
+            var audioWave = document.getElementById("audioWaveImg");
+            audioWave.style.display = "none";
+            var start_test = document.getElementById("start_test");
+            start_test.style.display = "none";
+        }
+
+        var audio = document.getElementById("myAudio");
+        audio.addEventListener("ended", function () {
+            // Do something when the audio ends
+            console.log("Audio ended");
+            var audioWave = document.getElementById("audioWaveImg");
+            audioWave.style.display = "none";
+            var start_test = document.getElementById("start_test");
+            start_test.style.display = "none";
+        });
         function getAudioUrl() {
             console.log('id->', Id)
             let audioTag = document.getElementById('audioDiv')
@@ -114,11 +142,36 @@
                     console.log('result=>', result)
 
                     let url = result
-                    audioTag.innerHTML = `<audio controls controlsList="nodownload noplaybackrate">
-                     <source 
-             src="${result}"
-              type="audio/mpeg">
-              </audio>`;
+                    audioTag.innerHTML = ` 
+              
+ <div style="text-align:center; color:red;">
+            <h1>
+              -:Instructions:-
+            </h1>
+            <h5>
+              Do not refresh your page while listening audio
+            </h5>
+            <h5>
+              You will be auto redirect to typing section after duration ends.
+            </h5>
+            <br>
+            <button  type="button" id="play_audio" class="btn btn-success" onclick="playAudio()"><i style="font-size: 20px;" class="bi bi-volume-up iconBtn"></i> Play Audio</button>
+            <br>
+            <br>  
+            <a  style="display: none;text-decoration:none;" id="start_test"><button onclick="stopAudio()" class="btn btn-warning">
+                <i  style="font-size: 20px;" class="bi bi-play-fill iconBtn"></i> Skip Audio &amp; Start Typing.</button></a>
+                <br>
+                <div style="width: 100%; display:flex; justify-content:center;">
+                <img id="audioWaveImg" style="display: none;" src="assets/img/sound.gif" width="150px" height="100px">
+                 </div>
+                   <audio style="visibility: hidden;" id="myAudio" controls  ended controlsList="nodownload noplaybackrate">
+            <source 
+    src="${result}"
+     type="audio/mpeg">
+     </audio>
+
+         </div>
+              `;
 
                 })
                 .catch(error => console.log('error=', error));

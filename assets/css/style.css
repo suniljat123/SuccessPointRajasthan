@@ -385,7 +385,7 @@ h6 {
 }
 
 .navbar-mobile {
-  position: fixed;
+  position: fixed !important;
   overflow: hidden;
   top: 0;
   right: 0;
@@ -1735,4 +1735,21 @@ section {
 }
 #loginBtn {
   display: block;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #3f923f;
+  border-color: #3f923f;
+}
+.btn {
+  cursor: pointer;
+  position: relative;
+  z-index: auto;
+  border-radius: 0.175rem;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s,
+    box-shadow 0.15s, opacity 0.15s;
+}
+.iconBtn {
+  vertical-align: middle !important;
 }
