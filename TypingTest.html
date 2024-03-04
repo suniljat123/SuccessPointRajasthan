@@ -941,13 +941,7 @@ justify-content: space-around;">
             console.log('setTextarea');
             let userInput = document.getElementById('quote-input').value;
             console.log('setTextarea', userInput);
-            if (userInput.length > 0) {
-                document.getElementById("stop-test").disabled = false;
-                document.getElementById("stop-test").style.cursor = pointer;
-            } else {
-                document.getElementById("stop-test").style.cursor = notallowed;
-                document.getElementById("stop-test").disabled = true;
-            }
+
 
         }
     </script>
@@ -988,6 +982,13 @@ justify-content: space-around;">
             console.log('referenceText=', quoteSection.innerText.length)
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
+            if (userInput.length > 0) {
+                document.getElementById("stop-test").disabled = false;
+                document.getElementById("stop-test").style.cursor = pointer;
+            } else {
+                document.getElementById("stop-test").style.cursor = notallowed;
+                document.getElementById("stop-test").disabled = true;
+            }
             referenceText = referenceText.split(' ');
             userInput = userInput.trim();
             userInput = userInput.split(' ');
