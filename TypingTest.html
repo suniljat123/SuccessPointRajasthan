@@ -1149,6 +1149,7 @@ justify-content: space-around;">
 
             userInput.disabled = false;
             timeReduce();
+            document.getElementById("stop-test").style.cursor = "not-allowed";
             document.getElementById("start-test").style.display = "none";
             document.getElementById("stop-test").style.display = "block";
             document.getElementById("stop-test").disabled = true;
@@ -1159,6 +1160,7 @@ justify-content: space-around;">
             userInput.value = "";
             document.getElementById("start-test").style.display = "block";
             document.getElementById("stop-test").style.display = "none";
+
             userInput.disabled = true;
             // renderNewQuote();
         };   
