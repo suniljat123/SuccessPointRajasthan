@@ -874,11 +874,10 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             let id = urlParams.get('Id')
-            console.log('get id=', id)
+
             if (id == null) {
                 id = queryString.substring(queryString.indexOf('d=') + 2, queryString.length)
             }
-            console.log('idin =', id)
             document.getElementById('header').style.backgroundColor = '#38434b'
             const TableData = document.getElementById('TableData');
 
@@ -900,7 +899,6 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    console.log('result in rank compare=>', result)
                     if (result != 'No result found.') {
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result)
