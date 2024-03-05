@@ -1045,7 +1045,7 @@ justify-content: space-around;">
                 .then(result => {
 
                     result = JSON.parse(result);
-                    console.log('typing result=', result)
+                    console.log('typing result=>', result)
                     if (result[0].Test_Language__c == 'Hindi') {
 
                         document.getElementById("quote").style.fontFamily = 'Hindi';
@@ -1140,7 +1140,7 @@ justify-content: space-around;">
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
 
-            document.getElementById("accuracy").innerText = accuracy.toFixed(2);// + '%';
+            document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -1149,7 +1149,7 @@ justify-content: space-around;">
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
                 "courseDataId": courseDataId,
-                "accuracy": accuracy.toFixed(2) + '%',
+                "accuracy": accuracy.toFixed(2),
                 "wrongWords": wrongWords,
                 "speed": (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm",
                 "totalWords": quoteSection.innerText.length + '',
