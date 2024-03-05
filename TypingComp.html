@@ -894,7 +894,7 @@
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
             var raw = JSON.stringify({
-                "recordId": id,
+                "recordId": 'a05GA00001RBJd6YAH',
                 "getRank": 'getRank'
             });
 
@@ -907,7 +907,7 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    console.log('result in rank compare=', result)
+                    console.log('result in rank compare=>', result)
                     if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result)
