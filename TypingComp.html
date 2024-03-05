@@ -904,7 +904,7 @@
                     if (result != 'No result found.') {
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result)
-                        result.forEach((currentItem, idx) => {
+                        result[0].Typing_Results__r.records.forEach((currentItem, idx) => {
                             const dateString = currentItem.LastModifiedDate;
                             const dateObject = new Date(dateString);
 
