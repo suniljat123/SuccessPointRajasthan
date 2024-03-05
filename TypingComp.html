@@ -834,15 +834,7 @@
                                 </tr>
                             </thead>
                             <tbody class="pos-rel" id="TableData">
-                                <tr class="d-style bgc-h-default-l4">
-                                    <td>1</td>
-                                    <td>2023-12-21</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 100 wpm (SSC)</td>
-                                    <td>100WPM</td>
-                                    <td>100</td>
-                                    <td>1</td>
-                                </tr>
+
 
                             </tbody>
                         </table>
@@ -909,7 +901,7 @@
                 .then(response => response.json())
                 .then(result => {
                     console.log('result in rank compare=>', result)
-                    if (result != 'Something went wrong please try again later.' && result != 'You don\'t buy any course.') {
+                    if (result != 'No result found.') {
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result)
                         result.forEach((currentItem, idx) => {
@@ -923,32 +915,21 @@
                             });
                             let SRNo = idx + 1;
 
-                            const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td>${SRNo}</td>
-                                        <td>${formattedDate}</td>
-                                        <td>${currentItem.Courses__r.Name}</td>
-                                        <td>${currentItem.Test_Language__c}</td>
-                                        <td>${currentItem.Name}</td>
-                                         
-                                        <td>${currentItem.Total_Words__c} Words</td>
-                                        <td>${currentItem.Duration__c} Mins</td>
-
-                                         <td>
-                                    <center>
-                                        <a href="TypingTest.html?Id=${currentItem.Id}"><button class="btn btn-sm btn-success" onclick="handleStartTest('${currentItem.Id}')"><i
-                                            class="fas fa-play"></i> Start
-                                            Typing</button></a>
-
-                                    </center>
-                                </td>
-
-                                    </tr>`;
+                            const tableHTML = ` <tr class="d-style bgc-h-default-l4">
+                                    <td>1</td>
+                                    <td>2023-12-21</td>
+                                    <td>Hindi</td>
+                                    <td>Demo Test 100 wpm (SSC)</td>
+                                    <td>100WPM</td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                </tr>`;
                             TableData.innerHTML += tableHTML;
                         })
 
                     } else {
                         const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td style="text-align: center;background: #8c93aa;" colspan="8">${result}</td>
+                                        <td style="text-align: center;background: #8c93aa;" colspan="7">${result}</td>
                                          
 
                                     </tr>`;
