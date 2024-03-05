@@ -904,10 +904,7 @@ class NotLoginPageNavbar extends HTMLElement {
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>   -->
   
           <!-- <li><a class="nav-link scrollto" href="#team">Our Product</a></li>   -->
-          
-          <li style="display:none;" id="drpDownProfileBtn" >
-            <a class="nav-link scrollto" href="Profile.html">Profile</a>
-          </li>
+           
           <li>
             <a class="nav-link scrollto" href="index.html">Home</a>
           </li>

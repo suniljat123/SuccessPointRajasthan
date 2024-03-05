@@ -1049,8 +1049,8 @@ justify-content: space-around;">
                     result = JSON.parse(result);
                     time = parseInt(result[0].Duration__c) * 60;
                     totalTimeInSecond = parseInt(result[0].Duration__c) * 60;
-                    document.getElementById("timer").innerText = convertSecondsToTime(time)+'s';
-                //    document.getElementById("timer").innerText = time + "s";
+                    document.getElementById("timer").innerText = convertSecondsToTime(time) + 's';
+                    //    document.getElementById("timer").innerText = time + "s";
                     let content = result[0].Audio_Text__c;
                     content = content.replace('<p>', '');
                     content = content.replace('</p>', '');
@@ -1071,34 +1071,40 @@ justify-content: space-around;">
         function convertSecondsToTime(seconds) {
             var minutes = Math.floor(seconds / 60);
             var remainingSeconds = seconds % 60;
-        
+
             // Add leading zero if necessary
             var minutesStr = minutes < 10 ? "0" + minutes : minutes.toString();
             var secondsStr = remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds.toString();
-        
+
             return minutesStr + ":" + secondsStr;
         }
-        
 
-     /*   function updateTimer() {
-            if (time == 0) {
-                //End test if timer reaches 0
-                displayResult();
-            } else {
-                document.getElementById("timer").innerText = --time + "s";
-            }
-        }  */
+
+        /*   function updateTimer() {
+               if (time == 0) {
+                   //End test if timer reaches 0
+                   displayResult();
+               } else {
+                   document.getElementById("timer").innerText = --time + "s";
+               }
+           }  */
         function updateTimer() {
             var timerElement = document.getElementById("timer");
             var currentTime = timerElement.innerText;
             var timeParts = currentTime.split(":");
             var minutes = parseInt(timeParts[0]);
             var seconds = parseInt(timeParts[1]);
-
-            var totalSeconds = minutes * 60 + seconds;
-            if (totalSeconds > 0) {
-                totalSeconds--;
-                timerElement.innerText = convertSecondsToTime(totalSeconds)+"s";
+            console.log(minutes);
+            console.log(seconds);
+            if (minutes == 0 && seconds == 0) {
+                //End test if timer reaches 0
+                displayResult();
+            } else {
+                var totalSeconds = minutes * 60 + seconds;
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                    timerElement.innerText = convertSecondsToTime(totalSeconds) + "s";
+                }
             }
         }
 
