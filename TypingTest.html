@@ -1114,6 +1114,7 @@ justify-content: space-around;">
                 var totalSeconds = minutes * 60 + seconds;
                 if (totalSeconds > 0) {
                     totalSeconds--;
+                    time--;
                     timerElement.innerText = convertSecondsToTime(totalSeconds) + "s";
                 }
             }
