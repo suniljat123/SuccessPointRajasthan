@@ -978,8 +978,11 @@ justify-content: space-around;">
                 document.getElementById("stop-test").disabled = true;
             }
             referenceText = referenceText.split(' ');
-            userInput = userInput.trim();
-            userInput = userInput.split(' ');
+            if (userInput.length > 0) {
+                userInput = userInput.trim();
+                userInput = userInput.split(' ');
+            }
+
             let correctWords = 0;
             let incorrectWords = 0;
             totaltypewords = userInput.length;
@@ -1132,8 +1135,10 @@ justify-content: space-around;">
             if (time != 0) {
                 timeTaken = (totalTimeInSecond - time) / 100;
             }
-            document.getElementById("wpm").innerText =
-                (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
+            var speedTemp = (userInput.value.length / 5 / timeTaken).toFixed(2);
+            if (speedTemp == 'Infinity' || speedTemp == 'NaN')
+                speedTemp = 0;
+            document.getElementById("wpm").innerText = speedTemp + " wpm";
             let accuracy = calculateTypingAccuracy();
 
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
