@@ -1207,6 +1207,7 @@
                         TableData.innerHTML += tableHTML;
                     } else {
                         result = JSON.parse(result);
+                        console.log('result=', result)
                         result.forEach((currentItem, idx) => {
                             const dateString = currentItem.CreatedDate;
                             const dateObject = new Date(dateString);
