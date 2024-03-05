@@ -864,7 +864,7 @@ width: 100%;
 border-radius: 5px;
 padding: 10px 5px;
 font-size: 16px;
-font-family: monospace;
+
     font-weight: 700;
     font-size: 23px;" rows="3" id="quote-input" placeholder="Type here when the test starts.."
                                 class="hindiFont"></textarea>
@@ -1053,9 +1053,11 @@ justify-content: space-around;">
                     if (result[0].Test_Language__c == 'Hindi') {
                         console.log('hindi')
                         document.getElementById("quote").style.fontFamily = 'Hindi';
+                        document.getElementById("quote-input").style.fontFamily = 'Hindi';
                     } else {
                         console.log('english')
                         document.getElementById("quote").style.fontFamily = 'monospace';
+                        document.getElementById("quote-input").style.fontFamily = 'monospace';
                     }
 
                     time = parseInt(result[0].Duration__c) * 60;
