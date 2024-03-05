@@ -882,6 +882,7 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             let id = urlParams.get('Id')
+            console.log('get id=', id)
             if (id == null) {
                 id = queryString.substring(queryString.indexOf('D=') + 2, queryString.length)
             }
@@ -894,7 +895,7 @@
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
             var raw = JSON.stringify({
-                "recordId": 'a05GA00001RBJd6YAH',
+                "recordId": id,
                 "getRank": 'getRank'
             });
 
