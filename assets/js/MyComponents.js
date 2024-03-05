@@ -153,7 +153,7 @@ class Navbar extends HTMLElement {
     <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
+        <a href="Home.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="./" class="logo"><img src="assets/img/SuccessPointRajasthanlogo.png" alt="" class="img-fluid"></a>-->
@@ -168,7 +168,7 @@ class Navbar extends HTMLElement {
             <a class="nav-link scrollto" href="Profile.html">Profile</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="index.html">Home</a>
+            <a class="nav-link scrollto" href="Home.html">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
@@ -453,7 +453,7 @@ class ContactCareerNavbar extends HTMLElement {
     this.innerHTML = `<header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
+        <a href="Home.html"><img src="assets/img/SuccessPointRajasthanlogo.png" height="60" width="60" /></a>
       </h1>
       <nav id="navbar" class="navbar">
         <ul>
@@ -462,7 +462,7 @@ class ContactCareerNavbar extends HTMLElement {
           </li>
 
            <li>
-            <a class="nav-link scrollto" href="index.html">Home</a>
+            <a class="nav-link scrollto" href="Home.html">Home</a>
           </li>
           <li>
             <a class="nav-link scrollto" href="Typing.html">Typing</a>
@@ -658,7 +658,7 @@ class NotLoginIndexPage extends HTMLElement {
     <app-NotLoginPageNavbar></app-NotLoginPageNavbar>
     </header>
     <section id="hero" style="margin-top: -20px;">
-    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+    <div class="hero-container" style="opacity:1" data-aos="fade-up" data-aos-delay="150">
       <div class="d-flex">
         <img class="HeroImage" src="assets/img/SuccessPointRajasthanlogo.png" />
       </div>
