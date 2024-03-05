@@ -1005,8 +1005,6 @@ justify-content: space-around;">
             return accuracy + '@' + incorrectWords;
         }
         function handleStartTest(id) {
-            console.log('id=', id)
-            console.log('btn start clicked');
             renderNewQuote(id);
             var part1 = document.getElementById('datatable');
             var part2 = document.getElementById('typingModalId');
@@ -1024,8 +1022,6 @@ justify-content: space-around;">
         }
         //Display random quotes
         const renderNewQuote = async (id) => {
-            //Fetch contents from url
-            console.log('Id in ren=', id)
             courseDataId = id;
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var myHeaders = new Headers();
@@ -1051,11 +1047,10 @@ justify-content: space-around;">
                     result = JSON.parse(result);
                     console.log('typing result=', result)
                     if (result[0].Test_Language__c == 'Hindi') {
-                        console.log('hindi')
+
                         document.getElementById("quote").style.fontFamily = 'Hindi';
                         document.getElementById("quote-input").style.fontFamily = 'Hindi';
                     } else {
-                        console.log('english')
                         document.getElementById("quote").style.fontFamily = 'monospace';
                         document.getElementById("quote-input").style.fontFamily = 'monospace';
                     }
@@ -1136,10 +1131,6 @@ justify-content: space-around;">
             if (time != 0) {
                 timeTaken = (totalTimeInSecond - time) / 100;
             }
-            console.log('time=', time)
-            console.log('totalTimeInSecond=', totalTimeInSecond)
-            console.log('timeTaken=', timeTaken)
-            console.log('userInput.value.length=', userInput.value.length)
             var speedTemp = (userInput.value.length / 5 / timeTaken).toFixed(2);
             if (speedTemp == 'Infinity' || speedTemp == 'NaN')
                 speedTemp = 0;
@@ -1155,8 +1146,6 @@ justify-content: space-around;">
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
 
-            console.log('totaltypewords=', totaltypewords)
-            console.log('quoteSection.innerText.length=', quoteSection.innerText.length)
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
                 "courseDataId": courseDataId,
