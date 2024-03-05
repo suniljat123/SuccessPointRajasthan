@@ -1149,7 +1149,7 @@ justify-content: space-around;">
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
 
-            document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
+            document.getElementById("accuracy").innerText = accuracy.toFixed(2);// + '%';
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
