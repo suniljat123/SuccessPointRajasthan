@@ -828,7 +828,7 @@
                                     <th class="bgc-yellow-l3">Date</th>
                                     <th class="bgc-yellow-l3">Student Roll Number</th>
                                     <th class="bgc-yellow-l3">Test Name</th>
-                                    <th class="bgc-yellow-l3">Total Words</th>
+                                    <th class="bgc-yellow-l3">Speed</th>
                                     <th class="bgc-yellow-l3">Marks </th>
                                     <th class="bgc-yellow-l3">Rank</th>
                                 </tr>
@@ -916,13 +916,13 @@
                             let SRNo = idx + 1;
 
                             const tableHTML = ` <tr class="d-style bgc-h-default-l4">
-                                    <td>1</td>
-                                    <td>2023-12-21</td>
-                                    <td>Hindi</td>
-                                    <td>Demo Test 100 wpm (SSC)</td>
-                                    <td>100WPM</td>
-                                    <td>100</td>
-                                    <td>1</td>
+                                    <td>${SRNo}</td>
+                                    <td>${formattedDate}</td>
+                                    <td>${currentItem.Course_Content__R.Test_Language__c}</td>
+                                    <td>${currentItem.ourse_Content__r.Name}</td>
+                                    <td>${currentItem.Speed__c}</td>
+                                    <td>${currentItem.Marks__c}</td>
+                                    <td>${currentItem.Rank__c}</td>
                                 </tr>`;
                             TableData.innerHTML += tableHTML;
                         })
