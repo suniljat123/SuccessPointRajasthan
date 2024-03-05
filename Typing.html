@@ -912,7 +912,6 @@ justify-content: space-around;">
                                     <th class="bgc-yellow-l3">Course Name</th>
                                     <th class="bgc-yellow-l3">Test Language</th>
                                     <th class="bgc-yellow-l3">Test Name</th>
-                                    <th class="bgc-yellow-l3">Dictation Speed</th>
                                     <th class="bgc-yellow-l3">Total Words</th>
                                     <th class="bgc-yellow-l3">Duration</th>
                                     <th class="bgc-yellow-l3">Action</th>
@@ -1021,7 +1020,7 @@ justify-content: space-around;">
                                         <td>${currentItem.Courses__r.Name}</td>
                                         <td>${currentItem.Test_Language__c}</td>
                                         <td>${currentItem.Name}</td>
-                                        <td>${currentItem.Dictation_Speed__c} WPM</td>
+                                         
                                         <td>${currentItem.Total_Words__c} Words</td>
                                         <td>${currentItem.Duration__c} Mins</td>
 
@@ -1040,7 +1039,7 @@ justify-content: space-around;">
 
                     } else {
                         const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
+                                        <td style="text-align: center;background: #8c93aa;" colspan="8">${result}</td>
                                          
 
                                     </tr>`;
