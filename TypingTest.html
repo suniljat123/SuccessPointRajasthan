@@ -1135,6 +1135,10 @@ justify-content: space-around;">
             if (time != 0) {
                 timeTaken = (totalTimeInSecond - time) / 100;
             }
+            console.log('time=', time)
+            console.log('totalTimeInSecond=', totalTimeInSecond)
+            console.log('timeTaken=', timeTaken)
+            console.log('userInput.value.length=', userInput.value.length)
             var speedTemp = (userInput.value.length / 5 / timeTaken).toFixed(2);
             if (speedTemp == 'Infinity' || speedTemp == 'NaN')
                 speedTemp = 0;
