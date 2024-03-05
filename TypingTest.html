@@ -1048,9 +1048,11 @@ justify-content: space-around;">
                     result = JSON.parse(result);
                     console.log('typing result=', result)
                     if (result.Test_Language__c == 'Hindi') {
-                        document.getElementById("quote").style.fontFamily = 'Hindi'
+                        console.log('hindi')
+                        document.getElementById("quote").style.fontFamily = 'Hindi';
                     } else {
-                        document.getElementById("quote").style.fontFamily = 'monospace'
+                        console.log('english')
+                        document.getElementById("quote").style.fontFamily = 'monospace';
                     }
 
                     time = parseInt(result[0].Duration__c) * 60;
