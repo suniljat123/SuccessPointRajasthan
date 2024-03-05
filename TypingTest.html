@@ -967,7 +967,7 @@ justify-content: space-around;">
         })
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
-            console.log('referenceText=', quoteSection.innerText.length)
+
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
@@ -1050,7 +1050,7 @@ justify-content: space-around;">
 
                     result = JSON.parse(result);
                     console.log('typing result=', result)
-                    if (result.Test_Language__c == 'Hindi') {
+                    if (result[0].Test_Language__c == 'Hindi') {
                         console.log('hindi')
                         document.getElementById("quote").style.fontFamily = 'Hindi';
                     } else {
@@ -1105,8 +1105,6 @@ justify-content: space-around;">
             var timeParts = currentTime.split(":");
             var minutes = parseInt(timeParts[0]);
             var seconds = parseInt(timeParts[1]);
-            console.log(minutes);
-            console.log(seconds);
             if (minutes == 0 && seconds == 0) {
                 //End test if timer reaches 0
                 displayResult();
