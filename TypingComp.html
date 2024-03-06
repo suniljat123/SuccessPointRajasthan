@@ -829,6 +829,7 @@
                                     <th class="bgc-yellow-l3">Student Roll Number</th>
                                     <th class="bgc-yellow-l3">Test Name</th>
                                     <th class="bgc-yellow-l3">Speed</th>
+                                    <th class="bgc-yellow-l3">Accuracy </th>
                                     <th class="bgc-yellow-l3">Marks </th>
                                     <th class="bgc-yellow-l3">Rank</th>
                                 </tr>
@@ -920,6 +921,7 @@
                                     <td>${currentItem.Course_Content__r.Name}</td>
                                     <td>${currentItem.Speed__c}</td>
                                     <td>${marks}</td>
+                                    <td>${currentItem.Steno_Marks__c}</td>
                                     <td>${currentItem.Rank__c}</td>
                                 </tr>`;
                             TableData.innerHTML += tableHTML;
