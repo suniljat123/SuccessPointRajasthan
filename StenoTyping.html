@@ -987,7 +987,8 @@ justify-content: space-around;">
                     incorrectWords++;
                 }
             }
-
+            if (incorrectWords == 'Infinity' || incorrectWords == 'NaN')
+                incorrectWords = 0;
             if (incorrectWords > 1) {
                 incorrectWords += ' Words'
             } else {
@@ -1121,6 +1122,8 @@ justify-content: space-around;">
             }
 
             let accuracy = calculateTypingAccuracy();
+            console.log('correctWords=', correctWords)
+            console.log(' quoteSection.length=', quoteSection.length)
             let marks = (correctWords / quoteSection.length) * 100;
             document.getElementById("wpm").innerText = marks.toFixed(2) + '/100';
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
