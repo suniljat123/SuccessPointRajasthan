@@ -960,8 +960,8 @@ justify-content: space-around;">
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
             console.log('quoteSection=', quoteSection)
-            console.log('quoteSection innerText=', quoteSection.innerText)
-            let referenceText = quoteSection.innerText;
+            console.log('quoteSection innerText=', quoteSection)
+            let referenceText = quoteSection;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
                 document.getElementById("stop-test").disabled = false;
@@ -1138,7 +1138,7 @@ justify-content: space-around;">
                 "accuracy": accuracy.toFixed(2),
                 "wrongWords": wrongWords,
                 "speed": (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm",
-                "totalWords": quoteSection.innerText.length + '',
+                "totalWords": quoteSection.length + '',
                 "totalType": totaltypewords,
                 "timeTaken": timeTaken,
                 "submitTypedData": 'submitTypedData'
