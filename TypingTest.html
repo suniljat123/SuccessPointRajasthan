@@ -966,6 +966,8 @@ justify-content: space-around;">
             calculateTypingAccuracy()
         })
         function calculateTypingAccuracy() {
+            correctWords = 0;
+            incorrectWords = 0;
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
             console.log('quoteSection=', quoteSection)
             console.log('quoteSection innerText=', quoteSection.innerText)
