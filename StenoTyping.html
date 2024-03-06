@@ -992,8 +992,7 @@ justify-content: space-around;">
             } else {
                 incorrectWords += ' Word'
             }
-            let marks = (correctWords / quoteSection.length) * 100;
-            document.getElementById("wpm").innerText = markstoFixed(2) + '/100';
+
             document.getElementById("mistakes").innerText = incorrectWords;
             const accuracy = (correctWords / userInput.length) * 100;
             return accuracy + '@' + incorrectWords;
@@ -1120,7 +1119,8 @@ justify-content: space-around;">
             }
 
             let accuracy = calculateTypingAccuracy();
-
+            let marks = (correctWords / quoteSection.length) * 100;
+            document.getElementById("wpm").innerText = marks.toFixed(2) + '/100';
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
 
@@ -1135,7 +1135,7 @@ justify-content: space-around;">
                 "courseDataId": courseDataId,
                 "accuracy": accuracy.toFixed(2),
                 "wrongWords": wrongWords,
-                "speed": (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm",
+                "speed": marks.toFixed(2) + "",
                 "totalWords": quoteSection.length + '',
                 "totalType": totaltypewords,
                 "timeTaken": timeTaken,
