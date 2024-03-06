@@ -994,7 +994,7 @@ justify-content: space-around;">
                 incorrectWords += ' Word'
             }
             let marks = (correctWords / quoteSection.length) * 100;
-            document.getElementById("wpm").innerText = marks;
+            document.getElementById("wpm").innerText = markstoFixed(2) + '/100';
             document.getElementById("mistakes").innerText = incorrectWords;
             const accuracy = (correctWords / userInput.length) * 100;
             return accuracy + '@' + incorrectWords;
@@ -1185,23 +1185,6 @@ justify-content: space-around;">
             // renderNewQuote();
         };   
     </Script>
-
-    <script>
-        var refreshTime = 420000; // every 10 minutes in milliseconds
-        window.setInterval(function () {
-            $.ajax({
-                cache: false,
-                type: "GET",
-                url: "refresh_session.php?login_mobile=7878438668",
-                success: function (data) {
-                    if (data == 'duplicate') {
-                        alert('Duplicate Session: Do Not Use Your ID in Another Device.');
-                        window.location = "login.php";
-                    }
-                }
-            });
-        }, refreshTime);
-    </script>
 
     <!-- include common vendor scripts used in demo pages -->
     <script src="js/jsone.js"></script>
