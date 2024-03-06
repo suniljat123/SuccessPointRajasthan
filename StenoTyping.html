@@ -882,7 +882,7 @@ display: none;">
                                 <div class="wrapper" style="  display: flex;
 justify-content: space-around;">
                                     <p>Accuracy: <span id="accuracy"></span></p>
-                                    <p>Speed: <span id="wpm"></span></p>
+                                    <p>Marks: <span id="wpm"></span></p>
                                     <p>Total Type: <span id="TotalTyped"></span></p>
                                     <p>Mistakes: <span id="mistakes"></span></p>
                                 </div>
@@ -993,6 +993,8 @@ justify-content: space-around;">
             } else {
                 incorrectWords += ' Word'
             }
+            let marks = (correctWords / quoteSection.length) * 100;
+            document.getElementById("wpm").innerText = marks;
             document.getElementById("mistakes").innerText = incorrectWords;
             const accuracy = (correctWords / userInput.length) * 100;
             return accuracy + '@' + incorrectWords;
@@ -1117,10 +1119,7 @@ justify-content: space-around;">
             if (time != 0) {
                 timeTaken = (totalTimeInSecond - time) / 100;
             }
-            var speedTemp = (userInput.value.length / 5 / timeTaken).toFixed(2);
-            if (speedTemp == 'Infinity' || speedTemp == 'NaN')
-                speedTemp = 0;
-            document.getElementById("wpm").innerText = speedTemp + " wpm";
+
             let accuracy = calculateTypingAccuracy();
 
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
