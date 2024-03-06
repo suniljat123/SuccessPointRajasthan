@@ -1123,8 +1123,8 @@ justify-content: space-around;">
 
             let accuracy = calculateTypingAccuracy();
             console.log('correctWords=', correctWords)
-            console.log(' quoteSection.length=', quoteSection.length)
-            let marks = (correctWords / quoteSection.length) * 100;
+            console.log(' quoteSection.length=', quoteSection.split(' ').length)
+            let marks = (correctWords / quoteSection.split(' ').length) * 100;
             document.getElementById("wpm").innerText = marks.toFixed(2) + '/100';
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
