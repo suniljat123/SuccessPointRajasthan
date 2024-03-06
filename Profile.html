@@ -839,7 +839,7 @@
                                             <i class="ni business_briefcase-24 mr-2"></i>
                                             <span id="StudentPhone"></span>
                                         </div>
-                                        <div><i class="ni education_hat mr-2"></i>Account Type: Paid </div>
+                                        <div id="StudentAccountType"><i class="ni education_hat mr-2"></i> </div>
 
                                         <br>
                                     </div>
@@ -976,7 +976,8 @@
                 .then(response => response.json())
                 .then(result => {
                     let accountType = result.substr(0, result.indexOf('@_@'));
-                    console.log('result profile', result)
+                    console.log('result profile', accountType)
+                    document.getElementById("StudentAccountType").innerText = accountType;
                     result = result.substr(result.indexOf('@_@') + 3, result.length)
                     result = JSON.parse(result);
                     console.log('result profile', result)
