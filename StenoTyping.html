@@ -960,7 +960,8 @@ justify-content: space-around;">
         })
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
-
+            correctWords = 0;
+            incorrectWords = 0;
             let referenceText = quoteSection;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
