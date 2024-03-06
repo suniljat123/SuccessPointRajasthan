@@ -960,8 +960,7 @@ justify-content: space-around;">
         })
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
-            console.log('quoteSection=', quoteSection)
-            console.log('quoteSection innerText=', quoteSection)
+
             let referenceText = quoteSection;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
@@ -993,7 +992,8 @@ justify-content: space-around;">
             } else {
                 incorrectWords += ' Word'
             }
-
+            console.log('correctWords=', correctWords)
+            console.log(' userInput.length=', userInput.length)
             document.getElementById("mistakes").innerText = incorrectWords;
             const accuracy = (correctWords / userInput.length) * 100;
             return accuracy + '@' + incorrectWords;
