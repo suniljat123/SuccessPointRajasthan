@@ -959,7 +959,8 @@ justify-content: space-around;">
         })
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
-
+            console.log('quoteSection=', quoteSection)
+            console.log('quoteSection innerText=', quoteSection.innerText)
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
@@ -1059,7 +1060,7 @@ justify-content: space-around;">
                         return "<span class='quote-chars'>" + value + "</span>";
                     });
                     //join array for displaying
-                    quoteSection.innerHTML += arr.join("");
+                    quoteSection += arr.join("");
                 })
                 .catch(error => console.log('error=', error));
 

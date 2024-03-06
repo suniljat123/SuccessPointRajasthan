@@ -1070,7 +1070,7 @@ justify-content: space-around;">
                         return "<span class='quote-chars'>" + value + "</span>";
                     });
                     //join array for displaying
-                    quoteSection += arr.join("");
+                    quoteSection.innerHTML += arr.join("");
                 })
                 .catch(error => console.log('error=', error));
 
