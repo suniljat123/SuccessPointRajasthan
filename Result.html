@@ -1218,7 +1218,7 @@
                                 day: "numeric",
                                 year: "numeric",
                             });
-
+                            let marks = currentItem.Marks__c + ' %';
                             const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>${idx + 1}</td>
@@ -1227,7 +1227,7 @@
                                             <td>${currentItem.Total_Words__c}</td>
                                             <td>${currentItem.Total_Type__c}</td>
                                             <td>${currentItem.Incorrect_Words__c}</td>
-                                            <td>${currentItem.Marks__c}</td>
+                                            <td>${marks}</td>
                                             <td>${currentItem.Steno_Marks__c}</td>
                                             <td>
                                                 ${currentItem.Rank__c} </td>
