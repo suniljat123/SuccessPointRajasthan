@@ -1054,14 +1054,8 @@ justify-content: space-around;">
                     content = content.replace('<p>', '');
                     content = content.replace('</p>', '');
                     quote = content;
-                    console.log('qoute in =', quote)
-                    //Array of characters in the quote
-                    let arr = quote.split("").map((value) => {
-                        //wrap the characters in a span tag
-                        return value;
-                    });
-                    //join array for displaying
-                    quoteSection += arr.join("");
+
+                    quoteSection = quote;
                 })
                 .catch(error => console.log('error=', error));
 
