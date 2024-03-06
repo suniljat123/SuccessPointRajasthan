@@ -824,7 +824,8 @@
                                             <th class="bgc-yellow-l3">Total Words</th>
                                             <th class="bgc-yellow-l3">Total Typed</th>
                                             <th class="bgc-yellow-l3">Incorrect</th>
-                                            <th class="bgc-yellow-l3">Mark</th>
+                                            <th class="bgc-yellow-l3">Accuracy</th>
+                                            <th class="bgc-yellow-l3">Marks</th>
                                             <th class="bgc-yellow-l3">Rank</th>
                                             <th class="bgc-yellow-l3">Answer Sheet</th>
                                         </tr>
@@ -1200,7 +1201,7 @@
                     if (result == 'No result found.') {
                         // alert('No result found.')
                         const tableHTML = `<tr class="d-style bgc-h-default-l4">
-                                        <td style="text-align: center;background: #8c93aa;" colspan="9">${result}</td>
+                                        <td style="text-align: center;background: #8c93aa;" colspan="10">${result}</td>
                                          
 
                                     </tr>`;
@@ -1227,6 +1228,7 @@
                                             <td>${currentItem.Total_Type__c}</td>
                                             <td>${currentItem.Incorrect_Words__c}</td>
                                             <td>${currentItem.Marks__c}</td>
+                                            <td>${currentItem.Steno_Marks__c}</td>
                                             <td>
                                                 ${currentItem.Rank__c} </td>
                                             <td style="    justify-content: center;
