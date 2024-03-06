@@ -832,13 +832,33 @@ justify-content: space-between;">
                 border-radius: 5px;" onclick="handleGoBack()">Go Back</button>
                                 </div>
                                 <div style="display:flex; justify-content:center;">
+
+                                    <span style="    margin-right: 16rem;
+                                    margin-top: 21px;">
+                                        <label>Select Time: </label>
+                                        <select name="duration" id="duration" onchange="handleTimeChange()"
+                                            class="form-control-sm">
+                                            <option value="1">1 Min</option>
+                                            <option value="2">2 Mins</option>
+                                            <option value="3">3 Mins</option>
+                                            <option value="4">4 Mins</option>
+                                            <option value="5">5 Mins</option>
+                                            <option value="10">10 Mins</option>
+                                            <option value="15">15 Mins</option>
+                                        </select>
+                                    </span>
+
+
                                     <p style="padding: 4px;
 border-radius: 6px;   
     
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: " Poppins", sans-serif; color: #263d4d; }">Time: <span id="timer">0s</span></p>
+    font-family: " Poppins", sans-serif; color: #263d4d; }">
+
+                                        Time: <span id="timer">1:00s
+                                        </span></p>
                                     <!-- <p style=" 
 padding: 4px;
 border-radius: 6px;    margin: 0;
@@ -937,6 +957,17 @@ justify-content: space-around;">
             document.getElementById('header').style.backgroundColor = '#38434b'
         })
 
+        var dropdown = document.getElementById("duration");
+
+        // Add an event listener to the dropdown to listen for changes
+        dropdown.addEventListener("change", function () {
+            // Get the selected value
+            var selectedValue = dropdown.value;
+
+            // Print or do something with the selected value
+            console.log("Selected value: " + selectedValue);
+            document.getElementById("timer").innerText = selectedValue + ':00s';
+        });
     </script>
     <Script>
         let time = 60;
@@ -967,7 +998,8 @@ justify-content: space-around;">
         })
         function calculateTypingAccuracy() {
             // console.log('referenceText=', document.getElementById('quote-input').value.length)
-
+            console.log('quoteSection=', quoteSection)
+            console.log('quoteSection innerText=', quoteSection.innerText)
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
@@ -1057,7 +1089,7 @@ justify-content: space-around;">
 
                     time = parseInt(result[0].Duration__c) * 60;
                     totalTimeInSecond = parseInt(result[0].Duration__c) * 60;
-                    document.getElementById("timer").innerText = convertSecondsToTime(time) + 's';
+                    //   document.getElementById("timer").innerText = convertSecondsToTime(time) + 's';
                     //    document.getElementById("timer").innerText = time + "s";
                     let content = result[0].Audio_Text__c;
                     content = content.replace('<p>', '');
@@ -1181,7 +1213,8 @@ justify-content: space-around;">
 
             mistakes = 0;
             timer = "";
-
+            var dropdown = document.getElementById("duration");
+            dropdown.setAttribute("disabled", true);
             userInput.disabled = false;
             timeReduce();
             document.getElementById("stop-test").style.cursor = "not-allowed";
