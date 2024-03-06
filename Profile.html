@@ -975,6 +975,9 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
+                    let accountType = result.substr(0, result.indexOf('@_@'));
+                    console.log('result profile', result)
+                    result = result.substr(result.indexOf('@_@') + 3, result.length)
                     result = JSON.parse(result);
                     console.log('result profile', result)
                     document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
