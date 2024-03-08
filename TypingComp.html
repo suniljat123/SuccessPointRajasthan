@@ -913,15 +913,17 @@
                                 year: "numeric",
                             });
                             let SRNo = idx + 1;
-                            let marks = currentItem.Marks__c + ' %';
+                            let speed = currentItem.Speed__c ? currentItem.Speed__c : ''
+                            let stenoMarks = currentItem.Steno_Marks__c ? currentItem.Steno_Marks__c : ''
+                            let marks = currentItem.Marks__c + '%';
                             const tableHTML = ` <tr class="d-style bgc-h-default-l4">
                                     <td>${SRNo}</td>
                                     <td>${formattedDate}</td>
                                     <td>${currentItem.Course_Content__r.Test_Language__c}</td>
                                     <td>${currentItem.Course_Content__r.Name}</td>
-                                    <td>${currentItem.Speed__c}</td>
+                                    <td>${speed}</td>
                                     <td>${marks}</td>
-                                    <td>${currentItem.Steno_Marks__c}</td>
+                                    <td>${stenoMarks}</td>
                                     <td>${currentItem.Rank__c}</td>
                                 </tr>`;
                             TableData.innerHTML += tableHTML;
