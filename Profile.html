@@ -950,8 +950,7 @@
                         paidCourseLst = JSON.parse(paidCourseLst);
                         document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
                         paidCourseLst.forEach((currentItem, idx) => {
-                            const createdDateString = currentItem.CreatedDate
-                                ;
+                            const createdDateString = currentItem.CreatedDate;
                             const createdDateObject = new Date(createdDateString);
 
                             const createdFormattedDate = createdDateObject.toLocaleDateString("en-US", {
@@ -960,7 +959,7 @@
                                 year: "numeric",
                             });
                             const expireDateString = currentItem?.Expire_Date__c;
-                            const expireDatedateObject = new Date(dateString);
+                            const expireDatedateObject = new Date(expireDateString);
 
                             const expireFormattedDate = expireDatedateObject.toLocaleDateString("en-US", {
                                 month: "short",
