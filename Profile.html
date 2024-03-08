@@ -974,7 +974,7 @@
                     if (result.includes('@')) {
                         let paidCourseLst = result.substr(0, result.indexOf('@_@'));
                         result = result.substr(result.indexOf('@_@') + 3, result.length)
-                        console.log('paid course lst->', paidCourseLst)
+                        //  console.log('paid course lst->', paidCourseLst)
                         console.log('paid course json->', JSON.parse(paidCourseLst))
                         document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
                     } else {
