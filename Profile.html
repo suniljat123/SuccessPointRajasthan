@@ -852,7 +852,7 @@
                                                 <td><b>Course Name</b></td>
                                                 <td><b>Steno Starting Date</b></td>
                                                 <td><b>Steno Expiry Date</b></td>
-                                                <td><b>Active</b></td>
+                                                <td><b>Status</b></td>
                                             </tr>
                                         </thead>
                                         <tbody id="TableData">
@@ -967,12 +967,13 @@
                                 year: "numeric",
                             });
                             let SRNo = idx + 1;
+                            let active = currentItem.Active__c ? 'Active' : 'Expired'
                             const tableHTML = ` <tr>
                                                 <td>${SRNo}</td>
                                                 <td>${currentItem.Courses__r.Name}</td>
                                                 <td>${createdFormattedDate}</td>
                                                 <td>${expireFormattedDate}</td>
-                                                <td>${currentItem.Active__c}</td>
+                                                <td>${active}</td>
                                             </tr>`;
                             TableData.innerHTML += tableHTML;
                         })
