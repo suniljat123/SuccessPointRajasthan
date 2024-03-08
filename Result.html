@@ -1144,7 +1144,7 @@
                         TableData.innerHTML += tableHTML;
                     } else {
                         result = JSON.parse(result);
-                        console.log('result=', result)
+                        console.log('result=>', result)
                         result.forEach((currentItem, idx) => {
                             const dateString = currentItem.CreatedDate;
                             const dateObject = new Date(dateString);
@@ -1155,6 +1155,8 @@
                                 year: "numeric",
                             });
                             let marks = currentItem.Marks__c + '%';
+                            let speed = currentItem.Speed__c ? currentItem.Speed__c : ' '
+                            let stenoMarks = currentItem.Steno_Marks__c ? currentItem.Steno_Marks__c : ' '
                             const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>${idx + 1}</td>
@@ -1164,8 +1166,8 @@
                                             <td>${currentItem.Total_Type__c}</td>
                                             <td>${currentItem.Incorrect_Words__c}</td>
                                             <td>${marks}</td>
-                                            <td>${currentItem.Speed__c}</td>
-                                            <td>${currentItem.Steno_Marks__c}</td>
+                                            <td>${speed}</td>
+                                            <td>${stenoMarks}</td>
                                             <td>
                                                 ${currentItem.Rank__c} </td>
                                             <td style="    justify-content: center;
