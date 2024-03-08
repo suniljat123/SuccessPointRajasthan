@@ -62,32 +62,33 @@
     <p class="message" id="modalMessage">Log In now and get full access to our app.</p>
     <div class="flex">
       <label id="firstNameId" style="display:none;">
-        <input required="true" id="firstName" placeholder="" type="text" class="input">
+        <input required="true" autocomplete="off" id="firstName" placeholder="" type="text" class="input">
         <span>Firstname</span>
       </label>
 
       <label id="LastNameId" style="display:none;">
-        <input required="" id="lastName" placeholder="" type="text" class="input">
+        <input required="" autocomplete="off" id="lastName" placeholder="" type="text" class="input">
         <span>Lastname</span>
       </label>
     </div>
 
     <label id="PhoneId">
-      <input id="phoneInputId" required="true" placeholder="" maxlength="10" type="Number" class="input">
+      <input id="phoneInputId" required="true" placeholder="" maxlength="10" type="Number" class="input"
+        autocomplete="off">
       <span>Phone</span>
     </label>
 
     <label id="EmailId" style="display:none;">
-      <input required="" id="email" placeholder="" type="email" class="input">
+      <input required="" id="email" placeholder="" type="email" class="input" autocomplete="off">
       <span>Email</span>
     </label>
 
     <label id="PasswordId">
-      <input id="passwordInputId" required placeholder="" type="password" class="input">
+      <input id="passwordInputId" required placeholder="" type="password" class="input" autocomplete="off">
       <span>Password</span>
     </label>
     <label id="confirmPasswordId" style="display:none;">
-      <input required placeholder="" id="confirmPassword" type="password" class="input">
+      <input required placeholder="" id="confirmPassword" type="password" class="input" autocomplete="off">
       <span>Confirm password</span>
     </label>
     <button class="submit signup" id="SignUpBtn" onclick="handleSubmitClick()">Submit</button>
