@@ -1159,7 +1159,7 @@
                             let stenoMarks = currentItem.Steno_Marks__c ? currentItem.Steno_Marks__c : ''
                             let marksOrSpeed = ''
                             if (speed.length < 1) {
-                                marksOrSpeed = stenoMarks;
+                                marksOrSpeed = stenoMarks + '/100';
                             } else {
                                 marksOrSpeed = speed;
                             }
