@@ -948,14 +948,34 @@
                         //  console.log('paid course lst->', paidCourseLst)
                         console.log('paid course json->>', JSON.parse(paidCourseLst))
                         document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
-                        const tableHTML = ` <tr>
-                                                <td>1</td>
-                                                <td>2024-01-22 17:49:16</td>
-                                                <td>0000-00-00</td>
-                                                <td>0000-00-00</td>
-                                                <td>2024-04-21</td>
+                        result.forEach((currentItem, idx) => {
+                            const createdDateString = currentItem.CreatedDate
+                                ;
+                            const createdDateObject = new Date(createdDateString);
+
+                            const createdFormattedDate = createdDateObject.toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                            });
+                            const expireDateString = currentItem?.Expire_Date__c;
+                            const expireDatedateObject = new Date(dateString);
+
+                            const expireFormattedDate = expireDatedateObject.toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                            });
+                            let SRNo = idx + 1;
+                            const tableHTML = ` <tr>
+                                                <td>${SRNo}</td>
+                                                <td>${currentItem.Courses__r.Name}</td>
+                                                <td>${createdFormattedDate}</td>
+                                                <td>${expireFormattedDate}</td>
+                                                <td>${currentItem.Active__c}</td>
                                             </tr>`;
-                        TableData.innerHTML += tableHTML;
+                            TableData.innerHTML += tableHTML;
+                        })
                     } else {
                         document.getElementById("StudentAccountType").innerText = 'Account Type: FREE';
                         //  result = result.substr(result.indexOf('@_@') + 3, result.length)
