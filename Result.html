@@ -825,8 +825,8 @@
                                             <th class="bgc-yellow-l3">Total Typed</th>
                                             <th class="bgc-yellow-l3">Incorrect</th>
                                             <th class="bgc-yellow-l3">Accuracy</th>
-                                            <th class="bgc-yellow-l3">Speed</th>
-                                            <th class="bgc-yellow-l3">Marks</th>
+                                            <th class="bgc-yellow-l3">Speed/Marks</th>
+                                            <!-- <th class="bgc-yellow-l3">Marks</th> -->
                                             <th class="bgc-yellow-l3">Rank</th>
                                             <th class="bgc-yellow-l3">Answer Sheet</th>
                                         </tr>
@@ -1155,8 +1155,14 @@
                                 year: "numeric",
                             });
                             let marks = currentItem.Marks__c + '%';
-                            let speed = currentItem.Speed__c ? currentItem.Speed__c : ' '
-                            let stenoMarks = currentItem.Steno_Marks__c ? currentItem.Steno_Marks__c : ' '
+                            let speed = currentItem.Speed__c ? currentItem.Speed__c : ''
+                            let stenoMarks = currentItem.Steno_Marks__c ? currentItem.Steno_Marks__c : ''
+                            let marksOrSpeed = ''
+                            if (speed.length < 1) {
+                                marksOrSpeed = stenoMarks;
+                            } else {
+                                marksOrSpeed = speed;
+                            }
                             const tableHTML = `
                         <tr class="d-style bgc-h-default-l4">
                                             <td>${idx + 1}</td>
@@ -1166,8 +1172,8 @@
                                             <td>${currentItem.Total_Type__c}</td>
                                             <td>${currentItem.Incorrect_Words__c}</td>
                                             <td>${marks}</td>
-                                            <td>${speed}</td>
-                                            <td>${stenoMarks}</td>
+                                            <td>${marksOrSpeed}</td>
+                                            <!--<td>${stenoMarks}</td>-->
                                             <td>
                                                 ${currentItem.Rank__c} </td>
                                             <td style="    justify-content: center;
