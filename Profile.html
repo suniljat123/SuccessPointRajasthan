@@ -849,11 +849,9 @@
                                         <tbody>
                                             <tr>
                                                 <td><b>S.No.</b></td>
-                                                <td><b>Timestamp</b></td>
+                                                <td><b>Course Name</b></td>
                                                 <td><b>Steno Expiry Date</b></td>
-                                                <td><b>Type Expiry Date</b></td>
-                                                <td><b>Transaction Nubmer</b></td>
-                                                <td><b>Remark</b></td>
+                                                <td><b>Active</b></td>
                                             </tr>
 
                                             <tr>
@@ -861,8 +859,6 @@
                                                 <td>2024-01-22 17:49:16</td>
                                                 <td>0000-00-00</td>
                                                 <td>2024-04-21</td>
-                                                <td></td>
-                                                <td></td>
                                             </tr>
 
                                             <tr>
@@ -948,7 +944,7 @@
         $(document).ready(function () {
             document.getElementById('header').style.backgroundColor = '#38434b'
             getStudentDetails();
-            checkIsSprStudent();
+            // checkIsSprStudent();
         })
         function getStudentDetails() {
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone")
@@ -975,16 +971,20 @@
             fetch("https://cloudcertitude15-dev-ed.develop.my.salesforce-sites.com/services/apexrest/SuccessPointRajasthan", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    let accountType = result.substr(0, result.indexOf('@_@'));
-                    console.log('result profile', accountType)
-                    document.getElementById("StudentAccountType").innerText = accountType;
-                    result = result.substr(result.indexOf('@_@') + 3, result.length)
-                    result = JSON.parse(result);
-                    console.log('result profile', result)
-                    document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
-                    document.getElementById("StudentPhone").innerText = result.Phone__c;
-                    document.getElementById("SPRNAme").innerText = result.Name;
-
+                    if (result.includes('@')) {
+                        let paidCourseLst = result.substr(0, result.indexOf('@_@'));
+                        console.log('paid course lst->', paidCourseLst)
+                        console.log('paid course json->', JSON.parse(paidCourseLst))
+                        document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
+                    } else {
+                        result = result.substr(result.indexOf('@_@') + 3, result.length)
+                        result = JSON.parse(result);
+                        console.log('result profile', result)
+                        document.getElementById("StudentAccountType").innerText = 'Account Type: FREE';
+                        document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
+                        document.getElementById("StudentPhone").innerText = result.Phone__c;
+                        document.getElementById("SPRNAme").innerText = result.Name;
+                    }
                 })
                 .catch(error => console.log('error=', error));
 
