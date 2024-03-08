@@ -948,7 +948,7 @@
                         //  console.log('paid course lst->', paidCourseLst)
                         console.log('paid course json->>', JSON.parse(paidCourseLst))
                         document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
-                        result.forEach((currentItem, idx) => {
+                        paidCourseLst.forEach((currentItem, idx) => {
                             const createdDateString = currentItem.CreatedDate
                                 ;
                             const createdDateObject = new Date(createdDateString);
