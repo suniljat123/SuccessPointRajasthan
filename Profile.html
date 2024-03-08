@@ -973,18 +973,21 @@
                 .then(result => {
                     if (result.includes('@')) {
                         let paidCourseLst = result.substr(0, result.indexOf('@_@'));
+                        result = result.substr(result.indexOf('@_@') + 3, result.length)
                         console.log('paid course lst->', paidCourseLst)
                         console.log('paid course json->', JSON.parse(paidCourseLst))
                         document.getElementById("StudentAccountType").innerText = 'Account Type: PAID';
                     } else {
-                        result = result.substr(result.indexOf('@_@') + 3, result.length)
-                        result = JSON.parse(result);
-                        console.log('result profile', result)
                         document.getElementById("StudentAccountType").innerText = 'Account Type: FREE';
-                        document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
-                        document.getElementById("StudentPhone").innerText = result.Phone__c;
-                        document.getElementById("SPRNAme").innerText = result.Name;
+                        //  result = result.substr(result.indexOf('@_@') + 3, result.length)
                     }
+
+                    result = JSON.parse(result);
+                    console.log('result profile', result)
+
+                    document.getElementById("StudentRollNumber").innerText = 'SPR_' + result.Roll_Number__c;
+                    document.getElementById("StudentPhone").innerText = result.Phone__c;
+                    document.getElementById("SPRNAme").innerText = result.Name;
                 })
                 .catch(error => console.log('error=', error));
 
