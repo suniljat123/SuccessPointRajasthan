@@ -1013,9 +1013,9 @@ justify-content: space-around;">
         })
 
         // --------------------------------------------
-        /*
         
-                var quotee='I am very happy to be present here today for opening the new building of your University. All that you have said about this new University, which is only six years old, is commendable in many respects. Although you have not had adequate equipment and the necessary wherewithal in the beginning, these serious shortcomings did not bother you. In right earnest you started the work.';
+        /*
+                var quotee='abrar and sunil and dev';
                 //Array of characters in the quote
                 let arr = quotee.split("").map((value) => {
                     //wrap the characters in a span tag
@@ -1024,9 +1024,9 @@ justify-content: space-around;">
                 console.log('1005');
                 //join array for displaying
                 quoteSection.innerHTML += arr.join("");
-                document.getElementById("quote").style.fontFamily = 'monospace';
-                document.getElementById("quote-input").style.fontFamily = 'monospace';
-        */
+                document.getElementById("quote").style.fontFamily = 'Hindi';
+                document.getElementById("quote-input").style.fontFamily = 'Hindi';
+    */
         // --------------------------------------------
 
 
@@ -1119,9 +1119,11 @@ justify-content: space-around;">
 
                         document.getElementById("quote").style.fontFamily = 'Hindi';
                         document.getElementById("quote-input").style.fontFamily = 'Hindi';
+                        document.getElementById("wrapperResultId").style.fontFamily = 'Hindi';
                     } else {
                         document.getElementById("quote").style.fontFamily = 'monospace';
                         document.getElementById("quote-input").style.fontFamily = 'monospace';
+                        document.getElementById("wrapperResultId").style.fontFamily = 'monospace';
                     }
 
                     time = parseInt(result[0].Duration__c) * 60;
@@ -1191,6 +1193,7 @@ justify-content: space-around;">
         };
         const displayResult = () => {
             document.getElementById("resultMainDiv").style.display = 'block';
+            document.getElementById("wrapperResultId").style.fontFamily = 'Hindi';
             document.getElementById("quote-input").style.display = 'none';
             document.getElementById("quote").style.display = 'none';
             document.getElementById("timeDivId").style.display = 'none';
@@ -1215,7 +1218,7 @@ justify-content: space-around;">
                         console.log('in if');
                         lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
                     } else {
-                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '>{" + words2[i] + "}</span><span style=\"color:green;\">{" + words[i] + "}</span>");
+                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + words2[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
                         console.log('in else');
                     }
                 } else {
