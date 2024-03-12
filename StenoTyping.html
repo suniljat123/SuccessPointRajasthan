@@ -875,32 +875,32 @@ font-size: 16px;
   padding: 10px 30px;
   border-radius: 5px;
   font-size: 18px;" id="stop-test" onclick="displayResult()">Submit</button>
-  <div class="result" style="margin-top: 40px; border: 3px solid black;
+                            <div class="result" style="margin-top: 40px; border: 3px solid black;
   display: none;">
-                                  <h3 style="padding: 13px 0 0 23px;">Result</h3>
-                                  <div class="wrapper" style="font-size: 21px;  display: flex;
+                                <h3 style="padding: 13px 0 0 23px;">Result</h3>
+                                <div class="wrapper" style="font-size: 21px;  display: flex;
   justify-content: space-around;">
-                                      <p>Accuracy: <span id="accuracy"></span></p>
-                                      <p>Speed: <span id="wpm"></span></p>
-                                      <p>Total Type: <span id="TotalTyped"></span></p>
-                                      <p>Mistakes: <span id="mistakes"></span></p>
-                                  </div>
-  
-  
-  
-                                  <div class="result" id="resultMainDiv" style="  display:none;  
+                                    <p>Accuracy: <span id="accuracy"></span></p>
+                                    <p>Speed: <span id="wpm"></span></p>
+                                    <p>Total Type: <span id="TotalTyped"></span></p>
+                                    <p>Mistakes: <span id="mistakes"></span></p>
+                                </div>
+
+
+
+                                <div class="result" id="resultMainDiv" style="  display:none;  
                               justify-content: space-around;
                               min-height: 26rem;
                               margin-top: 3rem;padding:1 rem;
                               background-color: white;padding: 17px;border-top: 3px solid;
                               ">
-                                      <div class="" id="wrapperResultId" style="   justify-content: space-around;font-weight: 700;
+                                    <div class="" id="wrapperResultId" style="   justify-content: space-around;font-weight: 700;
                                                               font-size: 23px;
                                                               font-family: monospace;">
-  
-                                      </div>
-                                  </div>
-                              </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div id="quote" style="display:none;">
 
@@ -965,7 +965,7 @@ font-size: 16px;
         })
         //Random Quotes Api URL
         const quoteApiUrl = "https://api.quotable.io/random?minLength=80&maxLength=100";
-        let quoteSection='';
+        let quoteSection = '';
         const userInput = document.getElementById("quote-input");
         let quote = "";
         let courseDataId = ''
@@ -973,7 +973,7 @@ font-size: 16px;
         let mistakes = 0;
         let totaltypewords = 0;
 
-         // --------------------------------------------
+        // --------------------------------------------
         /*
         
                 var quotee='I am very happy to be present here today for opening the new building of your University. All that you have said about this new University, which is only six years old, is commendable in many respects. Although you have not had adequate equipment and the necessary wherewithal in the beginning, these serious shortcomings did not bother you. In right earnest you started the work.';
@@ -1006,7 +1006,7 @@ font-size: 16px;
                 document.getElementById("stop-test").style.cursor = "not-allowed";
                 document.getElementById("stop-test").disabled = true;
             }
-         //   referenceText = referenceText.split(' ');
+            //   referenceText = referenceText.split(' ');
             if (userInput.length > 0) {
                 userInput = userInput.trim();
                 userInput = userInput.split(' ');
@@ -1088,9 +1088,10 @@ font-size: 16px;
                     totalTimeInSecond = parseInt(result[0].Duration__c) * 60;
                     document.getElementById("timer").innerText = convertSecondsToTime(time) + 's';
                     //    document.getElementById("timer").innerText = time + "s";
-                    let content = result[0].Audio_Text__c;
-                    content = content.replace('<p>', '');
-                    content = content.replace('</p>', '');
+                    let content = result[0].Audio_Text__c.split(" ");
+                    console.log('10092->', content);
+                    //   content = content.replace('<p>', '');
+                    // content = content.replace('</p>', '');
                     quote = content;
 
                     quoteSection = quote;
@@ -1146,14 +1147,14 @@ font-size: 16px;
             timer = setInterval(updateTimer, 1000);
         };
         const displayResult = () => {
-        
+
             document.getElementById("resultMainDiv").style.display = 'block';
             document.getElementById("quote-input").style.display = 'none';
             var resultSection = document.getElementById("wrapperResultId")
             // Words in above box
             var quotee = quoteSection;
             console.log('words in above box #######');
-           const words=quotee; 
+            const words = quotee;
             // ended
 
             // words in below box
@@ -1177,7 +1178,7 @@ font-size: 16px;
                 }
                 i++;
             }
-        //    console.log('last list-->', lastList);
+            //    console.log('last list-->', lastList);
             resultSection.innerHTML += lastList.join(" ");
 
             //   end of new changess ---------------------------------
