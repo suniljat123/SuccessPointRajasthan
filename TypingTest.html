@@ -1199,14 +1199,12 @@ justify-content: space-around;">
             var resultSection = document.getElementById("wrapperResultId")
             // Words in above box
             var quotee = document.getElementById("quote").innerText;
-            //  resultSection.innerHTML=quotee; 
-            console.log('words in above box #######');
             const words = quotee.split(/\s+/);
             // ended
 
             // words in below box
             var quoteebox = document.getElementById("quote-input").value;
-            console.log('1204->', quoteebox);
+
             const words2 = quoteebox.split(/\s+/);
             // ended
             var i = 0;
@@ -1214,37 +1212,17 @@ justify-content: space-around;">
             while (words.length > i) {
                 if (words2[i] != undefined) {
                     if (words[i] == words2[i]) {
-                        console.log('in if');
                         lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
                     } else {
                         lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + words2[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
-                        console.log('in else');
+
                     }
                 } else {
                     lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;\" '>" + words[i] + "</span>");
                 }
                 i++;
             }
-            console.log('last list-->', lastList);
             resultSection.innerHTML += lastList.join(" ");
-            //     words.forEach(word => {
-            //       console.log(word);
-            // });
-            //  words2.forEach(word => {
-            ///    console.log(word);
-            //  });
-            console.log('words in below box @@-->', words[0]);
-            console.log('1005', words2[0]);
-            // Loop through each word and console log it
-
-
-
-            //   return;
-            console.log('1006');
-            //join array for displaying
-            //  resultSection.innerHTML += arr.join("");
-
-
 
             document.querySelector(".result").style.display = "block";
             clearInterval(timer);
