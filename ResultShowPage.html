@@ -1069,6 +1069,8 @@
                 .then(response => response.json())
                 .then(result => {
                     if (result != 'No result found.') {
+
+                        result = JSON.parse(result);
                         const dateString = result[0].LastModifiedDate;
                         console.log('datestring=', dateString)
                         const dateObject = new Date(dateString);
@@ -1078,7 +1080,6 @@
                             day: "numeric",
                             year: "numeric",
                         });
-                        result = JSON.parse(result);
                         console.log('result Ranks=>', result);
                         var ContentWords = result[0].Content_Words__c;
                         var TypedWords = result[0].Typed_Words__c;
