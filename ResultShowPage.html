@@ -1081,7 +1081,7 @@
                         console.log('result Ranks=>', result);
                         var ContentWords = result[0].Content_Words__c;
                         var TypedWords = result[0].Typed_Words__c;
-                        displayResult(ContentWords, TypedWords);
+                        displayResult(ContentWords, TypedWords, result[0].Course_Content__r.Test_Language__c);
                         document.getElementById('sprSubmittedDate').innerText = formattedDate;
                         document.getElementById('sprTestLanguage').innerText = result[0].Course_Content__r.Test_Language__c;
                         document.getElementById('sprTestSpeed').innerText = result[0].Total_Words__c;
@@ -1097,19 +1097,25 @@
                 })
         }
         //  displayResult('I am happy today and last','I am sad today and tommorow');
-        function displayResult(ContentWords, TypedWords) {
+        function displayResult(ContentWords, TypedWords, testLanguage) {
             const words = ContentWords.split(" ");
 
             const words2 = TypedWords.split(" ");
             // ended
             var i = 0;
             var lastList = [];
+            let fontfamily = 'Monospace'
+            if (testLanguage == 'English') {
+                fontfamily = 'monospace';
+            } else {
+                fontfamily = 'Hindi';
+            }
             while (words.length > i) {
                 if (words2[i] != undefined) {
                     if (words[i] == words2[i]) {
                         lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
                     } else {
-                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + words2[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
+                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:" + fontfamily + "\">{</span>" + words2[i] + "<span style=\"font-family:" + fontfamily + "\">}</span></span><span style=\"color:green;\"><span style=\"font-family:" + fontfamily + "\">{</span>" + words[i] + "<span style=\"font-family:" + fontfamily + "\">}</span></span>");
                     }
                 } else {
                     lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;\" '>" + words[i] + "</span>");
@@ -1117,6 +1123,7 @@
                 i++;
             }
             var resultSection = document.getElementById("resultText");
+
             resultSection.innerHTML += lastList.join(" ");
         }
     </script>
