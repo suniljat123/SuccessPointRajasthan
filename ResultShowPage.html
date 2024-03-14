@@ -1070,6 +1070,7 @@
                 .then(result => {
                     if (result != 'No result found.') {
                         const dateString = result[0].LastModifiedDate;
+                        console.log('datestring=', dateString)
                         const dateObject = new Date(dateString);
 
                         const formattedDate = dateObject.toLocaleDateString("en-US", {
