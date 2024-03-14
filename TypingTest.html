@@ -1221,9 +1221,7 @@ justify-content: space-around;">
                 i++;
             }
             resultSection.innerHTML += lastList.join(" ");
-            console.log("quotee", quotee)
-            console.log("quoteebox", quoteebox)
-            console.log("resultSection", resultSection.innerText)
+
             document.querySelector(".result").style.display = "block";
             clearInterval(timer);
             document.getElementById("stop-test").style.display = "none";
@@ -1239,6 +1237,7 @@ justify-content: space-around;">
             document.getElementById("wpm").innerText = speedTemp + " wpm";
             let accuracy = calculateTypingAccuracy();
             console.log('Student Typed data=>', document.getElementById("wrapperResultId").innerText)
+            console.log("content data", quoteebox)
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
             document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
@@ -1257,7 +1256,7 @@ justify-content: space-around;">
                 "totalType": totaltypewords,
                 "timeTaken": timeTaken,
                 "contentData": quoteSection.innerText,
-                "studentTypedData": document.getElementById("wrapperResultId").innerText,
+                "studentTypedData": quoteebox,
                 "submitTypedData": 'submitTypedData'
             });
 
