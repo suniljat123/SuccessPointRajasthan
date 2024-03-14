@@ -1031,9 +1031,7 @@ justify-content: space-around;">
 
 
         function calculateTypingAccuracy() {
-            // console.log('referenceText=', document.getElementById('quote-input').value.length)
-            console.log('quoteSection=', quoteSection)
-            console.log('quoteSection innerText=', quoteSection.innerText)
+            // console.log('referenceText=', document.getElementById('quote-input').value.length) 
             let referenceText = quoteSection.innerText;
             let userInput = document.getElementById('quote-input').value;
             if (userInput.length > 0) {
@@ -1223,7 +1221,7 @@ justify-content: space-around;">
                 i++;
             }
             resultSection.innerHTML += lastList.join(" ");
-
+            console.log("contentData", quoteSection.innerText)
             document.querySelector(".result").style.display = "block";
             clearInterval(timer);
             document.getElementById("stop-test").style.display = "none";
@@ -1256,6 +1254,7 @@ justify-content: space-around;">
                 "totalWords": quoteSection.innerText.length + '',
                 "totalType": totaltypewords,
                 "timeTaken": timeTaken,
+                "contentData": quoteSection.innerText,
                 "studentTypedData": document.getElementById("wrapperResultId").innerText,
                 "submitTypedData": 'submitTypedData'
             });
