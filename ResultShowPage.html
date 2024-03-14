@@ -908,24 +908,27 @@
                                 <div class="container border">
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Roll Number: GSJ3210</span>
+                                            <span>Roll Number: <span id="rollNumber">
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Student Name: Rakesh Choudhary </span>
+                                            <span>Student Name: <span id="sprStudentName"> </span>
+                                            </span>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Test Name: Test 23 Jan 70 wpm legal</span>
+                                            <span>Test Name: <span id="sprTestName"> </span></span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Test Speed: (Hindi-70WPM)</span>
+                                            <span>Test Speed: <span id="sprTestSpeed"> </span></span>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Duration: 55 Mins</span>
+                                            <span>Test Language: <span id="sprTestLanguage"> </span></span>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <span>Submitted On: 2024-01-28 08:12:46</span>
+                                            <span>Submitted On: <span id="sprSubmittedDate"> </span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1071,7 +1074,12 @@
                         var ContentWords = result[0].Content_Words__c;
                         var TypedWords = result[0].Typed_Words__c;
                         displayResult(ContentWords, TypedWords);
-
+                        document.getElementById('sprSubmittedDate').innerText = result[0].LastModifiedDate;
+                        document.getElementById('sprTestLanguage').innerText = result[0].Course_Content__r.Test_Language__c;
+                        document.getElementById('sprTestSpeed').innerText = result[0].Total_Words__c;
+                        document.getElementById('sprTestName').innerText = result[0].Course_Content__r.Name;
+                        document.getElementById('sprStudentName').innerText = result[0].Students__r.Name;
+                        document.getElementById('rollNumber').innerText = result[0].Students__r.Roll_Number__c;
                         document.getElementById('totalValueId').innerText = 'Total:' + result[0].Total_Words__c;
                         document.getElementById('typedValueId').innerText = 'Typed:' + result[0].Total_Type__c;
                         document.getElementById('incorrectValueId').innerText = 'Incorrect:' + result[0].Incorrect_Words__c;
