@@ -1263,7 +1263,7 @@ justify-content: space-around;">
             console.log('Student Typed data=', document.getElementById("wrapperResultId").innerHTML)
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
-
+            console.log('student type data=', document.getElementById("wrapperResultId").innerText)
             document.getElementById("accuracy").innerText = accuracy.toFixed(2) + '%';
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var myHeaders = new Headers();
@@ -1279,7 +1279,7 @@ justify-content: space-around;">
                 "totalWords": quoteSection.innerText.length + '',
                 "totalType": totaltypewords,
                 "timeTaken": timeTaken,
-                "studentTypedData": document.getElementById("wrapperResultId").innerHTML,
+                "studentTypedData": document.getElementById("wrapperResultId").innerText,
                 "submitTypedData": 'submitTypedData'
             });
 
