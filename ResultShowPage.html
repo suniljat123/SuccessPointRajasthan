@@ -1047,7 +1047,7 @@
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("Cookie", "BrowserId=g1Zrr_uOEe2gTR9C7VyOiA; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1");
-            console.log('id=', id)
+
             let SPR_StudentPhone = localStorage.getItem("SPR_StudentPhone");
             var raw = JSON.stringify({
                 "Phone": SPR_StudentPhone,
@@ -1068,8 +1068,6 @@
                     if (result != 'No result found.') {
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result);
-                        console.log('Typed words->', result[0].Typed_Words__c);
-                        console.log('Content_Words__c->', result[0].Content_Words__c);
                         var ContentWords = result[0].Content_Words__c;
                         var TypedWords = result[0].Typed_Words__c;
                         displayResult(ContentWords, TypedWords);
@@ -1082,16 +1080,10 @@
                     }
                 })
         }
-        console.log('1110');
         //  displayResult('I am happy today and last','I am sad today and tommorow');
         function displayResult(ContentWords, TypedWords) {
-            console.log('in method');
             const words = ContentWords.split(" ");
-            // ended
 
-            // words in below box
-            // var quoteebox = document.getElementById("quote-input").value;
-            console.log('1204->', TypedWords);
             const words2 = TypedWords.split(" ");
             // ended
             var i = 0;
@@ -1099,11 +1091,9 @@
             while (words.length > i) {
                 if (words2[i] != undefined) {
                     if (words[i] == words2[i]) {
-                        console.log('in if');
                         lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
                     } else {
                         lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + words2[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
-                        console.log('in else');
                     }
                 } else {
                     lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;\" '>" + words[i] + "</span>");
@@ -1111,7 +1101,6 @@
                 i++;
             }
             var resultSection = document.getElementById("resultText");
-            console.log('last list-->', lastList);
             resultSection.innerHTML += lastList.join(" ");
         }
     </script>
