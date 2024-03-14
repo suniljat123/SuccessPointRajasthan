@@ -1069,12 +1069,20 @@
                 .then(response => response.json())
                 .then(result => {
                     if (result != 'No result found.') {
+                        const dateString = result[0].LastModifiedDate;
+                        const dateObject = new Date(dateString);
+
+                        const formattedDate = dateObject.toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                        });
                         result = JSON.parse(result);
                         console.log('result Ranks=>', result);
                         var ContentWords = result[0].Content_Words__c;
                         var TypedWords = result[0].Typed_Words__c;
                         displayResult(ContentWords, TypedWords);
-                        document.getElementById('sprSubmittedDate').innerText = result[0].LastModifiedDate;
+                        document.getElementById('sprSubmittedDate').innerText = formattedDate;
                         document.getElementById('sprTestLanguage').innerText = result[0].Course_Content__r.Test_Language__c;
                         document.getElementById('sprTestSpeed').innerText = result[0].Total_Words__c;
                         document.getElementById('sprTestName').innerText = result[0].Course_Content__r.Name;
