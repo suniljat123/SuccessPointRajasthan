@@ -1260,7 +1260,7 @@ justify-content: space-around;">
                 speedTemp = 0;
             document.getElementById("wpm").innerText = speedTemp + " wpm";
             let accuracy = calculateTypingAccuracy();
-            console.log('Student Typed data=', document.getElementById("wrapperResultId").innerHTML)
+            console.log('Student Typed data=', document.getElementById("wrapperResultId").innerText)
             let wrongWords = accuracy.substr(accuracy.indexOf('@') + 1, accuracy.length)
             accuracy = parseInt(accuracy.substr(0, accuracy.indexOf('@')));
             console.log('student type data=', document.getElementById("wrapperResultId").innerText)
