@@ -912,7 +912,7 @@ justify-content: space-around;">
                             margin-top: 3rem;padding:1 rem;
                             background-color: white;padding: 17px;border-top: 3px solid;
                             ">
-                                    <div class="" id="wrapperResultId" style="   justify-content: space-around;font-weight: 700;
+                                    <div class="" id="wrapperResultId" style="justify-content: space-around;font-weight: 700;
                                                             font-size: 23px;
                                                             font-family: monospace;">
 
@@ -1168,16 +1168,16 @@ justify-content: space-around;">
             // words in below box
             var quoteebox = document.getElementById("quote-input").value;
 
-            const words2 = quoteebox.split(/\s+/);
+            const typedwords = quoteebox.split(/\s+/);
             // ended
             var i = 0;
             var lastList = [];
             while (words.length > i) {
-                if (words2[i] != undefined) {
-                    if (words[i] == words2[i]) {
+                if (typedwords[i] != undefined) {
+                    if (words[i] == typedwords[i]) {
                         lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
                     } else {
-                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + words2[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
+                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + typedwords[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
 
                     }
                 } else {
