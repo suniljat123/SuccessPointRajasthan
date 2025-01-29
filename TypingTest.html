@@ -807,6 +807,28 @@
                             border-color: #bae7ff;
                             color: #2196f3;
                         }
+                        .incorrect-word {
+                            text-decoration: line-through; 
+                            color: red;
+                        }
+                        .correct-word, .correct-input {
+                            color: green;
+                        }
+                        .correct-input {
+                            font-weight: bold; 
+                        }
+                        .incorrect-word::before, .correct-word::before {
+                            content: "{";
+                        }
+                        .incorrect-word::after {
+                            content: "}";
+                        }
+                        .correct-word::after {
+                            content: "} ";  
+                        }
+                        .skipped {
+                            color: blue;
+                          }
                     </style>
                     <!-- Our price plan section -->
                     <div class="plans-section" style="padding:21px;overflow-x: scroll!important;">
@@ -849,13 +871,16 @@ justify-content: space-between;">
                                     </span>
 
 
-                                    <p style="padding: 4px;
-border-radius: 6px;   
-    
+                                    <p style="
+    padding: 4px;
+    border-radius: 6px;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: " Poppins", sans-serif; color: #263d4d; }">
+    font-family: Poppins, sans-serif;
+    color: #263d4d;
+">
+</p>
 
                                         Time: <span id="timer">1:00s
                                         </span></p>
@@ -1168,24 +1193,47 @@ justify-content: space-around;">
             // words in below box
             var quoteebox = document.getElementById("quote-input").value;
 
-            const typedwords = quoteebox.split(/\s+/);
+            const typedwords = document.getElementById("quote-input").value.trim().split(' ');
             // ended
-            var i = 0;
-            var lastList = [];
-            while (words.length > i) {
-                if (typedwords[i] != undefined) {
-                    if (words[i] == typedwords[i]) {
-                        lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;color: green;\" '>" + words[i] + "</span> ");
-                    } else {
-                        lastList.push(" <span class='quote-chars' style=\"text-decoration: line-through;color:red\" '> <span style=\"font-family:monospace\">{</span>" + typedwords[i] + "<span style=\"font-family:monospace\">}</span></span><span style=\"color:green;\"><span style=\"font-family:monospace\">{</span>" + words[i] + "<span style=\"font-family:monospace\">}</span></span>");
+            
+            console.log('words: ', words);
+            const typedWords = [];
+            let i = 0, j = 0;
+            while (i < words.length || j < typedwords.length) {
+                if (j >= typedwords.length || (i < words.length && words[i] !== typedwords[j])) {
+                    if (j < typedwords.length && !words.includes(typedwords[j])) {
+                        // Incorrect word
+                        const span = document.createElement('span');
+                        span.classList.add('incorrect-word');
+                        span.textContent = typedwords[j];
 
+                        const correctSpan = document.createElement('span');
+                        correctSpan.classList.add('correct-word');
+                        correctSpan.textContent =  words[i];
+
+                        resultSection.appendChild(span);
+                        resultSection.appendChild(correctSpan);
+                        j++;
+                        i++; // Skip the correct word already displayed
+                    } else {
+                        // Skipped word
+                        const span = document.createElement('span');
+                        span.classList.add('skipped');
+                        span.textContent = words[i] + ' ';
+                        resultSection.appendChild(span);
+                        i++;
                     }
                 } else {
-                    lastList.push("<span class='quote-chars' style=\"font-weight: bold;    font-weight: bold;\" '>" + words[i] + "</span>");
+                    // Correct word
+                    const span = document.createElement('span');
+                    span.classList.add('correct-input');
+                    span.textContent = words[i] + ' ';
+                    resultSection.appendChild(span);
+                    i++;
+                    j++;
                 }
-                i++;
             }
-            resultSection.innerHTML += lastList.join(" ");
+            
 
             document.querySelector(".result").style.display = "block";
             clearInterval(timer);
